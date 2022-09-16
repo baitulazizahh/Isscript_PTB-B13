@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/drawable/ic_lock.xml" value="0.188" />
+        <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/drawable/ic_person.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/drawable/ic_wave__1_.xml" value="0.173" />
+        <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/drawable/round_bg.xml" value="0.148" />
+        <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/drawable/round_border.xml" value="0.188" />
+        <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/drawable/wave.xml" value="0.172" />
+        <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/layout/activity_login2.xml" value="0.22" />
+        <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/input_tombol.xml" value="0.137" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/panahkiri.xml" value="0.137" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/tombol_hijau.xml" value="0.137" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/unggah_berkas.xml" value="0.129" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_ajukan_judul.xml" value="0.1675929884566054" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_ganti_password.xml" value="0.215625" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_pendaftaran_ta.xml" value="0.215625" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_pengajuan_semhas.xml" value="0.2015625" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_pilih_pembimbing.xml" value="0.215625" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
