@@ -9,6 +9,6 @@ public class Act_Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.homescreen);
+        setContentView(R.layout.activity_homescreen);
     }
 }
