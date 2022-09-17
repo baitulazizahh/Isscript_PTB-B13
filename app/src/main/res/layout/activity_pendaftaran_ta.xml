@@ -43,14 +43,13 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
         android:layout_marginTop="21dp"
+        android:fontFamily="@font/poppinssemibold"
         android:text="Mulai dikerjakan"
         android:textColor="@color/oren"
         android:textSize="16sp"
-        android:fontFamily="@font/poppinssemibold"
 
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -65,7 +64,8 @@
         android:textColor="@color/hitam"
         android:textColorHint="@color/abutua"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <com.google.android.material.textfield.TextInputEditText

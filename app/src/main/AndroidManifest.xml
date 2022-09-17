@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Isscript"
         tools:targetApi="31">
         <activity
-            android:name=".ubah_profil"
+            android:name=".ganti_password"
             android:exported="false" />
         <activity
             android:name=".detail_semhas"
@@ -38,9 +38,6 @@
             android:name=".pengajuan_sidang"
             android:exported="false" />
         <activity
-            android:name=".ganti_password"
-            android:exported="false" />
-        <activity
             android:name=".pilih_pembimbing"
             android:exported="false" />
         <activity
@@ -53,7 +50,7 @@
             android:name=".ajukan_judul"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ubah_profil"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
