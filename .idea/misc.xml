@@ -12,6 +12,7 @@
         <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/layout/activity_login2.xml" value="0.22" />
         <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/button_abu.xml" value="0.164" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/button_hijau.xml" value="0.1685" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/button_input.xml" value="0.2115" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/header_homescreen.xml" value="0.1685" />
@@ -20,6 +21,7 @@
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/input_tombol.xml" value="0.137" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/panahkiri.xml" value="0.137" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/petak_emas.xml" value="0.1685" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/petak_latar.xml" value="0.2105" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/tombol_hijau.xml" value="0.137" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/tombol_secondary.xml" value="0.2115" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/unggah_berkas.xml" value="0.129" />
@@ -33,6 +35,7 @@
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_edit_logbook.xml" value="0.33" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_ganti_password.xml" value="0.33" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_homescreen.xml" value="0.2" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_homescreen_logbook_on_process.xml" value="0.25" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_hs.xml" value="0.22" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_login.xml" value="0.18" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_login2.xml" value="0.1675929884566054" />

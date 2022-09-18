@@ -2,6 +2,8 @@
 <resources>
     <color name="hitam">#0C0C0C</color>
     <color name="oren">#ECAD03</color>
+    <color name="orentua">#F9795D</color>
+    <color name="abulatar">#E3E8ED</color>
     <color name="abumuda">#F0F2F5</color>
     <color name="abutua">#979797</color>
     <color name="hijau">#23AF7D</color>
