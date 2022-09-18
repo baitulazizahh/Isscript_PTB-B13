@@ -34,10 +34,12 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/nav_menu" >
+        app:layout_constraintTop_toBottomOf="@+id/button_daftarTA"
+        app:menu="@menu/nav_menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
@@ -82,15 +84,258 @@
     <View
         android:id="@+id/view2"
         android:layout_width="0dp"
-        android:layout_height="500"
+        android:layout_height="510dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/view_jadwalsemhas"
         app:layout_constraintBottom_toTopOf="@+id/button_daftarTA"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <View
+        android:id="@+id/tanggal3"
+        android:layout_width="0dp"
+        android:layout_height="178dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="356dp" />
+
+    <View
+        android:id="@+id/tanggal2"
+        android:layout_width="0dp"
+        android:layout_height="177dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <View
+        android:id="@+id/tanggal"
+        android:layout_width="0dp"
+        android:layout_height="178dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="534dp" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/button_semhas3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="408dp"
+        android:checkable="false"
+        android:text="SIDANG"
+        android:textAlignment="center"
+        android:textColor="@color/orensidang"
+        android:textSize="12sp"
+        app:chipBackgroundColor="@color/orenmuda"
+        app:layout_constraintEnd_toEndOf="@+id/button_semhas"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/button_semhas"
+        app:layout_constraintTop_toTopOf="@+id/jadwal" />
+
+    <TextView
+        android:id="@+id/location3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/icon_location"
+        android:drawablePadding="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Ruang Seminar SI"
+        android:textColor="@color/hijau"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <TextView
+        android:id="@+id/time3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/icon_time"
+        android:drawablePadding="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="10.00 WIB"
+        android:textColor="@color/hijau"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="628dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/icon_date"
+        android:drawablePadding="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Rabu, 14 September 2022"
+        android:textColor="@color/hijau"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="597dp" />
+
+    <TextView
+        android:id="@+id/nama_pseserta6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="332dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="2011522018"
+        android:textColor="@color/hitam"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/nama_pseserta"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <TextView
+        android:id="@+id/nama_pseserta5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Ruth Emeralda Raihan"
+        android:textColor="@color/hitam"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="534dp" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/button_semhas2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="236dp"
+        android:checkable="false"
+        android:text="SEMHAS"
+        android:textAlignment="center"
+        android:textColor="@color/abusemhas"
+        android:textSize="12sp"
+        app:chipBackgroundColor="@color/buttonsemhas"
+        app:layout_constraintEnd_toEndOf="@+id/button_semhas"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/button_semhas"
+        app:layout_constraintTop_toTopOf="@+id/jadwal" />
+
+    <TextView
+        android:id="@+id/location2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/icon_location"
+        android:drawablePadding="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Ruang Seminar SI"
+        android:textColor="@color/hijau"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="652dp" />
+
+    <TextView
+        android:id="@+id/time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/icon_time"
+        android:drawablePadding="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="14.00 WIB"
+        android:textColor="@color/hijau"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="470dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/icon_date"
+        android:drawablePadding="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Kamis, 8 September 2022"
+        android:textColor="@color/hijau"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="446dp" />
+
+    <TextView
+        android:id="@+id/nama_pseserta4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="2011523011"
+        android:textColor="@color/hitam"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/nama_pseserta"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <TextView
+        android:id="@+id/nama_pseserta3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Salma"
+        android:textColor="@color/hitam"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="375dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/icon_date"
+        android:drawablePadding="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Rabu, 7 September 2022"
+        android:textColor="@color/hijau"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="266dp" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/icon_time"
+        android:drawablePadding="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="10.00 WIB"
+        android:textColor="@color/hijau"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="290dp" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/icon_location"
+        android:drawablePadding="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Ruang Seminar SI"
+        android:textColor="@color/hijau"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="314dp" />
+
+    <TextView
+        android:id="@+id/nama_pseserta2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="2011522002"
+        android:textColor="@color/hitam"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/nama_pseserta"
+        tools:layout_editor_absoluteX="30dp" />
 
     <TextView
         android:id="@+id/jadwal"
@@ -106,5 +351,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view"
         app:layout_constraintVertical_bias="0.6" />
+
+    <TextView
+        android:id="@+id/nama_pseserta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Gita Putri"
+        android:textColor="@color/hitam"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/button_semhas"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:checkable="false"
+        android:text="SEMHAS"
+        android:textAlignment="center"
+        android:textColor="@color/abusemhas"
+        android:textSize="12sp"
+        app:chipBackgroundColor="@color/buttonsemhas"
+        app:layout_constraintStart_toEndOf="@+id/nama_pseserta2"
+        app:layout_constraintTop_toTopOf="@+id/jadwal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
