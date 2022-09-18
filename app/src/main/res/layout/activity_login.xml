@@ -7,65 +7,70 @@
     android:layout_height="match_parent"
     tools:context=".activity_Login2">
 
-    <View
-        android:id="@+id/topview"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="36dp"
-        android:background="@color/colorPrimary"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="50dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo_unand" />
 
     <TextView
         android:id="@+id/selamatdtg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="SELAMAT DATANG "
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Selamat Datang"
+        android:textColor="@color/hitam"
         android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topview" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/username"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="352dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/button_input"
-        android:drawableStart="@drawable/ic_personlogin"
+        android:drawableStart="@drawable/ic_person"
         android:drawablePadding="16dp"
         android:ems="10"
+        android:hint="Username"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColorHint="@color/abutua"
         android:inputType="text"
-        android:minHeight="48dp"
         android:padding="16dp"
-        android:text="Username"
-        android:textColor="#66000000"
+        android:textColor="@color/hitam"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="312dp" />
+        app:layout_constraintTop_toBottomOf="@+id/selamatdtg" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/button_input"
-        android:drawableStart="@drawable/ic_lock"
+        android:drawableStart="@drawable/ic_padlock"
         android:drawablePadding="16dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:minHeight="48dp"
         android:padding="16dp"
-        android:textColor="#000000"
+        android:textColor="@color/hitam"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColorHint="@color/abutua"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username" />
@@ -76,24 +81,13 @@
         android:layout_height="66dp"
         android:layout_marginBottom="23dp"
         android:background="@drawable/button_hijau"
-        android:text="LOGIN"
+        android:text="Masuk"
         android:textColor="@color/putih"
         android:textSize="16sp"
+        android:fontFamily="@font/poppinssemibold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="105dp"
-        android:layout_height="157dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/selamatdtg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_unand" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
