@@ -104,6 +104,16 @@
                 android:textColor="@color/orentua"
                 android:textSize="12sp" />
 
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView8"
+                android:layout_marginStart="288dp"
+                android:layout_marginTop="27dp"
+                app:srcCompat="@drawable/ic_panahkanan" />
+
+
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -380,6 +390,14 @@
                 android:textAlignment="center"
                 android:textColor="@color/orentua"
                 android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView9"
+                android:layout_marginStart="288dp"
+                android:layout_marginTop="27dp"
+                app:srcCompat="@drawable/ic_panahkanan" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
