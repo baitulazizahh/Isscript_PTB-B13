@@ -14,25 +14,25 @@
         android:theme="@style/Theme.Isscript"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityHomescreenPendaftaranTaOnProgres"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityHomescreenPilihPembimbing"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityHomescreen_logbook_on_progress_2"
+            android:exported="false" />
+        <activity
+            android:name=".activityhomescreenonprogress2"
+            android:exported="false" />
+        <activity
             android:name=".homescreen_logbook_on_process"
-            android:exported="false" />
-        <activity
-            android:name=".hs"
-            android:exported="false" />
-        <activity
-            android:name=".Act_Login"
-            android:exported="false" />
-        <activity
-            android:name=".Activity_homescreen"
-            android:exported="false" />
-        <activity
-            android:name=".activity_Login2"
             android:exported="false" />
         <activity
             android:name=".activity_login"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".hs"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
