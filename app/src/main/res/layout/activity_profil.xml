@@ -149,12 +149,12 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="102dp"
             android:background="@color/putih"
-            android:drawableTop="@drawable/ic_semhas_warna"
+            android:drawableTop="@drawable/ic_semhas_hitam"
             android:fontFamily="@font/poppinsregular"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="SEMHAS"
-            android:textColor="@color/oren"
+            android:textColor="@color/hitam"
             android:textSize="9sp" />
 
         <Button
@@ -177,13 +177,13 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="306dp"
             android:background="@color/putih"
-            android:drawableTop="@drawable/ic_profil_hitam"
+            android:drawableTop="@drawable/ic_profil_warna"
             android:fontFamily="@font/poppinsregular"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
 
             android:text="PROFIL"
-            android:textColor="@color/hitam"
+            android:textColor="@color/oren"
             android:textSize="9sp" />
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
