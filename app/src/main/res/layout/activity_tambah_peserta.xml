@@ -61,15 +61,15 @@
 
             <TextView
                 android:id="@+id/textView8"
-                android:layout_width="103dp"
+                android:layout_width="60dp"
                 android:layout_height="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/petak_latar"
                 android:fontFamily="@font/poppinsmedium"
-                android:text="Dalam proses"
+                android:text="Selesai"
                 android:textAlignment="center"
-                android:textColor="@color/orentua"
+                android:textColor="@color/hijau"
                 android:textSize="12sp" />
 
             <ImageView
