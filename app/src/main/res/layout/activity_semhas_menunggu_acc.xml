@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih"
-    tools:context=".tambah_peserta">
+    tools:context=".semhas_menunggu_acc">
 
     <ImageView
         android:id="@+id/imageView"
@@ -55,7 +55,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="7dp"
                 android:fontFamily="@font/poppinsmedium"
-                android:text="Detail seminar hasil"
+                android:text="Pengajuan seminar hasil"
                 android:textColor="@color/hitam"
                 android:textSize="16sp" />
 
@@ -86,67 +86,6 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Tambah peserta"
-        android:textColor="@color/hitam"
-        android:textSize="18sp"
-
-        app:layout_constraintStart_toStartOf="@+id/textInputEditText"
-        app:layout_constraintTop_toBottomOf="@+id/card_view1" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
-        android:layout_width="352dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/input_tombol"
-        android:fontFamily="@font/poppinsmedium"
-        android:hint="NIM"
-        android:inputType="number"
-        android:paddingLeft="20dp"
-        android:textColor="@color/hitam"
-        android:textColorHint="@color/abutua"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText1"
-        android:layout_width="352dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/input_tombol"
-        android:fontFamily="@font/poppinsmedium"
-        android:hint="Nama"
-        android:paddingLeft="20dp"
-        android:textColor="@color/hitam"
-        android:textColorHint="@color/abutua"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textInputEditText"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
-
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="352dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/tombol_hijau"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Selesai"
-        android:textColor="@color/putih"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_view" />
-
-    <TextView
         android:id="@+id/semhassaya"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -157,77 +96,6 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/card_view1"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Daftar peserta semhas"
-        android:textColor="@color/hitam"
-        android:textSize="18sp"
-
-        app:layout_constraintStart_toStartOf="@+id/textInputEditText"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view"
-        android:layout_width="352dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/abulatar"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12">
-
-        <RelativeLayout android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            >
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/poppinssemibold"
-                android:text="Salma"
-                android:textColor="@color/hitam"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView"
-                android:layout_alignStart="@+id/textView"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="-3dp"
-                android:fontFamily="@font/poppinssemibold"
-                android:text="2011522002"
-                android:textColor="@color/hitam"
-                android:layout_marginBottom="8dp"
-                android:textSize="12sp" />
-
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/tombol_secondary"
-        android:text="Tambah peserta"
-        android:textColor="@color/hijau"
-        android:textSize="16sp"
-        android:fontFamily="@font/poppinssemibold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText1" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView2"

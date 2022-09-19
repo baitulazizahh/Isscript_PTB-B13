@@ -15,6 +15,7 @@
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/button_hijau.xml" value="0.164" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/input_tombol.xml" value="0.137" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/panahkiri.xml" value="0.137" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/petak_latar.xml" value="0.164" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/tombol_hijau.xml" value="0.137" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/tombol_secondary.xml" value="0.2115" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/unggah_berkas.xml" value="0.129" />
@@ -33,6 +34,7 @@
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_pengajuan_semhas.xml" value="0.33" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_pengajuan_sidang.xml" value="0.33" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_pilih_pembimbing.xml" value="0.25" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_semhas_menunggu_acc.xml" value="0.1675929884566054" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_tambah_logbook.xml" value="0.33" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_tambah_peserta.xml" value="0.25" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_ubah_profil.xml" value="0.2" />
