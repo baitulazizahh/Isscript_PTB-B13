@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih"
-    tools:context=".activity_Login2">
+    tools:context=".activity_login">
 
     <ImageView
         android:id="@+id/imageView"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Selamat Datang"
+        android:text="ISSCRIPT"
         android:textColor="@color/hitam"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,10 +44,11 @@
         android:drawableStart="@drawable/ic_person"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Nama pengguna"
         android:fontFamily="@font/poppinsmedium"
         android:textColorHint="@color/abutua"
         android:inputType="text"
+        android:textSize="14sp"
         android:padding="16dp"
         android:textColor="@color/hitam"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +58,7 @@
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="0dp"
+        android:layout_width="352dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
@@ -66,7 +67,8 @@
         android:drawableStart="@drawable/ic_padlock"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="Kata sandi"
+        android:textSize="14sp"
         android:inputType="textPassword"
         android:padding="16dp"
         android:textColor="@color/hitam"
@@ -83,6 +85,7 @@
         android:layout_marginBottom="23dp"
         android:background="@drawable/button_hijau"
         android:text="Masuk"
+        android:onClick="Masuk"
         android:textColor="@color/putih"
         android:textSize="16sp"
         android:fontFamily="@font/poppinssemibold"

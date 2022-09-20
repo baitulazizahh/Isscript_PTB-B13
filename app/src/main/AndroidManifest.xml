@@ -14,7 +14,16 @@
         android:theme="@style/Theme.Isscript"
         tools:targetApi="31">
         <activity
-            android:name=".ganti_password"
+            android:name=".activityhomescreenonprogress2"
+            android:exported="false" />
+        <activity
+            android:name=".ajukan_judul"
+            android:exported="false" />
+        <activity
+            android:name=".detail_logbook"
+            android:exported="false" />
+        <activity
+            android:name=".detail_logbook_setelah_acc"
             android:exported="false" />
         <activity
             android:name=".detail_semhas"
@@ -26,19 +35,13 @@
             android:name=".edit_logbook"
             android:exported="false" />
         <activity
-            android:name=".detail_logbook_setelah_acc"
+            android:name=".ganti_password"
             android:exported="false" />
         <activity
-            android:name=".detail_logbook"
+            android:name=".homescreen_logbook_on_process"
             android:exported="false" />
         <activity
-            android:name=".tambah_logbook"
-            android:exported="false" />
-        <activity
-            android:name=".pengajuan_sidang"
-            android:exported="false" />
-        <activity
-            android:name=".pilih_pembimbing"
+            android:name=".hs"
             android:exported="false" />
         <activity
             android:name=".pendaftaran_ta"
@@ -47,10 +50,19 @@
             android:name=".pengajuan_semhas"
             android:exported="false" />
         <activity
-            android:name=".ajukan_judul"
+            android:name=".pengajuan_sidang"
+            android:exported="false" />
+        <activity
+            android:name=".pilih_pembimbing"
+            android:exported="false" />
+        <activity
+            android:name=".tambah_logbook"
             android:exported="false" />
         <activity
             android:name=".ubah_profil"
+            android:exported="false" />
+        <activity
+            android:name=".activity_login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

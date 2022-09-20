@@ -13,7 +13,10 @@
         <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/layout/activity_login2.xml" value="0.22" />
         <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/button_hijau.xml" value="0.164" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/button_input.xml" value="0.2115" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/ic_fotodummy.xml" value="0.164" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/ic_home_hitam.xml" value="0.164" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/ic_home_warna.xml" value="0.164" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/ic_panahkanan.xml" value="0.164" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/input_tombol.xml" value="0.137" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/panahkiri.xml" value="0.137" />
@@ -36,7 +39,7 @@
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_homescreen_pendaftaran_ta_on_progres.xml" value="0.1675929884566054" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_homescreen_pilih_pembimbing.xml" value="0.1675929884566054" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_hs.xml" value="0.1675929884566054" />
-        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_login.xml" value="0.1675929884566054" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_login.xml" value="0.11096491228070175" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_login2.xml" value="0.1675929884566054" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_main.xml" value="0.1675929884566054" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_pendaftaran_ta.xml" value="0.25" />
@@ -48,6 +51,7 @@
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_tambah_logbook.xml" value="0.33" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_tambah_peserta.xml" value="0.2" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_ubah_profil.xml" value="0.2" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/menu/nav_menu.xml" value="0.1675929884566054" />
       </map>
     </option>
   </component>
