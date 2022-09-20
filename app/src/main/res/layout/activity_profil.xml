@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/putih"
+    tools:context=".profil">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="97dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_garis" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="PROFIL"
+        android:textColor="@color/hijau"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="352dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/tombol_oren"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Ubah profil"
+        android:paddingEnd="30dp"
+        android:paddingStart="40dp"
+        android:textColor="@color/hitam"
+        android:drawableEnd="@drawable/ic_panahkanan"
+        android:textSize="16sp"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="352dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/tombol_oren"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Ganti password"
+        android:paddingEnd="30dp"
+        android:paddingStart="40dp"
+        android:textColor="@color/hitam"
+        android:drawableEnd="@drawable/ic_panahkanan"
+        android:textSize="16sp"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/ic_fotodummy" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Baitul Azizah"
+        android:textColor="@color/hitam"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="2011521002"
+        android:textColor="@color/abutua"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="352dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="168dp"
+        android:background="@drawable/tombol_keluar"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Keluar akun"
+        android:textColor="@color/oren"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView2"
+        android:layout_width="409dp"
+        android:layout_height="80dp"
+        android:background="@color/putih"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:background="@color/putih"
+            android:drawableTop="@drawable/ic_home_hitam"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:text="Beranda"
+            android:textColor="@color/hitam"
+            android:textSize="9sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="102dp"
+            android:background="@color/putih"
+            android:drawableTop="@drawable/ic_semhas_hitam"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:text="SEMHAS"
+            android:textColor="@color/hitam"
+            android:textSize="9sp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="204dp"
+            android:background="@color/putih"
+            android:drawableTop="@drawable/ic_sidang_hitam"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:text="SIDANG"
+            android:textColor="@color/hitam"
+            android:textSize="9sp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="104dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="306dp"
+            android:background="@color/putih"
+            android:drawableTop="@drawable/ic_profil_warna"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+
+            android:text="PROFIL"
+            android:textColor="@color/oren"
+            android:textSize="9sp" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
