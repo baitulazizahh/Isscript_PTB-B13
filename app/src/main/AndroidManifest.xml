@@ -8,16 +8,28 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="ISSCRIPT"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Isscript"
         tools:targetApi="31">
         <activity
-            android:name=".activityhomescreenonprogress2"
+            android:name=".detail_pengajuan_sidang"
+            android:exported="false" />
+        <activity
+            android:name=".detail_pengajuan_semhas"
+            android:exported="false" />
+        <activity
+            android:name=".detail_pendaftaran_ta"
+            android:exported="false" />
+        <activity
+            android:name=".activity_login"
             android:exported="false" />
         <activity
             android:name=".ajukan_judul"
+            android:exported="false" />
+        <activity
+            android:name=".daftar_peserta"
             android:exported="false" />
         <activity
             android:name=".detail_logbook"
@@ -56,13 +68,31 @@
             android:name=".pilih_pembimbing"
             android:exported="false" />
         <activity
+            android:name=".profil"
+            android:exported="false" />
+        <activity
+            android:name=".semhas1"
+            android:exported="false" />
+        <activity
+            android:name=".semhas_menunggu_acc"
+            android:exported="false" />
+        <activity
+            android:name=".sidang1"
+            android:exported="false" />
+        <activity
             android:name=".tambah_logbook"
+            android:exported="false" />
+        <activity
+            android:name=".tambah_peserta"
+            android:exported="false" />
+        <activity
+            android:name=".tambah_peserta1"
             android:exported="false" />
         <activity
             android:name=".ubah_profil"
             android:exported="false" />
         <activity
-            android:name=".activity_login"
+            android:name=".start"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

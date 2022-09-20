@@ -197,6 +197,7 @@
         android:text="Pendaftaran TA"
         android:textColor="@color/putih"
         android:textSize="16sp"
+        android:onClick="daftarta"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -222,7 +223,8 @@
             android:paddingBottom="8dp"
             android:text="Beranda"
             android:textColor="@color/oren"
-            android:textSize="9sp" />
+            android:textSize="9sp"
+            android:onClick="beranda"/>
 
         <Button
             android:id="@+id/button4"
@@ -236,7 +238,8 @@
             android:paddingBottom="8dp"
             android:text="SEMHAS"
             android:textColor="@color/hitam"
-            android:textSize="9sp" />
+            android:textSize="9sp"
+            android:onClick="semhas"/>
 
         <Button
             android:id="@+id/button5"
@@ -250,7 +253,8 @@
             android:paddingBottom="8dp"
             android:text="SIDANG"
             android:textColor="@color/hitam"
-            android:textSize="9sp" />
+            android:textSize="9sp"
+            android:onClick="sidang"/>
 
         <Button
             android:id="@+id/button6"
@@ -265,7 +269,8 @@
 
             android:text="PROFIL"
             android:textColor="@color/hitam"
-            android:textSize="9sp" />
+            android:textSize="9sp"
+            android:onClick="profil"/>
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

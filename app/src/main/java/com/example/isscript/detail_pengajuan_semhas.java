@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class activityhomescreenonprogress2 extends AppCompatActivity {
+public class detail_pengajuan_semhas extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activityhomescreenonprogress2);
+        setContentView(R.layout.activity_detail_pengajuan_semhas);
     }
 }

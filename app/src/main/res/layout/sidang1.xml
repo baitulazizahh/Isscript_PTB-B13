@@ -51,6 +51,7 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="Beranda"
+            android:onClick="beranda"
             android:textColor="@color/hitam"
             android:textSize="9sp" />
 
@@ -65,6 +66,7 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="SEMHAS"
+            android:onClick="semhas"
             android:textColor="@color/hitam"
             android:textSize="9sp" />
 
@@ -79,6 +81,7 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="SIDANG"
+            android:onClick="sidang"
             android:textColor="@color/oren"
             android:textSize="9sp" />
 
@@ -92,7 +95,7 @@
             android:fontFamily="@font/poppinsregular"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
-
+            android:onClick="profil"
             android:text="PROFIL"
             android:textColor="@color/hitam"
             android:textSize="9sp" />
