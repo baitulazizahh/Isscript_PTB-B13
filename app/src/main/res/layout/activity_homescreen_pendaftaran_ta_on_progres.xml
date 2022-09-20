@@ -49,7 +49,7 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/nama"
         app:layout_constraintEnd_toEndOf="@+id/card_view"
-        app:srcCompat="@drawable/ic_fotodummy" />
+        app:srcCompat="@drawable/ic_fotodummykecil" />
 
     <TextView
         android:id="@+id/perjalanansaya"
