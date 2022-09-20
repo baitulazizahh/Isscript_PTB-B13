@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Act_Login extends AppCompatActivity {
+public class ActivityHomescreenPilihPembimbing extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homescreen);
+        setContentView(R.layout.activity_homescreen_pilih_pembimbing);
     }
 }
