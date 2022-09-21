@@ -221,6 +221,7 @@ Toko Trio Cendramata"
         android:textColor="@color/putih"
         android:fontFamily="@font/poppinssemibold"
         android:textSize="16sp"
+        android:onClick="ajukan_semhas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
