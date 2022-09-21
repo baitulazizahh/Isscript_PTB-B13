@@ -13,8 +13,8 @@ public class pengajuan_sidang extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pengajuan_sidang);
     }
-    public void Ajukan(View view) {
-        Intent intent = new Intent( pengajuan_sidang.this, sidang_menunggu_acc.class);
+    public void ajukansidang(View view) {
+        Intent intent = new Intent(pengajuan_sidang.this, sidang_menunggu_acc.class);
         startActivity(intent);
     }
 }

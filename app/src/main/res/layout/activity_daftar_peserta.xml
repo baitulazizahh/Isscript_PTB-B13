@@ -81,6 +81,7 @@
                 android:layout_marginStart="280dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="6dp"
+                android:onClick="detailsemhas"
                 android:background="@color/orenmuda"
                 app:srcCompat="@drawable/ic_panahkanan" />
 
@@ -204,6 +205,7 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="SIDANG"
+            android:onClick="sidangg"
             android:textColor="@color/hitam"
             android:textSize="11sp" />
 
