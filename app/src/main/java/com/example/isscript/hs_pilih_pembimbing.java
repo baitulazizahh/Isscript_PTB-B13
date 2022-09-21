@@ -6,15 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class tambah_logbook extends AppCompatActivity {
+public class hs_pilih_pembimbing extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tambah_logbook);
+        setContentView(R.layout.activity_hs_pilih_pembimbing);
     }
-    public void Tambah(View view) {
-        Intent intent = new Intent( tambah_logbook.this, hs_logbook_proses2.class);
+    public void PilihPembimbing(View view) {
+        Intent intent = new Intent( hs_pilih_pembimbing.this,pilih_pembimbing.class);
         startActivity(intent);
     }
 }

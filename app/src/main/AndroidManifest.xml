@@ -14,6 +14,24 @@
         android:theme="@style/Theme.Isscript"
         tools:targetApi="31">
         <activity
+            android:name=".hs_logbook_proses3"
+            android:exported="false" />
+        <activity
+            android:name=".hs_logbook_proses2"
+            android:exported="false" />
+        <activity
+            android:name=".hs_logbook_proses"
+            android:exported="false" />
+        <activity
+            android:name=".hs_ajukan_judul"
+            android:exported="false" />
+        <activity
+            android:name=".hs_pilih_pembimbing"
+            android:exported="false" />
+        <activity
+            android:name=".hs_berhasil_daftar_ta"
+            android:exported="false" />
+        <activity
             android:name=".detail_pengajuan_sidang"
             android:exported="false" />
         <activity
@@ -48,9 +66,6 @@
             android:exported="false" />
         <activity
             android:name=".ganti_password"
-            android:exported="false" />
-        <activity
-            android:name=".homescreen_logbook_on_process"
             android:exported="false" />
         <activity
             android:name=".hs"

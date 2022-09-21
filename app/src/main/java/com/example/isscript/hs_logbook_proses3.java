@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ActivityHomescreenPendaftaranTaOnProgres extends AppCompatActivity {
+public class hs_logbook_proses3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homescreen_pendaftaran_ta_on_progres);
+        setContentView(R.layout.activity_hs_logbook_proses3);
     }
 }

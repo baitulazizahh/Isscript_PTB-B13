@@ -178,6 +178,7 @@
         android:layout_marginBottom="23dp"
         android:background="@drawable/tombol_hijau"
         android:text="Simpan"
+        android:onClick="Simpan"
         android:textColor="@color/putih"
         android:fontFamily="@font/poppinssemibold"
         android:textSize="16sp"
