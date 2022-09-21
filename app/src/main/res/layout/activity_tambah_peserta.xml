@@ -72,13 +72,17 @@
                 android:textColor="@color/hijau"
                 android:textSize="12sp" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView7"
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/textView8"
-                android:layout_marginStart="288dp"
-                android:layout_marginTop="27dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/orenmuda"
                 app:srcCompat="@drawable/ic_panahkanan" />
 
 
