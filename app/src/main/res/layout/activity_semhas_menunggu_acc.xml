@@ -107,6 +107,7 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="Beranda"
+            android:onClick="Refresh"
             android:textColor="@color/hitam"
             android:textSize="11sp" />
 
@@ -121,6 +122,7 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="SEMHAS"
+
             android:textColor="@color/oren"
             android:textSize="11sp" />
 
@@ -135,6 +137,7 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="SIDANG"
+
             android:textColor="@color/hitam"
             android:textSize="11sp" />
 
@@ -148,7 +151,6 @@
             android:fontFamily="@font/poppinsregular"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
-
             android:text="PROFIL"
             android:textColor="@color/hitam"
             android:textSize="11sp" />
