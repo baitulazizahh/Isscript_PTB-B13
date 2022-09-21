@@ -13,9 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Isscript"
         tools:targetApi="31">
-        <activity
-            android:name=".sidang_menunggu_acc"
-            android:exported="false" />
+
         <activity
             android:name=".hs_logbook_proses3"
             android:exported="false" />
@@ -74,6 +72,12 @@
             android:name=".hs"
             android:exported="false" />
         <activity
+            android:name=".hs_sidang_acc"
+            android:exported="false" />
+        <activity
+            android:name=".hs_sidang_menunggu"
+            android:exported="false" />
+        <activity
             android:name=".pendaftaran_ta"
             android:exported="false" />
         <activity
@@ -96,6 +100,9 @@
             android:exported="false" />
         <activity
             android:name=".sidang1"
+            android:exported="false" />
+        <activity
+            android:name=".sidang_menunggu_acc"
             android:exported="false" />
         <activity
             android:name=".tambah_logbook"
