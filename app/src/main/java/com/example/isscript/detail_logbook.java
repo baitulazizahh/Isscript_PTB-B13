@@ -15,7 +15,7 @@ public class detail_logbook extends AppCompatActivity {
     }
 
     public void Edit (View view) {
-        Intent intent = new Intent(detail_logbook.this, hs.class);
+        Intent intent = new Intent(detail_logbook.this, edit_logbook.class);
         startActivity(intent);
     }
 }

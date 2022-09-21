@@ -15,7 +15,7 @@ public class edit_logbook extends AppCompatActivity {
     }
 
     public void Simpan (View view) {
-        Intent intent = new Intent(edit_logbook.this, hs.class);
+        Intent intent = new Intent(edit_logbook.this, hs_logbook_proses2.class);
         startActivity(intent);
     }
 }
