@@ -25,4 +25,8 @@ public class hs_logbook_proses2 extends AppCompatActivity {
         Intent intent = new Intent( hs_logbook_proses2.this, detail_logbook.class);
         startActivity(intent);
     }
+    public void ajukansemhas(View view) {
+        Intent intent = new Intent( hs_logbook_proses2.this, semhas2.class);
+        startActivity(intent);
+    }
 }

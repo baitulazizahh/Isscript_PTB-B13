@@ -52,8 +52,8 @@
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_hs_logbook_proses3.xml" value="0.22" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_hs_pilih_pembimbing.xml" value="0.17192982456140352" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_hs_selesai_logbook.xml" value="0.1600877192982456" />
-        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_hs_sidang_acc.xml" value="0.17192982456140352" />
-        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_hs_sidang_menunggu.xml" value="0.17192982456140352" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_hs_sidang_acc.xml" value="0.25" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_hs_sidang_menunggu.xml" value="0.22" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_login.xml" value="0.11096491228070175" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_login2.xml" value="0.1675929884566054" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_main.xml" value="0.1675929884566054" />
@@ -63,6 +63,7 @@
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_pilih_pembimbing.xml" value="0.25" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_profil.xml" value="0.33" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_selesai_edit.xml" value="0.17192982456140352" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_semhas2.xml" value="0.17192982456140352" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_semhas_menunggu_acc.xml" value="0.1675929884566054" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_sidang2.xml" value="0.17192982456140352" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_sidang_menunggu_acc.xml" value="0.17192982456140352" />
