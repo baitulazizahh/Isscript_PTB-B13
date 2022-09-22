@@ -66,7 +66,7 @@
             android:layout_width="352dp"
             android:layout_height="77dp"
             android:layout_marginTop="8dp"
-            app:cardBackgroundColor="@color/abulatar"
+            app:cardBackgroundColor="@color/orenmuda"
             app:cardCornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -347,7 +347,7 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="7dp"
                     android:fontFamily="@font/poppinsmedium"
-                    android:text="30 Februari 2022"
+                    android:text="1 Maret 2022"
                     android:textColor="@color/hitam"
                     android:textSize="16sp" />
 

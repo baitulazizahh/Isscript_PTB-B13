@@ -93,7 +93,7 @@
 
                 <TextView
                     android:id="@+id/textView8"
-                    android:layout_width="103dp"
+                    android:layout_width="60dp"
                     android:layout_height="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="12dp"
@@ -112,7 +112,6 @@
                     android:layout_marginStart="288dp"
                     android:layout_marginTop="27dp"
                     android:background="@color/abulatar"
-                    android:onClick="Detail"
                     app:srcCompat="@drawable/ic_panahkanan" />
 
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih"
-    tools:context=".ganti_password">
+    tools:context=".tambahlogbook2">
 
     <ImageView
         android:id="@+id/imageView"
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Ganti Password"
+        android:text="Tambah Logbook"
         android:fontFamily="@font/poppinssemibold"
         android:textSize="21sp"
         android:textColor="@color/hitam"
@@ -46,15 +46,125 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Password lama"
+        android:text="Tanggal"
+        android:textColor="@color/hitam"
+        android:textSize="14sp"
+
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="21dp"
+        android:text="tanggallogbook"
+        android:textColor="@color/hitam"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppinsmedium"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinssemibold"
+
+        android:text="Nama"
+        android:textColor="@color/hitam"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="namasaya"
+        android:textColor="@color/hitam"
+
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinssemibold"
+
+        android:text="NIM"
+        android:textColor="@color/hitam"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="nimsaya"
+        android:textColor="@color/hitam"
+
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinssemibold"
+
+        android:text="Pembimbing"
+        android:textColor="@color/hitam"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="pembimbingsaya"
+        android:textColor="@color/hitam"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Catatan"
         android:textColor="@color/oren"
         android:textSize="16sp"
 
-        app:layout_constraintStart_toStartOf="@+id/textInputEditText"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText5"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
+        android:id="@+id/textInputEditText5"
         android:layout_width="352dp"
         android:layout_height="52dp"
         android:layout_marginTop="8dp"
@@ -66,60 +176,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Konfirmasi password"
-        android:textColor="@color/oren"
-        android:textSize="16sp"
-
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText2"
-        android:layout_width="352dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/input_tombol"
-        android:fontFamily="@font/poppinsmedium"
-        android:hint=""
-        android:textColor="@color/hitam"
-        android:paddingStart="20dp"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Password baru"
-        android:textColor="@color/oren"
-        android:textSize="16sp"
-
-        app:layout_constraintStart_toStartOf="@+id/textInputEditText"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="352dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/input_tombol"
-        android:fontFamily="@font/poppinsmedium"
-        android:hint=""
-        android:paddingStart="20dp"
-        android:textColor="@color/hitam"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <Button
         android:id="@+id/button"
@@ -127,11 +184,11 @@
         android:layout_height="66dp"
         android:layout_marginBottom="23dp"
         android:background="@drawable/tombol_hijau"
-        android:text="Simpan"
+        android:text="Tambah"
+        android:onClick="lb2"
         android:textColor="@color/putih"
-        android:textSize="16sp"
-        android:onClick="gantipw"
         android:fontFamily="@font/poppinssemibold"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

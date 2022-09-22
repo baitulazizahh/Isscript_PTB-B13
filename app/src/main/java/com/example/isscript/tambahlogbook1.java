@@ -6,15 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class ganti_password extends AppCompatActivity {
+public class tambahlogbook1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ganti_password);
+        setContentView(R.layout.activity_tambahlogbook1);
     }
-    public void gantipw(View view) {
-        Intent intent = new Intent( ganti_password.this, profil.class);
+    public void tambahlogbook(View view) {
+        Intent intent = new Intent( tambahlogbook1.this, tambah_logbook.class);
         startActivity(intent);
     }
 }
