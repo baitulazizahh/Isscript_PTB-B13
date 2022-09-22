@@ -14,7 +14,7 @@ public class sidang_menunggu_acc extends AppCompatActivity {
         setContentView(R.layout.activity_sidang_menunggu_acc);
     }
     public void selesaiajukansidang(View view) {
-        Intent intent = new Intent( sidang_menunggu_acc.this, hs_sidang_menunggu.class);
+        Intent intent = new Intent( sidang_menunggu_acc.this, sidang_acc.class);
         startActivity(intent);
     }
 }
