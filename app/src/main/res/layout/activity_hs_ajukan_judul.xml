@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/putih"
     tools:context=".hs_ajukan_judul">
 
 
@@ -115,7 +116,6 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:background="@color/abulatar"
-                    android:onClick="Detail"
                     app:srcCompat="@drawable/ic_panahkanan" />
 
 
@@ -267,7 +267,6 @@
             android:background="@drawable/button_hijau"
             android:fontFamily="@font/poppinssemibold"
             android:text="Ajukan judul TA"
-            android:onClick="AjukanJudul"
             android:textColor="@color/putih"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -295,6 +294,7 @@
                 android:paddingTop="16dp"
                 android:paddingBottom="8dp"
                 android:text="Beranda"
+                android:onClick="selesailogbook"
                 android:textColor="@color/oren"
                 android:textSize="11sp" />
 

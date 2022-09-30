@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih"
-    tools:context=".sidang_menunggu_acc">
+    tools:context=".sidang_acc">
 
     <ImageView
         android:id="@+id/imageView"
@@ -54,22 +54,36 @@
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="7dp"
                 android:fontFamily="@font/poppinsmedium"
-                android:text="Pengajuan sidang"
+                android:text="Detail sidang"
                 android:textColor="@color/hitam"
                 android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/textView8"
-                android:layout_width="103dp"
+                android:layout_width="60dp"
                 android:layout_height="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/petak_latar"
                 android:fontFamily="@font/poppinsmedium"
-                android:text="Dalam proses"
+                android:text="Selesai"
                 android:textAlignment="center"
-                android:textColor="@color/orentua"
-                android:textSize="12sp" />
+                android:textColor="@color/hijau"
+                android:textSize="12sp"/>
+
+            <ImageButton
+                android:id="@+id/imageView7"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView8"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:onClick="detailsidang"
+                android:background="@color/orenmuda"
+                app:srcCompat="@drawable/ic_panahkanan" />
 
 
         </RelativeLayout>
@@ -136,7 +150,6 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="SIDANG"
-            android:onClick="selesaiajukansidang"
             android:textColor="@color/oren"
             android:textSize="11sp" />
 
@@ -150,8 +163,8 @@
             android:fontFamily="@font/poppinsregular"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
-
             android:text="PROFIL"
+            android:onClick="keprofil"
             android:textColor="@color/hitam"
             android:textSize="11sp" />
 

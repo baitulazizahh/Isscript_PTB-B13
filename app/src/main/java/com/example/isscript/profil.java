@@ -36,4 +36,8 @@ public class profil extends AppCompatActivity {
         Intent intent = new Intent(profil.this, ganti_password.class);
         startActivity(intent);
     }
+    public void Keluar(View view) {
+        Intent intent = new Intent(profil.this, start.class);
+        startActivity(intent);
+    }
 }

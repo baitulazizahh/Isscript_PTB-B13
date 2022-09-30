@@ -14,7 +14,7 @@ public class pilih_pembimbing extends AppCompatActivity {
         setContentView(R.layout.activity_pilih_pembimbing);
     }
     public void Simpan(View view) {
-        Intent intent = new Intent( pilih_pembimbing.this, hs_ajukan_judul.class);
+        Intent intent = new Intent( pilih_pembimbing.this, tambahlogbook1.class);
         startActivity(intent);
     }
 }

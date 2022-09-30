@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih"
-    tools:context=".sidang_menunggu_acc">
+    tools:context=".semhas2">
 
     <ImageView
         android:id="@+id/imageView"
@@ -23,69 +23,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="SIDANG"
+        android:text="SEMHAS"
         android:textColor="@color/hijau"
         android:textSize="21sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view1"
-        android:layout_width="352dp"
-        android:layout_height="77dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/emas"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/semhassaya">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView8"
-                android:layout_alignStart="@+id/textView8"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="7dp"
-                android:fontFamily="@font/poppinsmedium"
-                android:text="Pengajuan sidang"
-                android:textColor="@color/hitam"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="103dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/petak_latar"
-                android:fontFamily="@font/poppinsmedium"
-                android:text="Dalam proses"
-                android:textAlignment="center"
-                android:textColor="@color/orentua"
-                android:textSize="12sp" />
-
-
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/semhassaya"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Sidang saya"
-        android:textColor="@color/hitam"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/card_view1"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView2"
@@ -117,12 +61,13 @@
             android:layout_height="match_parent"
             android:layout_marginStart="102dp"
             android:background="@color/putih"
-            android:drawableTop="@drawable/ic_semhas_hitam"
+            android:drawableTop="@drawable/ic_semhas_warna"
             android:fontFamily="@font/poppinsregular"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="SEMHAS"
-            android:textColor="@color/hitam"
+
+            android:textColor="@color/oren"
             android:textSize="11sp" />
 
         <Button
@@ -131,13 +76,13 @@
             android:layout_height="match_parent"
             android:layout_marginStart="204dp"
             android:background="@color/putih"
-            android:drawableTop="@drawable/ic_sidang_warna"
+            android:drawableTop="@drawable/ic_sidang_hitam"
             android:fontFamily="@font/poppinsregular"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="SIDANG"
-            android:onClick="selesaiajukansidang"
-            android:textColor="@color/oren"
+
+            android:textColor="@color/hitam"
             android:textSize="11sp" />
 
         <Button
@@ -156,5 +101,21 @@
             android:textSize="11sp" />
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="352dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/tombol_hijau"
+        android:fontFamily="@font/poppinssemibold"
+        android:onClick="daftarsemhas"
+        android:text="Ajukan Semhas"
+        android:textColor="@color/putih"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

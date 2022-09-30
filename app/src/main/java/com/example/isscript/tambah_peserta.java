@@ -16,4 +16,7 @@ public class tambah_peserta extends AppCompatActivity {
         Intent intent = new Intent(tambah_peserta.this, daftar_peserta.class);
         startActivity(intent);
     }
+
+    public void siapdaftarsemhas(View view) {
+    }
 }

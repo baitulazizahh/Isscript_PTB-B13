@@ -1,20 +1,20 @@
 package com.example.isscript;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
-import android.view.View;
-import android.os.Bundle;
 
-public class tambah_peserta1 extends AppCompatActivity {
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+public class tambahlogbook2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tambah_peserta1);
+        setContentView(R.layout.activity_tambahlogbook2);
     }
-
-    public void siapdaftarsemhas(View view) {
-        Intent intent = new Intent( tambah_peserta1.this, tambah_peserta.class);
+    public void lb2(View view) {
+        Intent intent = new Intent( tambahlogbook2.this, hs_ajukan_judul2.class);
         startActivity(intent);
     }
 }

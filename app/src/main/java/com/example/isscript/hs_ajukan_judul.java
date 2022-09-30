@@ -14,12 +14,10 @@ public class hs_ajukan_judul extends AppCompatActivity {
         setContentView(R.layout.activity_hs_ajukan_judul);
     }
 
-    public void AjukanJudul(View view) {
-        Intent intent = new Intent( hs_ajukan_judul.this, ajukan_judul.class);
-        startActivity(intent);
-    }
-    public void Detail(View view) {
-        Intent intent = new Intent( hs_ajukan_judul.this, detail_pendaftaran_ta.class);
+
+
+    public void selesailogbook(View view) {
+        Intent intent = new Intent( hs_ajukan_judul.this, hs_selesai_logbook.class);
         startActivity(intent);
     }
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih"
-    tools:context=".detail_sidang">
+    tools:context=".tambahlogbook2">
 
     <ImageView
         android:id="@+id/imageView"
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Detail Sidang"
+        android:text="Tambah Logbook"
         android:fontFamily="@font/poppinssemibold"
         android:textSize="21sp"
         android:textColor="@color/hitam"
@@ -30,14 +30,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
         android:layout_marginTop="41dp"
-        android:onClick="Detail"
-        android:background="@color/putih"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_panahkiri" />
@@ -46,14 +44,13 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
         android:layout_marginTop="21dp"
-        android:text="Nama"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Tanggal"
         android:textColor="@color/hitam"
         android:textSize="14sp"
-        android:fontFamily="@font/poppinssemibold"
 
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
@@ -62,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
         android:layout_marginTop="21dp"
-        android:text="Namasaya"
+        android:text="tanggallogbook"
         android:textColor="@color/hitam"
         android:textSize="14sp"
         android:fontFamily="@font/poppinsmedium"
@@ -78,7 +75,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinssemibold"
 
-        android:text="NIM"
+        android:text="Nama"
         android:textColor="@color/hitam"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/textView10"
@@ -91,7 +88,7 @@
         android:layout_marginStart="145dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinsmedium"
-        android:text="NIMsaya"
+        android:text="namasaya"
         android:textColor="@color/hitam"
 
         android:textSize="14sp"
@@ -106,7 +103,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinssemibold"
 
-        android:text="Pembimbing"
+        android:text="NIM"
         android:textColor="@color/hitam"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/textView10"
@@ -119,7 +116,7 @@
         android:layout_marginStart="145dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinsmedium"
-        android:text="Pembimbingsaya"
+        android:text="nimsaya"
         android:textColor="@color/hitam"
 
         android:textSize="14sp"
@@ -133,7 +130,8 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Judul"
+
+        android:text="Pembimbing"
         android:textColor="@color/hitam"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/textView10"
@@ -146,118 +144,53 @@
         android:layout_marginStart="145dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinsmedium"
-        android:text="Penerapan Enterprise Resource Planning
-(ERP) Untuk Sistem Informasi Penjualan,
-Pembelian, Production Management dan
-Human Resource Management (HRM) Pada
-Toko Trio Cendramata"
+        android:text="pembimbingsaya"
         android:textColor="@color/hitam"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Tanggal"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
+        android:text="Catatan"
+        android:textColor="@color/oren"
+        android:textSize="16sp"
+
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText5"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="235dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText5"
+        android:layout_width="352dp"
+        android:layout_height="52dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/input_tombol"
         android:fontFamily="@font/poppinsmedium"
-        android:text="tanggalsidang"
+        android:hint=""
+        android:paddingStart="20dp"
         android:textColor="@color/hitam"
-        android:textSize="14sp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="8dp"
+    <Button
+        android:id="@+id/button"
+        android:layout_width="352dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/tombol_hijau"
+        android:text="Tambah"
+        android:onClick="lb2"
+        android:textColor="@color/putih"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Pukul"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="235dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:text="jamsidang"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Lokasi"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="235dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:text="lokasisidang"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Penguji"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="235dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:text="pengujisidang"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
