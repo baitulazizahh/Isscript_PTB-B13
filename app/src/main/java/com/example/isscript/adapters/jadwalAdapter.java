@@ -8,10 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class jadwalAdapter extends RecyclerView.Adapter<jadwalAdapter.jadwalViewHolder> {
 
-    Arraylist<Jadwal>
 
-    @NonNull
-    @Override
     public jadwalViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return null;
     }
