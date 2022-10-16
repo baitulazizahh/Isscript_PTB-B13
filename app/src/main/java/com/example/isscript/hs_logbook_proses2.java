@@ -17,10 +17,6 @@ public class hs_logbook_proses2 extends AppCompatActivity {
         Intent intent = new Intent( hs_logbook_proses2.this, tambah_logbook.class);
         startActivity(intent);
     }
-    public void Refresh(View view) {
-        Intent intent = new Intent( hs_logbook_proses.this, hs_logbook_proses3.class);
-        startActivity(intent);
-    }
     public void Detail(View view) {
         Intent intent = new Intent( hs_logbook_proses2.this, detail_pendaftaran_ta.class);
         startActivity(intent);
