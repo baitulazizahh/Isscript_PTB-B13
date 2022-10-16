@@ -145,6 +145,7 @@
         android:text="Selesai"
         android:textColor="@color/putih"
         android:textSize="16sp"
+        android:onClick="selesaitambahpeserta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
