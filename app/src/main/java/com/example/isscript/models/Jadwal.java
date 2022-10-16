@@ -1,47 +1,47 @@
 package com.example.isscript.models;
 
-public class jadwal {
+public class Jadwal {
 
-    String nama;
-    Integer nim;
-    Integer jenis;
+    String Nama;
+    String nim;
+    String jenisAcara;
     String tanggal;
     String jam;
     String lokasi;
 
-    public jadwal(){ }
+    public Jadwal(){ }
 
-    public jadwal(String nama, Integer nim, Integer jenis, String tanggal, String jam, String lokasi) {
-        this.nama = nama;
+    public Jadwal(String Nama, String nim, String jenisAcara, String tanggal, String jam, String lokasi) {
+        this.Nama = Nama;
         this.nim = nim;
-        this.jenis = jenis;
+        this.jenisAcara = jenisAcara;
         this.tanggal = tanggal;
         this.jam = jam;
         this.lokasi = lokasi;
     }
 
     public String getNama() {
-        return nama;
+        return Nama;
     }
 
     public void setNama(String nama) {
-        this.nama = nama;
+        this.Nama = Nama;
     }
 
-    public Integer getNim() {
+    public String getNim() {
         return nim;
     }
 
-    public void setNim(Integer nim) {
+    public void setNim(String nim) {
         this.nim = nim;
     }
 
-    public Integer getJenis() {
-        return jenis;
+    public String getJenisAcara() {
+        return jenisAcara;
     }
 
-    public void setJenis(Integer jenis) {
-        this.jenis = jenis;
+    public void setJenisAcara(String jenisAcara) {
+        this.jenisAcara = jenisAcara;
     }
 
     public String getTanggal() {
