@@ -5,16 +5,15 @@ import android.content.Intent;
 import android.view.View;
 import android.os.Bundle;
 
-public class tambah_peserta1 extends AppCompatActivity {
+public class sidang2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tambah_peserta1);
+        setContentView(R.layout.activity_sidang2);
     }
-
-    public void siapdaftarsemhas(View view) {
-        Intent intent = new Intent( tambah_peserta1.this, tambah_peserta.class);
+    public void daftarsidang(View view) {
+        Intent intent = new Intent(sidang2.this, pengajuan_sidang.class);
         startActivity(intent);
     }
 }

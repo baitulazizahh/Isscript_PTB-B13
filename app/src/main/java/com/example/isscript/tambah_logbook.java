@@ -14,7 +14,7 @@ public class tambah_logbook extends AppCompatActivity {
         setContentView(R.layout.activity_tambah_logbook);
     }
     public void Tambah(View view) {
-        Intent intent = new Intent( tambah_logbook.this, hs_logbook_proses2.class);
+        Intent intent = new Intent( tambah_logbook.this, hs_ajukan_judul.class);
         startActivity(intent);
     }
 }

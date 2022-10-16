@@ -41,7 +41,7 @@
         app:srcCompat="@drawable/ic_panahkiri" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textstatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -79,7 +79,7 @@
         android:text="Nama"
         android:textColor="@color/hitam"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textstatus"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
@@ -107,7 +107,7 @@
         android:text="NIM"
         android:textColor="@color/hitam"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textstatus"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
@@ -135,11 +135,11 @@
         android:text="Pembimbing"
         android:textColor="@color/hitam"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textstatus"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/texttanggal"
         android:layout_width="235dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
@@ -161,8 +161,8 @@
         android:text="Catatan"
         android:textColor="@color/hitam"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintStart_toStartOf="@+id/textstatus"
+        app:layout_constraintTop_toBottomOf="@+id/texttanggal" />
 
     <TextView
         android:id="@+id/textView12"
@@ -175,7 +175,7 @@
         android:textColor="@color/hitam"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/texttanggal" />
 
     <Button
         android:id="@+id/button"
