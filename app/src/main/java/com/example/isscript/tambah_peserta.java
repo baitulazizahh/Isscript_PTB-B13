@@ -33,7 +33,7 @@ public class tambah_peserta extends AppCompatActivity {
     public void siapdaftarsemhas(View view) {
     }
 }
-    ublic ArrayList<Peserta> getPeserta() {
+    public ArrayList<Peserta> getPeserta() {
         ArrayList<Peserta>listPeserta = new ArrayList<>();
 
         listPeserta.add(new Peserta(
