@@ -290,6 +290,7 @@
                 android:fontFamily="@font/poppinsregular"
                 android:paddingTop="16dp"
                 android:paddingBottom="8dp"
+                android:onClick="kemenusemhas"
                 android:text="SEMHAS"
                 android:textColor="@color/hitam"
                 android:textSize="11sp" />
