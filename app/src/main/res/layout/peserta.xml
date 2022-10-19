@@ -15,7 +15,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textnim"
+            android:id="@+id/textNim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="-3dp"
@@ -25,11 +25,11 @@
             android:textColor="@color/hitam"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textnama"
-            app:layout_constraintTop_toBottomOf="@+id/textnama" />
+            app:layout_constraintStart_toStartOf="@+id/textNama"
+            app:layout_constraintTop_toBottomOf="@+id/textNama" />
 
         <TextView
-            android:id="@+id/textnama"
+            android:id="@+id/textNama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"

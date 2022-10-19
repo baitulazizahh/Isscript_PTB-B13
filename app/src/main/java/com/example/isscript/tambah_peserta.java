@@ -30,9 +30,8 @@ public class tambah_peserta extends AppCompatActivity {
 //        public void selesaitambahpeserta(View view) {
 //        };
     }
-
     public ArrayList<Peserta> getPeserta() {
-        ArrayList<Peserta> listPeserta = new ArrayList<>();
+        ArrayList<Peserta>listPeserta = new ArrayList<>();
 
         listPeserta.add(new Peserta(
                 "Baitul Azizah",
@@ -45,7 +44,5 @@ public class tambah_peserta extends AppCompatActivity {
         ));
 
         return listPeserta;
-    }
-
-
+    };
 }
