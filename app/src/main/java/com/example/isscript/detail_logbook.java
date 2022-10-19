@@ -13,8 +13,9 @@ public class detail_logbook extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_logbook);
     }
-    public void editlb1(View view) {
-        Intent intent = new Intent( detail_logbook.this, edit_logbook.class);
+
+    public void Edit (View view) {
+        Intent intent = new Intent(detail_logbook.this, edit_logbook.class);
         startActivity(intent);
     }
 }
