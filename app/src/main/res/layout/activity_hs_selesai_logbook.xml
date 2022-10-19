@@ -406,19 +406,22 @@
                 android:background="@color/abulatar"
                 app:srcCompat="@drawable/ic_panahkanan" />
 
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/button_abu"
-                android:fontFamily="@font/poppinssemibold"
-                android:onClick="tambahlagilogbook"
-                android:text="Tambah logbook"
-                android:textColor="@color/hijau"
-                android:textSize="16sp" />
-
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_abu"
+        android:fontFamily="@font/poppinssemibold"
+        android:onClick="tambahlagilogbook"
+        android:text="Tambah logbook"
+        android:textColor="@color/hijau"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

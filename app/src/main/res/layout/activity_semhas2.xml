@@ -109,7 +109,7 @@
         android:layout_marginBottom="32dp"
         android:background="@drawable/tombol_hijau"
         android:fontFamily="@font/poppinssemibold"
-        android:onClick="daftarsemhas"
+
         android:text="Ajukan Semhas"
         android:textColor="@color/putih"
         android:textSize="16sp"
