@@ -13,7 +13,7 @@ import com.example.isscript.models_listlogbook.logbook;
 
 import java.util.ArrayList;
 
-public class hs_logbook_proses extends AppCompatActivity {
+public class hs_logbook_proses extends AppCompatActivity implements listlogbook_adapter.logbookClickListener{
 
     private RecyclerView rvLogbook;
 
@@ -25,6 +25,7 @@ public class hs_logbook_proses extends AppCompatActivity {
         rvLogbook = findViewById(R.id.rv_logbook);
 
         listlogbook_adapter adapter = new listlogbook_adapter(getlogbook());
+        adapter.setListenerlb(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         rvLogbook.setLayoutManager(layoutManager);
@@ -38,7 +39,16 @@ public class hs_logbook_proses extends AppCompatActivity {
                 "1 Maret 2022",
                 null
         ));
-
+        listlogbook.add(new logbook(
+                "Dalam Proses",
+                "1 Maret 2022",
+                null
+        ));
+        listlogbook.add(new logbook(
+                "Dalam Proses",
+                "1 Maret 2022",
+                null
+        ));
         return listlogbook;
     }
     public void Refresh(View view) {
@@ -48,5 +58,12 @@ public class hs_logbook_proses extends AppCompatActivity {
     public void Detail(View view) {
         Intent intent = new Intent( hs_logbook_proses.this, detail_pendaftaran_ta.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onlogbookClick(logbook logbook) {
+        Intent detaillogbook = new Intent(this, detail_logbook.class);
+        detaillogbook.putExtra("panah",logbook.getPanah());
+        startActivity(detaillogbook);
     }
 }
