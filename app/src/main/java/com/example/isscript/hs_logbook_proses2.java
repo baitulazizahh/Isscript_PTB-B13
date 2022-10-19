@@ -47,22 +47,9 @@ public class hs_logbook_proses2 extends AppCompatActivity implements listlogbook
         ));
         return listlogbook;
     }
-    public void TambahLogbook(View view) {
-        Intent intent = new Intent( hs_logbook_proses2.this, tambah_logbook.class);
-        startActivity(intent);
-    }
-    public void Detail(View view) {
-        Intent intent = new Intent( hs_logbook_proses2.this, detail_pendaftaran_ta.class);
-        startActivity(intent);
-    }
-    public void DetailLogbook(View view) {
-        Intent intent = new Intent( hs_logbook_proses2.this, detail_logbook.class);
-        startActivity(intent);
-    }
-    public void ajukansemhas(View view) {
-        Intent intent = new Intent( hs_logbook_proses2.this, semhas2.class);
-        startActivity(intent);
-    }
+
+
+
     @Override
     public void onlogbookClick(logbook logbook) {
         Intent detaillogbook = new Intent(this, detail_logbook_setelah_acc.class);

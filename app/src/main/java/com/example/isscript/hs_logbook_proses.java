@@ -55,10 +55,7 @@ public class hs_logbook_proses extends AppCompatActivity implements listlogbook_
         Intent intent = new Intent( hs_logbook_proses.this, hs_logbook_proses3.class);
         startActivity(intent);
     }
-    public void Detail(View view) {
-        Intent intent = new Intent( hs_logbook_proses.this, detail_pendaftaran_ta.class);
-        startActivity(intent);
-    }
+
 
     @Override
     public void onlogbookClick(logbook logbook) {
