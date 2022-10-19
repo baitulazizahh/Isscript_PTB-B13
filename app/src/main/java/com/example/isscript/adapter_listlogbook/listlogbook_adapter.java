@@ -17,10 +17,21 @@ import java.util.ArrayList;
 public class listlogbook_adapter extends RecyclerView.Adapter<listlogbook_adapter.listlogbookVH>{
 
     ArrayList<logbook> listLoogbook = new ArrayList<>();
+    logbookClickListener listenerlb;
+
 
     public listlogbook_adapter(ArrayList<logbook> listLoogbook) {
         this.listLoogbook = listLoogbook;
     }
+
+    public void setListLoogbook(ArrayList<logbook> listLoogbook) {
+        this.listLoogbook = listLoogbook;
+    }
+
+    public void setListenerlb(logbookClickListener listenerlb) {
+        this.listenerlb = listenerlb;
+    }
+
 
     @NonNull
     @Override
@@ -43,14 +54,27 @@ public class listlogbook_adapter extends RecyclerView.Adapter<listlogbook_adapte
         return listLoogbook.size();
     }
 
-    public class listlogbookVH extends RecyclerView.ViewHolder {
+    public interface logbookClickListener{
+        void onlogbookClick(logbook logbook);
+    }
+
+    public class listlogbookVH extends RecyclerView.ViewHolder implements View.OnClickListener{
         public TextView textstatus,texttanggal;
         public ImageView imageView8;
+
         public listlogbookVH(@NonNull View itemView) {
             super(itemView);
             textstatus = itemView.findViewById(R.id.textstatus);
             texttanggal = itemView.findViewById(R.id.texttanggal) ;
             imageView8 = itemView.findViewById(R.id.imageView8);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            logbook logbook = listLoogbook.get(getAdapterPosition());
+            listenerlb.onlogbookClick(logbook);
         }
     }
 }
