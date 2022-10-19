@@ -380,7 +380,7 @@
         </androidx.cardview.widget.CardView>
 
 
-    <androidx.recyclerview.widget.RecyclerView
+<androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_logbook"
         android:layout_width="352dp"
         android:layout_height="256dp"
@@ -390,5 +390,20 @@
         app:layout_constraintStart_toStartOf="@+id/logbook"
         app:layout_constraintTop_toBottomOf="@+id/logbook"
         tools:listitem="@layout/activity_listlogbook" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_abu"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Tambah logbook"
+        android:textColor="@color/hijau"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
