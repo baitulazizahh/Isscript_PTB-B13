@@ -41,7 +41,7 @@
         app:srcCompat="@drawable/ic_panahkiri" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textstatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
@@ -135,7 +135,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/texttanggal"
         android:layout_width="235dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
@@ -158,7 +158,7 @@
         android:textSize="16sp"
 
         app:layout_constraintStart_toStartOf="@+id/textInputEditText4"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/texttanggal" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText4"
@@ -182,10 +182,10 @@
         android:layout_marginBottom="23dp"
         android:background="@drawable/tombol_hijau"
         android:text="Simpan"
+        android:onClick="Simpan"
         android:textColor="@color/putih"
         android:fontFamily="@font/poppinssemibold"
         android:textSize="16sp"
-        android:onClick="editya"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
