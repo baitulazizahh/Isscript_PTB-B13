@@ -41,7 +41,7 @@
         app:srcCompat="@drawable/ic_panahkiri" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textstatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
@@ -67,7 +67,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textstatus" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText1"
