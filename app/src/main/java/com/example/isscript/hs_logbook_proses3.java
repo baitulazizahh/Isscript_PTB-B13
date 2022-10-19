@@ -35,17 +35,17 @@ public class hs_logbook_proses3 extends AppCompatActivity implements listlogbook
     public ArrayList<logbook> getlogbook(){
         ArrayList<logbook> listlogbook = new ArrayList<>();
         listlogbook.add(new logbook(
-                "Dalam Proses",
+                "Selesai",
                 "1 Maret 2022",
                 null
         ));
         listlogbook.add(new logbook(
-                "Dalam Proses",
+                "Selesai",
                 "2 Maret 2022",
                 null
         ));
         listlogbook.add(new logbook(
-                "Dalam Proses",
+                "Selesai",
                 "3 Maret 2022",
                 null
         ));
