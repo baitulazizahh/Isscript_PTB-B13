@@ -37,7 +37,7 @@ public class listlogbook_adapter extends RecyclerView.Adapter<listlogbook_adapte
     @Override
     public listlogbookVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.activity_listlogbook, parent, false);
+                .inflate(R.layout.activity_listlogbook2, parent, false);
         return new listlogbookVH(view);
     }
 
