@@ -137,7 +137,7 @@
                 >
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/textNama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
@@ -148,13 +148,13 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/textJenisAcara"
                     android:layout_width="46dp"
                     android:layout_height="14dp"
-                    android:layout_below="@+id/textView"
+                    android:layout_below="@+id/textNama"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="-1dp"
-                    android:layout_toEndOf="@+id/textView3"
+                    android:layout_toEndOf="@+id/textNim"
                     android:background="@drawable/petak_silver"
                     android:fontFamily="@font/poppinssemibold"
                     android:text="SEMHAS"
@@ -163,11 +163,11 @@
                     android:textSize="9sp" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textNim"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView"
-                    android:layout_alignStart="@+id/textView"
+                    android:layout_below="@+id/textNama"
+                    android:layout_alignStart="@+id/textNama"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="-3dp"
                     android:fontFamily="@font/poppinssemibold"
@@ -176,69 +176,69 @@
                     android:textSize="12sp" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imageIconTanggal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView3"
-                    android:layout_alignStart="@+id/textView3"
+                    android:layout_below="@+id/textNim"
+                    android:layout_alignStart="@+id/textNim"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="5dp"
                     app:srcCompat="@drawable/ic_kalender" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/textTanggal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView3"
+                    android:layout_below="@+id/textNim"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="3dp"
-                    android:layout_toEndOf="@+id/imageView4"
+                    android:layout_toEndOf="@+id/imageIconTanggal"
                     android:fontFamily="@font/poppinsmedium"
                     android:text="Sabtu, 13 Maret 2024"
                     android:textColor="@color/hijau"
                     android:textSize="12sp" />
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/imageIconJam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView3"
-                    android:layout_alignStart="@+id/textView3"
+                    android:layout_below="@+id/textNim"
+                    android:layout_alignStart="@+id/textNim"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="25dp"
                     app:srcCompat="@drawable/ic_jam" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textJam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView3"
+                    android:layout_below="@+id/textNim"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="22dp"
-                    android:layout_toEndOf="@+id/imageView4"
+                    android:layout_toEndOf="@+id/imageIconTanggal"
                     android:fontFamily="@font/poppinsmedium"
                     android:text="10.00 WIB"
                     android:textColor="@color/hijau"
                     android:textSize="12sp" />
                 <ImageView
-                    android:id="@+id/imageView6"
+                    android:id="@+id/imageIconLokasi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView3"
-                    android:layout_alignStart="@+id/textView3"
+                    android:layout_below="@+id/textNim"
+                    android:layout_alignStart="@+id/textNim"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="45dp"
                     app:srcCompat="@drawable/ic_pin" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/textLokasi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView3"
+                    android:layout_below="@+id/textNim"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="42dp"
                     android:layout_marginBottom="12dp"
-                    android:layout_toEndOf="@+id/imageView4"
+                    android:layout_toEndOf="@+id/imageIconTanggal"
                     android:fontFamily="@font/poppinsmedium"
                     android:text="Ruang Seminar SI"
                     android:textColor="@color/hijau"
@@ -327,15 +327,71 @@
             app:layout_constraintStart_toStartOf="@+id/card_view"
             app:layout_constraintTop_toBottomOf="@+id/card_view" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_logbook"
-        android:layout_width="352dp"
-        android:layout_height="256dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.24"
-        app:layout_constraintStart_toStartOf="@+id/logbook"
-        app:layout_constraintTop_toBottomOf="@+id/logbook"
-        tools:listitem="@layout/activity_listlogbook" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view2"
+            android:layout_width="352dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/abulatar"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logbook">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView10"
+                    android:layout_alignStart="@+id/textView10"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="1 Maret 2022"
+                    android:textColor="@color/hitam"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="103dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/petak_latar"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Dalam proses"
+                    android:textAlignment="center"
+                    android:textColor="@color/orentua"
+                    android:textSize="12sp" />
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView9"
+                    android:layout_marginStart="288dp"
+                    android:layout_marginTop="27dp"
+                    app:srcCompat="@drawable/ic_panahkanan" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_abu"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Tambah logbook"
+            android:textColor="@color/hijau"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

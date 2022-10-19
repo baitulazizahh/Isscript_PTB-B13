@@ -14,7 +14,7 @@ public class detail_sidang extends AppCompatActivity {
         setContentView(R.layout.activity_detail_sidang);
     }
     public void Detail(View view) {
-        Intent intent = new Intent(detail_sidang.this, sidang_menunggu_acc.class);
+        Intent intent = new Intent(detail_sidang.this, sidang_acc.class);
         startActivity(intent);
     }
 }

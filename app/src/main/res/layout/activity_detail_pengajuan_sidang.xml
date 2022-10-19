@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/ic_garis" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textJenisAcara"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -41,7 +41,7 @@
         app:srcCompat="@drawable/ic_panahkiri" />
 
     <TextView
-        android:id="@+id/textstatus"
+        android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textNim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textTanggal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
@@ -79,11 +79,11 @@
         android:text="NIM"
         android:textColor="@color/hitam"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textstatus"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textNim" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textJam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
@@ -94,10 +94,10 @@
 
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textNim" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textLokasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
@@ -107,8 +107,8 @@
         android:text="Pembimbing"
         android:textColor="@color/hitam"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textstatus"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textJam" />
 
     <TextView
         android:id="@+id/textView7"
@@ -122,7 +122,7 @@
 
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textJam" />
 
     <TextView
         android:id="@+id/textView8"
@@ -135,11 +135,11 @@
         android:text="Judul"
         android:textColor="@color/hitam"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textstatus"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
-        android:id="@+id/texttanggal"
+        android:id="@+id/textView9"
         android:layout_width="235dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
@@ -166,7 +166,7 @@ Toko Trio Cendramata"
         android:textSize="16sp"
 
         app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/texttanggal" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Button
         android:id="@+id/button2"

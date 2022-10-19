@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/ic_garis" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textJenisAcara"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -107,7 +107,6 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="Beranda"
-            android:onClick="Refresh"
             android:textColor="@color/hitam"
             android:textSize="11sp" />
 
@@ -122,7 +121,7 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="SEMHAS"
-
+            android:onClick="tambahpeserta"
             android:textColor="@color/oren"
             android:textSize="11sp" />
 
@@ -137,7 +136,6 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="SIDANG"
-
             android:textColor="@color/hitam"
             android:textSize="11sp" />
 
@@ -151,6 +149,7 @@
             android:fontFamily="@font/poppinsregular"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
+
             android:text="PROFIL"
             android:textColor="@color/hitam"
             android:textSize="11sp" />
