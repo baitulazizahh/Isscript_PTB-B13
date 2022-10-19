@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih"
-    tools:context=".semhas1">
+    tools:context=".ajukan_semhas">
 
     <ImageView
         android:id="@+id/imageView"
@@ -37,7 +37,7 @@
         android:background="@drawable/tombol_hijau"
         android:fontFamily="@font/poppinssemibold"
         android:text="Ajukan seminar hasil"
-        android:onClick="Ajukansemhas"
+        android:onClick="Ajukansh"
         android:textColor="@color/putih"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
@@ -67,7 +67,7 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="Beranda"
-            android:onClick="beranda"
+
             android:textColor="@color/hitam"
             android:textSize="11sp" />
 
@@ -82,7 +82,7 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="SEMHAS"
-            android:onClick="semhas"
+
             android:textColor="@color/oren"
             android:textSize="11sp" />
 
@@ -97,7 +97,7 @@
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="SIDANG"
-            android:onClick="sidang"
+
             android:textColor="@color/hitam"
             android:textSize="11sp" />
 
@@ -111,7 +111,7 @@
             android:fontFamily="@font/poppinsregular"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
-            android:onClick="profil"
+
 
             android:text="PROFIL"
             android:textColor="@color/hitam"

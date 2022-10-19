@@ -14,7 +14,7 @@ public class ajukan_semhas extends AppCompatActivity {
         setContentView(R.layout.activity_ajukan_semhas);
     }
 
-    public void Ajukansemhas(View view) {
+    public void Ajukansh(View view) {
         Intent intent = new Intent( ajukan_semhas.this, pengajuan_semhas.class);
         startActivity(intent);
     }

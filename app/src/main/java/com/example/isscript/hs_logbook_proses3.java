@@ -62,8 +62,8 @@ public class hs_logbook_proses3 extends AppCompatActivity implements listlogbook
     }
     public void DetailLogbook(View view) {
         Intent intent = new Intent( hs_logbook_proses3.this, detail_logbook.class);
-        startActivity(intent);
-    }public void kemenusemhas(View view) {
+        startActivity(intent);}
+    public void kemenusemhas(View view) {
         Intent intent = new Intent( hs_logbook_proses3.this, ajukan_semhas.class);
         startActivity(intent);
     }
