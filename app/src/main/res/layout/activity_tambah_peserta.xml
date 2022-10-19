@@ -272,7 +272,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_listpeserta"
         android:layout_width="352dp"
-        android:layout_height="142dp"
+        android:layout_height="155dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"

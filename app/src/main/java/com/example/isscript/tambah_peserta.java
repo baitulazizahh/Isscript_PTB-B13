@@ -5,8 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.isscript.adapters.PesertaAdapter;
+import com.example.isscript.models.Peserta;
 
 import java.util.ArrayList;
 
@@ -43,9 +45,20 @@ public class tambah_peserta extends AppCompatActivity {
                 "Salma",
                 "2011522002"
         ));
+        listPeserta.add(new Peserta(
+                "Baitul Azizah",
+                "2011521002"
+
+        ));
+        listPeserta.add(new Peserta(
+                "Salma",
+                "2011522002"
+        ));
 
         return listPeserta;
     }
 
 
+    public void selesaitambahpeserta(View view) {
+    }
 }
