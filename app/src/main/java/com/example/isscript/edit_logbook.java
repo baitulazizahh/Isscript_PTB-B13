@@ -13,8 +13,9 @@ public class edit_logbook extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_logbook);
     }
-    public void editya(View view) {
-        Intent intent = new Intent( edit_logbook.this, hs_ajukan_judul2.class);
+
+    public void Simpan (View view) {
+        Intent intent = new Intent(edit_logbook.this, hs_logbook_proses2.class);
         startActivity(intent);
     }
 }

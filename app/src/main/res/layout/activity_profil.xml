@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/ic_garis" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textJenisAcara"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -72,7 +72,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageIconTanggal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
@@ -92,7 +92,7 @@
         android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/imageIconTanggal" />
 
     <TextView
         android:id="@+id/textView20"

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_jadwal"
+    android:layout_width="352dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="@color/hijaumuda"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Salma"
+            android:textColor="@color/hitam"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textJenisAcara"
+            android:layout_width="46dp"
+            android:layout_height="14dp"
+            android:layout_below="@+id/textNama"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/textNim"
+            android:background="@drawable/petak_silver"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="SEMHAS"
+            android:textAlignment="center"
+            android:textColor="@color/silver_tulisan"
+            android:textSize="9sp"
+            app:layout_constraintStart_toEndOf="@+id/textNim"
+            app:layout_constraintTop_toBottomOf="@+id/textNama" />
+
+        <TextView
+            android:id="@+id/textNim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textNama"
+            android:layout_alignStart="@+id/textNama"
+            android:layout_marginTop="-3dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="2011522002"
+            android:textColor="@color/hitam"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/textNama"
+            app:layout_constraintTop_toBottomOf="@+id/textNama" />
+
+        <ImageView
+            android:id="@+id/imageIconTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textNim"
+            android:layout_alignStart="@+id/textNim"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="@+id/textNim"
+            app:layout_constraintTop_toBottomOf="@+id/textNim"
+            app:srcCompat="@drawable/ic_kalender" />
+
+        <TextView
+            android:id="@+id/textTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textNim"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/imageIconTanggal"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Sabtu, 13 Maret 2024"
+            android:textColor="@color/hijau"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageIconTanggal"
+            app:layout_constraintTop_toBottomOf="@+id/textNim" />
+
+        <ImageView
+            android:id="@+id/imageIconJam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textNim"
+            android:layout_alignStart="@+id/textNim"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="@+id/imageIconTanggal"
+            app:layout_constraintTop_toBottomOf="@+id/textNim"
+            app:srcCompat="@drawable/ic_jam" />
+
+        <TextView
+            android:id="@+id/textJam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textNim"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="22dp"
+            android:layout_toEndOf="@+id/imageIconTanggal"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="10.00 WIB"
+            android:textColor="@color/hijau"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageIconJam"
+            app:layout_constraintTop_toBottomOf="@+id/textNim" />
+
+        <ImageView
+            android:id="@+id/imageIconLokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textNim"
+            android:layout_alignStart="@+id/textNim"
+            android:layout_marginTop="45dp"
+            app:layout_constraintStart_toStartOf="@+id/imageIconJam"
+            app:layout_constraintTop_toBottomOf="@+id/textNim"
+            app:srcCompat="@drawable/ic_pin" />
+
+        <TextView
+            android:id="@+id/textLokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textNim"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/imageIconTanggal"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Ruang Seminar SI"
+            android:textColor="@color/hijau"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageIconLokasi"
+            app:layout_constraintTop_toBottomOf="@+id/textNim" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

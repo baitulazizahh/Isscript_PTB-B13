@@ -2,6 +2,7 @@ package com.example.isscript;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -12,6 +13,17 @@ public class hs_logbook_proses3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hs_logbook_proses3);
     }
-
+    public void TambahLogbook(View view) {
+        Intent intent = new Intent( hs_logbook_proses3.this, tambah_logbook.class);
+        startActivity(intent);
+    }
+    public void Detail(View view) {
+        Intent intent = new Intent( hs_logbook_proses3.this, detail_pendaftaran_ta.class);
+        startActivity(intent);
+    }
+    public void DetailLogbook(View view) {
+        Intent intent = new Intent( hs_logbook_proses3.this, detail_logbook.class);
+        startActivity(intent);
+    }
 
 }
