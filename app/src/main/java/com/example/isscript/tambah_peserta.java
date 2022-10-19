@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -60,5 +61,10 @@ public class tambah_peserta extends AppCompatActivity {
 
 
     public void selesaitambahpeserta(View view) {
+        Intent intent = new Intent( tambah_peserta.this, daftar_peserta.class);
+        startActivity(intent);
+    }
+
+    public void tambahpeserta(View view) {
     }
 }
