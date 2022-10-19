@@ -52,7 +52,7 @@ public class hs_logbook_proses extends AppCompatActivity implements listlogbook_
         return listlogbook;
     }
     public void Refresh(View view) {
-        Intent intent = new Intent( hs_logbook_proses.this, hs_logbook_proses2.class);
+        Intent intent = new Intent( hs_logbook_proses.this, hs_logbook_proses3.class);
         startActivity(intent);
     }
     public void Detail(View view) {
