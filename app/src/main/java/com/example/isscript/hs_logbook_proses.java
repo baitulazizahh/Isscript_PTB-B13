@@ -13,6 +13,7 @@ import com.example.isscript.models_listlogbook.logbook;
 
 import java.util.ArrayList;
 
+
 public class hs_logbook_proses extends AppCompatActivity implements listlogbook_adapter.logbookClickListener{
 
     private RecyclerView rvLogbook;
