@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".hs_logbook_proses">
 
-
-
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="411dp"
@@ -327,71 +325,30 @@
             app:layout_constraintStart_toStartOf="@+id/card_view"
             app:layout_constraintTop_toBottomOf="@+id/card_view" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_view2"
-            android:layout_width="352dp"
-            android:layout_height="77dp"
-            android:layout_marginTop="8dp"
-            app:cardBackgroundColor="@color/abulatar"
-            app:cardCornerRadius="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logbook">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_logbook"
+        android:layout_width="352dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/logbook"
+        app:layout_constraintTop_toBottomOf="@+id/logbook"
+        tools:listitem="@layout/activity_listlogbook2" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView10"
-                    android:layout_alignStart="@+id/textView10"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="7dp"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:text="1 Maret 2022"
-                    android:textColor="@color/hitam"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="103dp"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/petak_latar"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:text="Dalam proses"
-                    android:textAlignment="center"
-                    android:textColor="@color/orentua"
-                    android:textSize="12sp" />
-                <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView9"
-                    android:layout_marginStart="288dp"
-                    android:layout_marginTop="27dp"
-                    app:srcCompat="@drawable/ic_panahkanan" />
-
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/button_abu"
-            android:fontFamily="@font/poppinssemibold"
-            android:text="Tambah logbook"
-            android:textColor="@color/hijau"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.508"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/card_view2" />
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_abu"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Tambah logbook"
+        android:textColor="@color/hijau"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_logbook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

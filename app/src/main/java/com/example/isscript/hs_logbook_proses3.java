@@ -66,7 +66,7 @@ public class hs_logbook_proses3 extends AppCompatActivity implements listlogbook
     }
     @Override
     public void onlogbookClick(logbook logbook) {
-        Intent detaillogbook = new Intent(this, detail_logbook.class);
+        Intent detaillogbook = new Intent(this, detail_logbook_setelah_acc.class);
         detaillogbook.putExtra("panah",logbook.getPanah());
         startActivity(detaillogbook);
     }
