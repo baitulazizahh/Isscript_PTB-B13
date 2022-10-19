@@ -52,8 +52,8 @@ public class PesertaAdapter extends RecyclerView.Adapter<PesertaAdapter.PesertaV
 
         public PesertaViewHolder(@NonNull View itemView) {
             super(itemView);
-            textNama = itemView.findViewById(R.id.textnama);
-            textNim = itemView.findViewById(R.id.textnim);
+            textNama = itemView.findViewById(R.id.textNama);
+            textNim = itemView.findViewById(R.id.textNim);
 
         }
     }
