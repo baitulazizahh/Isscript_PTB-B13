@@ -41,12 +41,12 @@ public class hs_logbook_proses extends AppCompatActivity implements listlogbook_
         ));
         listlogbook.add(new logbook(
                 "Dalam Proses",
-                "1 Maret 2022",
+                "2 Maret 2022",
                 null
         ));
         listlogbook.add(new logbook(
                 "Dalam Proses",
-                "1 Maret 2022",
+                "3 Maret 2022",
                 null
         ));
         return listlogbook;
