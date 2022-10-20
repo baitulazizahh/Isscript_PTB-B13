@@ -18,7 +18,7 @@ public class sidang_acc extends AppCompatActivity {
         startActivity(intent);
     }
     public void keprofil(View view) {
-        Intent intent = new Intent( sidang_acc.this, profil.class);
+        Intent intent = new Intent( sidang_acc.this,  profil.class);
         startActivity(intent);
     }
 }
