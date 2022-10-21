@@ -13,7 +13,7 @@ public class activity_login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
     public void Masuk(View view) {
-        Intent intent = new Intent(activity_login.this, hs.class);
+        Intent intent = new Intent(activity_login.this, homescreen.class);
         startActivity(intent);
     }
 }

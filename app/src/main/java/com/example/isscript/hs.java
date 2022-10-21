@@ -38,7 +38,8 @@ public class hs extends AppCompatActivity {
         listJadwal.add(new Jadwal(
                 "Salma",
                 "2011522002",
-                "SEMHAS",
+                null,
+                1,
                 "Rabu, 1 Januari 2023",
                 "10.00 - 12.00 WIB",
                 "Ruang sidang SI"
@@ -46,7 +47,8 @@ public class hs extends AppCompatActivity {
         listJadwal.add(new Jadwal(
                 "Tuti Astuti",
                 "2011522003",
-                "SEMHAS",
+                null,
+                1,
                 "Kamis, 2 Januari 2023",
                 "10.00 - 12.00 WIB",
                 "Ruang sidang SI"
@@ -54,7 +56,8 @@ public class hs extends AppCompatActivity {
         listJadwal.add(new Jadwal(
                 "Cici Melia",
                 "2011522004",
-                "SEMHAS",
+                null,
+                1,
                 "Jumat, 3 Januari 2023",
                 "10.00 - 12.00 WIB",
                 "Ruang sidang SI"
@@ -62,7 +65,8 @@ public class hs extends AppCompatActivity {
         listJadwal.add(new Jadwal(
                 "Salma",
                 "2011522002",
-                "SEMHAS",
+                null,
+                1,
                 "Rabu, 1 Januari 2023",
                 "10.00 - 12.00 WIB",
                 "Ruang sidang SI"
@@ -70,7 +74,8 @@ public class hs extends AppCompatActivity {
         listJadwal.add(new Jadwal(
                 "Tuti Astuti",
                 "2011522003",
-                "SEMHAS",
+                null,
+                1,
                 "Kamis, 2 Januari 2023",
                 "10.00 - 12.00 WIB",
                 "Ruang sidang SI"
@@ -78,7 +83,8 @@ public class hs extends AppCompatActivity {
         listJadwal.add(new Jadwal(
                 "Cici Melia",
                 "2011522004",
-                "SEMHAS",
+                null,
+                1,
                 "Jumat, 3 Januari 2023",
                 "10.00 - 12.00 WIB",
                 "Ruang sidang SI"
