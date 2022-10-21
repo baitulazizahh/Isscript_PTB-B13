@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Isscript"
         tools:targetApi="31">
         <activity
+            android:name=".list_logbook"
+            android:exported="false" />
+        <activity
             android:name=".listlogbook2"
             android:exported="false" />
         <activity

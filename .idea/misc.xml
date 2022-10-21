@@ -67,6 +67,7 @@
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/unggah_berkas.xml" value="0.129" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_activityhomescreenonprogress2.xml" value="0.1675929884566054" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_ajukan_judul.xml" value="0.25" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_ajukan_semhas.xml" value="0.17192982456140352" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_daftar_peserta.xml" value="0.33" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_detail_logbook.xml" value="0.2" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_detail_logbook_setelah_acc.xml" value="0.1675929884566054" />
@@ -92,6 +93,7 @@
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_hs_selesai_logbook.xml" value="0.1600877192982456" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_hs_sidang_acc.xml" value="0.25" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_hs_sidang_menunggu.xml" value="0.22" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_list_logbook.xml" value="0.22" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_login.xml" value="0.11096491228070175" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_login2.xml" value="0.1675929884566054" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_main.xml" value="0.1675929884566054" />
@@ -114,6 +116,7 @@
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_ubah_profil.xml" value="0.2" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/jadwal.xml" value="0.9" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/jadwal_semhas_sidang.xml" value="0.4514637904468413" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/peserta.xml" value="0.17192982456140352" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/semhas1.xml" value="0.17192982456140352" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/sidang1.xml" value="0.17192982456140352" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/tambah_peserta1.xml" value="0.17192982456140352" />
