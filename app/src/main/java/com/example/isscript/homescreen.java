@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.isscript.adapters.JadwalAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -55,5 +57,9 @@ public class homescreen extends AppCompatActivity {
                 return true;
             }
         });
+    }
+    public void ganti(View view) {
+        Intent intent = new Intent(homescreen.this, ganti_password.class);
+        startActivity(intent);
     }
 }

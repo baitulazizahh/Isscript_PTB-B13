@@ -1,5 +1,6 @@
 package com.example.isscript;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -43,6 +44,7 @@ public class Fragment_homescreen extends Fragment {
 
     public Fragment_homescreen() {
         // Required empty public constructor
+
     }
 
     /**
@@ -72,7 +74,9 @@ public class Fragment_homescreen extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
 
         }
+
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -165,7 +169,11 @@ public class Fragment_homescreen extends Fragment {
 //        rvJadwal.setAdapter(new JadwalAdapter(listJadwal));
 //        rvlogbook.setAdapter(new listlogbook_adapter(listLogbook));
         return inflater.inflate(R.layout.fragment_homescreen, container, false);
+
+
     }
+
+
 
 
 }

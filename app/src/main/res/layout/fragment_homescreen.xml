@@ -143,6 +143,20 @@
         app:layout_constraintStart_toStartOf="@+id/button7"
         app:layout_constraintTop_toBottomOf="@+id/rv_jadwal" />
 
+    <TextView
+        android:id="@+id/lihatsemua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Lihat semua"
+        android:textColor="@color/hitam"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/rv_jadwal"
+        app:layout_constraintTop_toBottomOf="@+id/rv_jadwal" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_logbook"
         android:layout_width="352dp"
@@ -160,11 +174,10 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/button_abu"
         android:fontFamily="@font/poppinssemibold"
-        android:onClick="TambahLogbook"
+        android:onClick="ganti"
         android:text="Tambah logbook"
         android:textColor="@color/hijau"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"

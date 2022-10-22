@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih"
-    tools:context=".ganti_password">
+    tools:context=".tambah_peserta_semhas">
 
     <ImageView
         android:id="@+id/imageView"
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Ganti Password"
+        android:text="Tambah Peserta"
         android:fontFamily="@font/poppinssemibold"
         android:textSize="21sp"
         android:textColor="@color/hitam"
@@ -44,14 +44,14 @@
         android:id="@+id/textstatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Password lama"
-        android:textColor="@color/oren"
-        android:textSize="16sp"
+        android:text="Tambah peserta"
 
+        android:textColor="@color/hitam"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/textInputEditText"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText"
@@ -60,83 +60,94 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/input_tombol"
         android:fontFamily="@font/poppinsmedium"
-        android:hint=""
-        android:inputType="textPassword"
+        android:hint="NIM"
+        android:inputType="number"
         android:paddingStart="20dp"
         android:textColor="@color/hitam"
+        android:textColorHint="@color/abutua"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textstatus" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Konfirmasi password"
-        android:textColor="@color/oren"
-        android:textSize="16sp"
-
-        app:layout_constraintStart_toStartOf="@+id/textstatus"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
-
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText2"
+        android:id="@+id/textInputEditText1"
         android:layout_width="352dp"
         android:layout_height="52dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/input_tombol"
         android:fontFamily="@font/poppinsmedium"
-        android:hint=""
-        android:inputType="textPassword"
-        android:textColor="@color/hitam"
+        android:hint="Nama"
         android:paddingStart="20dp"
+        android:textColor="@color/hitam"
+        android:textColorHint="@color/abutua"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textstatus"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Password baru"
-        android:textColor="@color/oren"
-        android:textSize="16sp"
-
         app:layout_constraintStart_toStartOf="@+id/textInputEditText"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="352dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/input_tombol"
-        android:fontFamily="@font/poppinsmedium"
-        android:hint=""
-        android:paddingStart="20dp"
-        android:inputType="textPassword"
-        android:textColor="@color/hitam"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textstatus"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="352dp"
         android:layout_height="66dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/tombol_hijau"
-        android:text="Simpan"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Selesai"
         android:textColor="@color/putih"
         android:textSize="16sp"
-        android:onClick="gantipw"
-        android:fontFamily="@font/poppinssemibold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_listpeserta" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Daftar peserta semhas"
+        android:textColor="@color/hitam"
+        android:textSize="18sp"
+
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/abulatar"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/tombol_secondary"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Tambah peserta"
+        android:textColor="@color/hijau"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText1" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_listpeserta"
+        android:layout_width="352dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        tools:listitem="@layout/peserta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
