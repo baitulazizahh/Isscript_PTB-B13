@@ -39,8 +39,6 @@ public class Fragment_homescreen extends Fragment {
 
     private RecyclerView rvJadwal;
     ArrayList<Jadwal> listJadwal;
-    private RecyclerView rvlogbook;
-    ArrayList<logbook> listLogbook;
 
     public Fragment_homescreen() {
         // Required empty public constructor
@@ -87,7 +85,9 @@ public class Fragment_homescreen extends Fragment {
 
 //        View view = inflater.inflate(R.layout.fragment_homescreen, container, false);
 //        rvJadwal = rvJadwal.findViewById(R.id.rv_jadwal);
-//        rvlogbook = rvlogbook.findViewById(R.id.rv_logbook);
+//        rvJadwal.setLayoutManager(layoutManager);
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(this.getContext());
+//
 //
 //        listJadwal =new ArrayList<>();
 //        listJadwal.add(new Jadwal(
@@ -117,57 +117,10 @@ public class Fragment_homescreen extends Fragment {
 //                "10.00 - 12.00 WIB",
 //                "Ruang sidang SI"
 //        ));
-//        listJadwal.add(new Jadwal(
-//                "Salma",
-//                "2011522002",
-//                null,
-//                1,
-//                "Rabu, 1 Januari 2023",
-//                "10.00 - 12.00 WIB",
-//                "Ruang sidang SI"
-//        ));
-//        listJadwal.add(new Jadwal(
-//                "Tuti Astuti",
-//                "2011522003",
-//                null,
-//                1,
-//                "Kamis, 2 Januari 2023",
-//                "10.00 - 12.00 WIB",
-//                "Ruang sidang SI"
-//        ));
-//        listJadwal.add(new Jadwal(
-//                "Cici Melia",
-//                "2011522004",
-//                null,
-//                1,
-//                "Jumat, 3 Januari 2023",
-//                "10.00 - 12.00 WIB",
-//                "Ruang sidang SI"
-//        ));
 //
-//        listLogbook =new ArrayList<>();
-//        listLogbook.add(new logbook(
-//                "Selesai",
-//                "1 Maret 2022",
-//                null
-//        ));
-//        listLogbook.add(new logbook(
-//                "Selesai",
-//                "2 Maret 2022",
-//                null
-//        ));
-//        listLogbook.add(new logbook(
-//                "Selesai",
-//                "3 Maret 2022",
-//                null
-//        ));
-//        LinearLayoutManager layoutManager = new LinearLayoutManager(this.getContext());
-//        LinearLayoutManager layoutManager2 = new LinearLayoutManager(this.getContext());
-//        rvJadwal.setLayoutManager(layoutManager);
-//        rvlogbook.setLayoutManager(layoutManager2);
+//
 //
 //        rvJadwal.setAdapter(new JadwalAdapter(listJadwal));
-//        rvlogbook.setAdapter(new listlogbook_adapter(listLogbook));
         return inflater.inflate(R.layout.fragment_homescreen, container, false);
 
 
