@@ -14,15 +14,6 @@
         android:theme="@style/Theme.Isscript"
         tools:targetApi="31">
         <activity
-            android:name=".layout_layout_isscript"
-            android:exported="false" />
-        <activity
-            android:name=".tambah_peserta_semhas"
-            android:exported="false" />
-        <activity
-            android:name=".homescreen"
-            android:exported="false" />
-        <activity
             android:name=".profil2"
             android:exported="false" />
         <activity
