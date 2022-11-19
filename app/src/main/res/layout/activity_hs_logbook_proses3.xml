@@ -85,7 +85,7 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="7dp"
                     android:fontFamily="@font/poppinsmedium"
-                    android:text="3 Maret 2022"
+                    android:text="1 Maret 2022"
                     android:textColor="@color/hitam"
                     android:textSize="16sp" />
 
@@ -290,6 +290,7 @@
                 android:fontFamily="@font/poppinsregular"
                 android:paddingTop="16dp"
                 android:paddingBottom="8dp"
+                android:onClick="Kesemhas"
                 android:text="SEMHAS"
                 android:textColor="@color/hitam"
                 android:textSize="11sp" />
@@ -359,6 +360,7 @@
         android:text="Tambah logbook"
         android:textColor="@color/hijau"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"

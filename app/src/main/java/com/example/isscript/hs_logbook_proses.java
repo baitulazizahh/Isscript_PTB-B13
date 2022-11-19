@@ -35,24 +35,24 @@ public class hs_logbook_proses extends AppCompatActivity implements listlogbook_
     public ArrayList<logbook> getlogbook(){
         ArrayList<logbook> listlogbook = new ArrayList<>();
         listlogbook.add(new logbook(
-                "Dalam Proses",
+                "Selesai",
                 "1 Maret 2022",
                 null
         ));
         listlogbook.add(new logbook(
-                "Dalam Proses",
-                "1 Maret 2022",
+                "Selesai",
+                "2 Maret 2022",
                 null
         ));
         listlogbook.add(new logbook(
-                "Dalam Proses",
-                "1 Maret 2022",
+                "Selesai",
+                "3 Maret 2022",
                 null
         ));
         return listlogbook;
     }
     public void Refresh(View view) {
-        Intent intent = new Intent( hs_logbook_proses.this, hs_logbook_proses2.class);
+        Intent intent = new Intent( hs_logbook_proses.this, hs_logbook_proses3.class);
         startActivity(intent);
     }
     public void Detail(View view) {
@@ -62,7 +62,7 @@ public class hs_logbook_proses extends AppCompatActivity implements listlogbook_
 
     @Override
     public void onlogbookClick(logbook logbook) {
-        Intent detaillogbook = new Intent(this, detail_logbook.class);
+        Intent detaillogbook = new Intent(this, detail_logbook_setelah_acc.class);
         detaillogbook.putExtra("panah",logbook.getPanah());
         startActivity(detaillogbook);
     }

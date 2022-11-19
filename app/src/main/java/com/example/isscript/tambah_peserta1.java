@@ -17,4 +17,9 @@ public class tambah_peserta1 extends AppCompatActivity {
         Intent intent = new Intent( tambah_peserta1.this, tambah_peserta.class);
         startActivity(intent);
     }
+
+    public void tambahpeserta(View view) {
+        Intent intent = new Intent( tambah_peserta1.this, tambah_peserta.class);
+        startActivity(intent);
+    }
 }

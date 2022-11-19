@@ -161,10 +161,10 @@
             android:background="@color/putih"
             android:drawableTop="@drawable/ic_profil_hitam"
             android:fontFamily="@font/poppinsregular"
+            android:onClick="keprofil"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="PROFIL"
-            android:onClick="keprofil"
             android:textColor="@color/hitam"
             android:textSize="11sp" />
 

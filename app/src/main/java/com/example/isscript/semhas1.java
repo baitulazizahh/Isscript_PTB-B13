@@ -28,4 +28,8 @@ public class semhas1 extends AppCompatActivity {
         Intent intent = new Intent(semhas1.this, profil.class);
         startActivity(intent);
     }
+    public void Ajukansh(View view) {
+        Intent intent = new Intent( semhas1.this, pengajuan_semhas.class);
+        startActivity(intent);
+    }
 }

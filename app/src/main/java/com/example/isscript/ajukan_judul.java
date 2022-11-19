@@ -14,7 +14,7 @@ public class ajukan_judul extends AppCompatActivity {
         setContentView(R.layout.activity_ajukan_judul);
     }
 
-    public void Simpan(View view) {
+    public void Simpanya(View view) {
         Intent intent = new Intent( ajukan_judul.this, hs_logbook_proses.class);
         startActivity(intent);
     }
