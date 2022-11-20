@@ -13,7 +13,7 @@ public class logbook {
         this.panah = panah;
     }
 
-    public String getStatus() {
+    public String  getStatus() {
         return status;
     }
 

@@ -5,76 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih"
-    tools:context=".a2_homescreen">
+    tools:context=".a9_semhas">
+
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="411dp"
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="97dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_petakijo" />
+        app:srcCompat="@drawable/ic_garis" />
 
     <TextView
-        android:id="@+id/halo"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:text="Halo pejuang,"
-        android:textColor="@color/hijaumuda"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/nama"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="BAITUL AZIZAH"
-        android:textColor="@color/putih"
+        android:text="SEMINAR HASIL"
+        android:textColor="@color/hijau"
         android:textSize="21sp"
-        app:layout_constraintStart_toStartOf="@+id/perjalanansaya"
-        app:layout_constraintTop_toBottomOf="@+id/halo" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/nama"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:srcCompat="@drawable/ic_fotodummykecil" />
-
-    <TextView
-        android:id="@+id/perjalanansaya"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Perjalanan saya"
-        android:textColor="@color/hitam"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/card_view1"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view1"
         android:layout_width="352dp"
         android:layout_height="77dp"
         android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/abulatar"
+        app:cardBackgroundColor="@color/emas"
+        android:onClick="a9detailsemhas"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/perjalanansaya">
+        app:layout_constraintTop_toBottomOf="@+id/semhassaya">
 
-
-
-        <RelativeLayout android:layout_height="match_parent"
-            android:layout_width="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView7"
@@ -83,12 +53,12 @@
                 android:layout_below="@+id/imageView4"
                 android:layout_alignStart="@+id/imageView4"
                 android:layout_marginStart="0dp"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="7dp"
                 android:fontFamily="@font/poppinsmedium"
-                android:text="30 Februari 2022"
+                android:text="Detail seminar hasil"
                 android:textColor="@color/hitam"
                 android:textSize="16sp" />
+
 
             <ImageView
                 android:id="@+id/imageView4"
@@ -96,8 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="12dp"
-                app:srcCompat="@drawable/ic_dalamproses" />
-
+                app:srcCompat="@drawable/ic_selesai" />
 
             <ImageButton
                 android:id="@+id/imageView7"
@@ -109,7 +78,7 @@
                 android:layout_marginStart="280dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:background="@color/abulatar"
+                android:background="@color/orenmuda"
                 app:srcCompat="@drawable/ic_panahkanan" />
 
 
@@ -117,43 +86,117 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/jadwal"
+        android:id="@+id/textstatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Jadwal Seminar Hasil dan Sidang"
+        android:text="Tambah peserta"
         android:textColor="@color/hitam"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/rv_jadwal"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_jadwal"
-        android:layout_width="wrap_content"
-        android:layout_height="124dp"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText"
+        app:layout_constraintTop_toBottomOf="@+id/card_view1" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText"
+        android:layout_width="352dp"
+        android:layout_height="52dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/input_tombol"
+        android:fontFamily="@font/poppinsmedium"
+        android:hint="NIM"
+        android:inputType="number"
+        android:paddingStart="20dp"
+        android:textColor="@color/hitam"
+        android:textColorHint="@color/abutua"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jadwal"
-        tools:listitem="@layout/jadwal" />
+        app:layout_constraintTop_toBottomOf="@+id/textstatus" />
 
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText1"
+        android:layout_width="352dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_tombol"
+        android:fontFamily="@font/poppinsmedium"
+        android:hint="Nama"
+        android:paddingStart="20dp"
+        android:textColor="@color/hitam"
+        android:textColorHint="@color/abutua"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="352dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/tombol_hijau"
+        android:fontFamily="@font/poppinssemibold"
+        android:onClick="a9kedaftarsemhas"
+        android:text="Selesai"
+        android:textColor="@color/putih"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_listpeserta" />
+
+    <TextView
+        android:id="@+id/semhassaya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Semhas saya"
+        android:textColor="@color/hitam"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/card_view1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Daftar peserta semhas"
+        android:textColor="@color/hitam"
+        android:textSize="18sp"
+
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/abulatar"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"/>
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/button_hijau"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/tombol_secondary"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Ajukan judul TA"
-        android:onClick="a2tambahjudul"
-        android:textColor="@color/putih"
+        android:text="Tambah peserta"
+        android:textColor="@color/hijau"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.305"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_view1" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText1" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView2"
@@ -170,13 +213,13 @@
             android:layout_height="match_parent"
             android:layout_marginStart="0dp"
             android:background="@color/putih"
-            android:drawableTop="@drawable/ic_home_warna"
+            android:drawableTop="@drawable/ic_home_hitam"
             android:fontFamily="@font/poppinsregular"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
             android:text="Beranda"
             android:onClick="beranda"
-            android:textColor="@color/oren"
+            android:textColor="@color/hitam"
             android:textSize="11sp" />
 
         <Button
@@ -185,13 +228,13 @@
             android:layout_height="match_parent"
             android:layout_marginStart="102dp"
             android:background="@color/putih"
-            android:drawableTop="@drawable/ic_semhas_hitam"
+            android:drawableTop="@drawable/ic_semhas_warna"
             android:fontFamily="@font/poppinsregular"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
-            android:onClick="semhas"
             android:text="SEMHAS"
-            android:textColor="@color/hitam"
+            android:onClick="semhas"
+            android:textColor="@color/oren"
             android:textSize="11sp" />
 
         <Button
@@ -204,8 +247,8 @@
             android:fontFamily="@font/poppinsregular"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
-            android:onClick="sidang"
             android:text="SIDANG"
+            android:onClick="sidang"
             android:textColor="@color/hitam"
             android:textSize="11sp" />
 
@@ -226,55 +269,15 @@
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-    <TextView
-        android:id="@+id/logbook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Logbook"
-        android:textColor="@color/hitam"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/jadwal"
-        app:layout_constraintTop_toBottomOf="@+id/rv_jadwal" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginTop="24dp"
-        android:background="@null"
-        android:stateListAnimator="@null"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Lihat semua"
-        android:textColor="@color/hitam"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/rv_jadwal"
-        app:layout_constraintTop_toBottomOf="@+id/rv_jadwal" />
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_logbook"
+        android:id="@+id/rv_listpeserta"
         android:layout_width="352dp"
-        android:layout_height="80dp"
+        android:layout_height="142dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logbook"
-        tools:listitem="@layout/activity_listlogbook2" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/button_abu"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Tambah logbook"
-        android:textColor="@color/hijau"
-        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_logbook" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        tools:listitem="@layout/peserta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
