@@ -44,7 +44,7 @@ public class listlogbook_adapter extends RecyclerView.Adapter<listlogbook_adapte
     @Override
     public void onBindViewHolder(@NonNull listlogbookVH holder, int position) {
         logbook logbook = listLoogbook.get(position);
-        holder.textstatus.setText(logbook.getStatus());
+        holder.imageView4.setImageResource(R.drawable.ic_dalamproses);
         holder.texttanggal.setText(logbook.getTanggal());
         holder.imageView8.setImageResource(R.drawable.ic_panahkanan);
     }
@@ -59,12 +59,12 @@ public class listlogbook_adapter extends RecyclerView.Adapter<listlogbook_adapte
     }
 
     public class listlogbookVH extends RecyclerView.ViewHolder implements View.OnClickListener{
-        public TextView textstatus,texttanggal;
-        public ImageView imageView8;
+        public TextView texttanggal;
+        public ImageView imageView8, imageView4;
 
         public listlogbookVH(@NonNull View itemView) {
             super(itemView);
-            textstatus = itemView.findViewById(R.id.textstatus);
+            imageView4 = itemView.findViewById(R.id.imageView4);
             texttanggal = itemView.findViewById(R.id.texttanggal) ;
             imageView8 = itemView.findViewById(R.id.imageView8);
 

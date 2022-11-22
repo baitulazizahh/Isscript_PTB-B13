@@ -13,16 +13,11 @@ public class detail_logbook extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_logbook);
+        setContentView(R.layout.activity_a2_homescreen);
 
         Intent detailIntent = getIntent();
         if(detailIntent != null){
             panah = detailIntent.getStringExtra("panah");
         }
-    }
-
-    public void Edit (View view) {
-        Intent intent = new Intent(detail_logbook.this, edit_logbook.class);
-        startActivity(intent);
     }
 }

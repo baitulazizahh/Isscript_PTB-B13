@@ -19,7 +19,7 @@ public class JadwalAdapter extends RecyclerView.Adapter<JadwalAdapter.JadwalView
     ArrayList<Jadwal> ListJadwal = new ArrayList<>();
 
     public JadwalAdapter(ArrayList<Jadwal> listJadwal) {
-        ListJadwal = listJadwal;
+        this.ListJadwal = listJadwal;
     }
 
     @NonNull

@@ -10,6 +10,7 @@ public class Jadwal {
     String jam;
     String lokasi;
 
+    public Jadwal() {}
 
     public Jadwal(String nama, String nim, String lencana, int jenisAcara, String tanggal, String jam, String lokasi) {
         this.nama = nama;
@@ -20,8 +21,6 @@ public class Jadwal {
         this.jam = jam;
         this.lokasi = lokasi;
     }
-
-
 
     public String getNama() {
         return nama;
