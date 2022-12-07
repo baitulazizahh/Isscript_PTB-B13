@@ -26,8 +26,10 @@ public class notif_salma extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notif_salma);
 
+        // 1. Ambil notification manager
         notificationManager = NotificationManagerCompat.from(this);
 
+        // 2. Membuat channel notifikasi
         createNotificationChannel();
 
         buttonShow = findViewById(R.id.buttonShow);
@@ -43,6 +45,7 @@ public class notif_salma extends AppCompatActivity {
                         stackBuilder.getPendingIntent(0,
                                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
+                // 3. Membuat builder untuk membuat notifikasi
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(notif_salma.this, CHANNEL_ID)
                         .setSmallIcon(R.drawable.ic_notification)
                         .setContentTitle("Lakukan segera!")
@@ -51,6 +54,7 @@ public class notif_salma extends AppCompatActivity {
                         .addAction(R.drawable.ic_photo, "Ganti foto", resultPendingIntent)
                         .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
+                // 4. Membuat objek notifikasi dan menampilkan notifikasi
                 notificationManager.notify(1304, builder.build());
 
                 //Toast.makeText(notif_salma.this, "Test", Toast.LENGTH_SHORT).show();
