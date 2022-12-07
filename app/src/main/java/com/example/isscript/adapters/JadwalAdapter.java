@@ -36,7 +36,6 @@ public class JadwalAdapter extends RecyclerView.Adapter<JadwalAdapter.JadwalView
         holder.textNama.setText(jadwal.getNama());
         holder.textNim.setText(jadwal.getNim());
         holder.imageLencana.setImageResource(R.drawable.lencana_semhas);
-        holder.textJenisAcara.setText(jadwal.getJenisAcara());
         holder.textTanggal.setText(jadwal.getTanggal());
         holder.textJam.setText(jadwal.getJam());
         holder.textLokasi.setText(jadwal.getLokasi());
@@ -63,7 +62,6 @@ public class JadwalAdapter extends RecyclerView.Adapter<JadwalAdapter.JadwalView
             imageLencana = itemView.findViewById(R.id.imageLencana);
             textNama = itemView.findViewById(R.id.textNama);
             textNim = itemView.findViewById(R.id.textNim);
-            textJenisAcara = itemView.findViewById(R.id.textJenisAcara);
             textTanggal = itemView.findViewById(R.id.textTanggal);
             textJam = itemView.findViewById(R.id.textJam);
             textLokasi = itemView.findViewById(R.id.textLokasi);

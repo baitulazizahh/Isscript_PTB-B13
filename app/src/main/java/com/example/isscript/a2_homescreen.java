@@ -37,7 +37,6 @@ public class a2_homescreen extends AppCompatActivity{
                 "Salma",
                 "2011522002",
                 null,
-                1,
                 "Rabu, 1 Januari 2023",
                 "10.00 - 12.00 WIB",
                 "Ruang sidang SI"
@@ -46,7 +45,6 @@ public class a2_homescreen extends AppCompatActivity{
                 "Tuti Astuti",
                 "2011522003",
                 null,
-                1,
                 "Kamis, 2 Januari 2023",
                 "10.00 - 12.00 WIB",
                 "Ruang sidang SI"
@@ -55,7 +53,6 @@ public class a2_homescreen extends AppCompatActivity{
                 "Cici Melia",
                 "2011522004",
                 null,
-                1,
                 "Jumat, 3 Januari 2023",
                 "10.00 - 12.00 WIB",
                 "Ruang sidang SI"
@@ -64,7 +61,6 @@ public class a2_homescreen extends AppCompatActivity{
                 "Salma",
                 "2011522002",
                 null,
-                1,
                 "Rabu, 1 Januari 2023",
                 "10.00 - 12.00 WIB",
                 "Ruang sidang SI"
@@ -73,7 +69,6 @@ public class a2_homescreen extends AppCompatActivity{
                 "Tuti Astuti",
                 "2011522003",
                 null,
-                1,
                 "Kamis, 2 Januari 2023",
                 "10.00 - 12.00 WIB",
                 "Ruang sidang SI"
@@ -82,7 +77,6 @@ public class a2_homescreen extends AppCompatActivity{
                 "Cici Melia",
                 "2011522004",
                 null,
-                1,
                 "Jumat, 3 Januari 2023",
                 "10.00 - 12.00 WIB",
                 "Ruang sidang SI"
@@ -94,7 +88,10 @@ public class a2_homescreen extends AppCompatActivity{
         Intent intent = new Intent(a2_homescreen.this, a8_tambah_judul.class);
         startActivity(intent);
     }
-
+    public void kelistlb(View view) {
+        Intent intent = new Intent(a2_homescreen.this, a5_list_logbook.class);
+        startActivity(intent);
+    }
     public void beranda(View view) {
         Intent intent = new Intent(a2_homescreen.this, a2_homescreen.class);
         startActivity(intent);

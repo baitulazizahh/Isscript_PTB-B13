@@ -5,18 +5,16 @@ public class Jadwal {
     String nama;
     String nim;
     String lencana;
-    int jenisAcara;
     String tanggal;
     String jam;
     String lokasi;
 
     public Jadwal() {}
 
-    public Jadwal(String nama, String nim, String lencana, int jenisAcara, String tanggal, String jam, String lokasi) {
+    public Jadwal(String nama, String nim, String lencana, String tanggal, String jam, String lokasi) {
         this.nama = nama;
         this.nim = nim;
         this.lencana = lencana;
-        this.jenisAcara = jenisAcara;
         this.tanggal = tanggal;
         this.jam = jam;
         this.lokasi = lokasi;
@@ -44,14 +42,6 @@ public class Jadwal {
 
     public void setLencana(String lencana) {
         this.lencana = lencana;
-    }
-
-    public int getJenisAcara() {
-        return jenisAcara;
-    }
-
-    public void setJenisAcara(int jenisAcara) {
-        this.jenisAcara = jenisAcara;
     }
 
     public String getTanggal() {
