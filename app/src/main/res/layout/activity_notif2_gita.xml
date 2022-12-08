@@ -8,7 +8,7 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonshow"
         android:layout_width="352dp"
         android:layout_height="66dp"
         android:background="@drawable/tombol_hijau"

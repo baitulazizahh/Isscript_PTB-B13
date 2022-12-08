@@ -24,7 +24,7 @@ public class notif2_gita extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notif_gta);
+        setContentView(R.layout.activity_notif2_gita);
 
         //ambil notification
         notificationManager = NotificationManagerCompat.from(this);
