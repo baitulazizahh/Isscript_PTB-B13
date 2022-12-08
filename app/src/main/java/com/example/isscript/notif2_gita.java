@@ -50,7 +50,7 @@ public class notif2_gita extends AppCompatActivity {
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(notif2_gita.this, CHANNEL_ID)
                         .setSmallIcon(R.drawable.ic_baseline_notification_important_24)
                         .setContentTitle("Notifikasiku")
-                        .setContentText("Jangan Lupa Makan")
+                        .setContentText("Daftar Semhas Berhasil Gais")
                         .setContentIntent(resultPendingIntent)
                         .addAction(R.drawable.ic_baseline_notification_important_24,"Lihat", resultPendingIntent)
                         .setPriority(NotificationCompat.PRIORITY_DEFAULT);
