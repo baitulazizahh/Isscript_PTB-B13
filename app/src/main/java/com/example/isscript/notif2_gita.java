@@ -12,9 +12,8 @@ import android.content.Intent;
 import android.os.Build;
 import android.view.View;
 import android.os.Bundle;
-import android.os.Handler;
 import android.widget.Button;
-import android.widget.Toast;
+
 
 public class notif2_gita extends AppCompatActivity {
     private static final String CHANNEL_ID = "test_kanal";
