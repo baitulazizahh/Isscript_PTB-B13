@@ -4,13 +4,18 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
-public class MyFirebaseMessagingService extends Service {
+import com.google.firebase.messaging.FirebaseMessagingService;
+import com.google.firebase.messaging.RemoteMessage;
+
+public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public MyFirebaseMessagingService() {
     }
-
     @Override
-    public IBinder onBind(Intent intent) {
-        // TODO: Return the communication channel to the service.
-        throw new UnsupportedOperationException("Not yet implemented");
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        displayNotification(remoteMessage.getNotification());
     }
+
+    private void displayNotification(RemoteMessage.Notification notification) {
+    }
+
 }
