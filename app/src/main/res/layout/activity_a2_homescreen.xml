@@ -253,21 +253,12 @@
         app:layout_constraintEnd_toEndOf="@+id/rv_jadwal"
         app:layout_constraintTop_toBottomOf="@+id/rv_jadwal" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_logbook"
-        android:layout_width="352dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logbook"
-        tools:listitem="@layout/activity_listlogbook2" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button_abu"
         android:fontFamily="@font/poppinssemibold"
         android:text="Tambah logbook"
@@ -276,6 +267,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_logbook" />
+        app:layout_constraintTop_toBottomOf="@+id/logbook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
