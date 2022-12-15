@@ -23,9 +23,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private static final String TAG = "Service-Debug";
     private NotificationManagerCompat notificationManager;
 
-    public MyFirebaseMessagingService() {
-    }
-
     @Override
     public void onNewToken(@NonNull String token) {
         Log.d(TAG, "Refreshed token: " + token);
@@ -33,6 +30,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
+
         displayNotification(remoteMessage.getNotification());
     }
 
@@ -44,30 +42,20 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
             channel.setDescription(description);
-            notificationManager.createNotificationChannel(channel);
+            NotificationManagerCompat.from(this).createNotificationChannel(channel);
         }
 
-
-        Intent resultIntent = new Intent(this, b7_ganti_foto.class);
-
-        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-        stackBuilder.addNextIntentWithParentStack(resultIntent);
-
-        PendingIntent resultPendingIntent =
-                stackBuilder.getPendingIntent(0,
-                        PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
         // 3. Membuat builder untuk membuat notifikasi
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_notification)
-                .setContentTitle("Lakukan segera!")
-                .setContentText("Wah, foto profil kamu udah expired, yuk ganti dengan yang baru")
-                //.setContentIntent(resultPendingIntent)
-                .addAction(R.drawable.ic_photo, "Ganti foto", resultPendingIntent)
+                .setContentTitle(notification.getTitle())
+                .setContentText(notification.getBody())
+
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
         // 4. Membuat objek notifikasi dan menampilkan notifikasi
-        notificationManager.notify(1304, builder.build());
+        NotificationManagerCompat.from(this).notify(1304, builder.build());
 
         //Toast.makeText(notif_salma.this, "Test", Toast.LENGTH_SHORT).show();
     }
