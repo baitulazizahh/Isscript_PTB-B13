@@ -14,11 +14,39 @@ import com.example.isscript.models.Jadwal;
 import java.util.ArrayList;
 
 public class a2_homescreen extends AppCompatActivity{
+
+/*    private Boolean isLoggedIn = false;
+    private ActivityMainBinding binding;
+    //RecyclerView rv_kelas;
+    String token;*/
+
+
+
     private RecyclerView rvJadwal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /*binding = ActivityMainBinding.inflate(getLayoutInflater());
+        View v = binding.getRoot();
+        setContentView(v);
+
+        Intent mainIntent = getIntent();
+        String username = mainIntent.getStringExtra("USERX");
+        isLoggedIn = mainIntent.getBooleanExtra("LOGX", false);
+
+        SharedPreferences sharedPref = getSharedPreferences(
+                "com.example.isscript",
+                MODE_PRIVATE);
+        String token = sharedPref.getString("token", "");
+
+        if (token.equals("")) {
+            //Panggil activity Login
+            Intent LoginIntent = new Intent(this, a1_login.class);
+            startActivity(loginIntent);
+            finish();
+        }*/
+
         setContentView(R.layout.activity_a2_homescreen);
 
         rvJadwal = findViewById(R.id.rv_jadwal);
@@ -108,4 +136,17 @@ public class a2_homescreen extends AppCompatActivity{
         Intent intent = new Intent(a2_homescreen.this, b6_profil.class);
         startActivity(intent);
     }
+
+    /*public void requestData() {
+        String BASE_URL = "http://ptb-api.husnilkamil.my.id/";
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(new OkHttpClient.Builder().build())
+                .build();
+
+        StoryEndpoint client = retrofit.create(StoryEndpoint.class);
+
+        Call<GetStoryResponse> call = client.getStories(token);
+    }*/
 }
