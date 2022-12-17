@@ -3,14 +3,27 @@ package com.example.isscript;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.example.isscript.api.LoginResponse;
 import com.example.isscript.api.StoryEndpoint;
 
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Response;
+import retrofit2.Call;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+
 public class a1_login extends AppCompatActivity {
+
+    EditText editUsername, editPassword;
+    String username, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,20 +38,22 @@ public class a1_login extends AppCompatActivity {
     public void onLoginButtonClicked (View view) {
 
         String BASE_URL="http://ptb-api.husnilkamil.my.id/";
+        editUsername = findViewById(R.id.textEditUsername);
+        editPassword = findViewById(R.id.textEditPassword);
 
-        username = binding.textEditUsername.getText().toString();
-        password = binding.textEditPassword.getText().toString();
+        username = editUsername.getText().toString();
+        password = editPassword.getText().toString();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(new OkHttpClient.Builder().build())
-                .build();t6
+                .build();
 
         StoryEndpoint client = retrofit.create(StoryEndpoint.class);
 
-        Call <LoginResponse> call = client.loginToServer(username, password);
-        call.enqueue(new Callback<LoginResponse>() {
+        Call<LoginResponse> call = client.loginToServer(username, password);
+        call.enqueue(new Callback <LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 LoginResponse loginResponse = response.body();
@@ -54,7 +69,7 @@ public class a1_login extends AppCompatActivity {
                     editor.putString("TOKEN", token);
                     editor.apply();
 
-                    Toast.makeText(LoginActivity.this, "Berhasil login", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(a1_login.this, "Berhasil login", Toast.LENGTH_SHORT).show();
                     Intent mainIntent = new Intent(a1_login.this, a2_homescreen.class);
                     mainIntent.putExtra("USERX", username);
                     mainIntent.putExtra("LOGX", true);
@@ -64,6 +79,6 @@ public class a1_login extends AppCompatActivity {
                     Toast.makeText(a1_login.this, "Gagal Login", Toast.LENGTH_SHORT).show();
                 }
             }
-        }
+        });
     }
 }

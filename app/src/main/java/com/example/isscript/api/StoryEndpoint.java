@@ -1,13 +1,15 @@
 package com.example.isscript.api;
 
+import retrofit2.Call;
+import retrofit2.http.Field;
+import retrofit2.http.POST;
+
 public interface StoryEndpoint {
 
-    @POST("vi/login")
-    Call<LoginResponse> LoginToServer(
-            @Field("email") String email,
+    @POST("v1/login")
+    Call<LoginResponse> loginToServer(
+            @Field("username") String username,
             @Field("password") String password
     );
 
-    @GET("v1/stories")
-    Call <GetStoryResponse> getStories (@Header("Authorization") String token);
 }

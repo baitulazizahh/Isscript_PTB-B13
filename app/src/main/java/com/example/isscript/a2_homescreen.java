@@ -5,29 +5,31 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
 import com.example.isscript.adapters.JadwalAdapter;
+import com.example.isscript.api.StoryEndpoint;
 import com.example.isscript.models.Jadwal;
 
 import java.util.ArrayList;
 
+import okhttp3.OkHttpClient;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class a2_homescreen extends AppCompatActivity{
 
-/*    private Boolean isLoggedIn = false;
-    private ActivityMainBinding binding;
-    //RecyclerView rv_kelas;
-    String token;*/
+
+    private Boolean isLoggedIn = false;
+    String token;
 
     private RecyclerView rvJadwal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /*binding = ActivityMainBinding.inflate(getLayoutInflater());
-        View v = binding.getRoot();
-        setContentView(v);
 
         Intent mainIntent = getIntent();
         String username = mainIntent.getStringExtra("USERX");
@@ -40,10 +42,10 @@ public class a2_homescreen extends AppCompatActivity{
 
         if (token.equals("")) {
             //Panggil activity Login
-            Intent LoginIntent = new Intent(this, a1_login.class);
+            Intent loginIntent = new Intent(this, a1_login.class);
             startActivity(loginIntent);
             finish();
-        }*/
+        }
 
         setContentView(R.layout.activity_a2_homescreen);
 
@@ -135,7 +137,7 @@ public class a2_homescreen extends AppCompatActivity{
         startActivity(intent);
     }
 
-    /*public void requestData() {
+    public void requestData() {
         String BASE_URL = "http://ptb-api.husnilkamil.my.id/";
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -144,20 +146,5 @@ public class a2_homescreen extends AppCompatActivity{
                 .build();
 
         StoryEndpoint client = retrofit.create(StoryEndpoint.class);
-
-        Call<GetStoryResponse> call = client.getStories(token);
-        call.enqueue(new Callback<GetStoryResponse>() {
-
-            @Override
-            public void onResponse(Call<GetStoryResponse> call, Response<GetStoryResponse> response) {
-                GetStoryResponse getStoryResponse = response.body();
-                List<ListStoryItems> ListStory = getstoryResponse.getListStory();
-            }
-
-            @Override
-            public void onfailure(Call<GetStoryResponse> call, Throwable t) {
-
-            }
-        });
-    }*/
+    }
 }
