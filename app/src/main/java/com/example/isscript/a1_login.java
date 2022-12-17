@@ -22,7 +22,7 @@ public class a1_login extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*public void onLoginButtonClicked (View view) {
+    public void onLoginButtonClicked (View view) {
 
         String BASE_URL="http://ptb-api.husnilkamil.my.id/";
 
@@ -40,9 +40,9 @@ public class a1_login extends AppCompatActivity {
         Call <LoginResponse> call = client.loginToServer(username, password);
         call.enqueue(new Callback<LoginResponse>() {
             @Override
-            public void onResponse (Call<LoginResponse> call, Response <LoginResponse> response) {
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 LoginResponse loginResponse = response.body();
-                if (!loginResponse.isError()){
+                if (!loginResponse.isError()) {
                     LoginResult loginResult = loginResponse.getLoginResult();
                     String token = loginResult.getToken();
 
@@ -62,5 +62,8 @@ public class a1_login extends AppCompatActivity {
 
                 } else {
                     Toast.makeText(a1_login.this, "Gagal Login", Toast.LENGTH_SHORT).show();
-                }*/
+                }
+            }
+        }
+    }
 }
