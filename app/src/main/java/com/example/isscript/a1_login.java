@@ -19,7 +19,6 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-
 public class a1_login extends AppCompatActivity {
 
     EditText editUsername, editPassword;
