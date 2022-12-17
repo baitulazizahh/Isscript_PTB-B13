@@ -33,7 +33,7 @@ public class a1_login extends AppCompatActivity {
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(new OkHttpClient.Builder().build())
-                .build();
+                .build();t6
 
         StoryEndpoint client = retrofit.create(StoryEndpoint.class);
 

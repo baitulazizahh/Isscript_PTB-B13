@@ -15,10 +15,10 @@ import java.util.ArrayList;
 
 public class a2_homescreen extends AppCompatActivity{
 
-    private Boolean isLoggedIn = false;
+/*    private Boolean isLoggedIn = false;
     private ActivityMainBinding binding;
     //RecyclerView rv_kelas;
-    String token;
+    String token;*/
 
     private RecyclerView rvJadwal;
 
@@ -135,7 +135,7 @@ public class a2_homescreen extends AppCompatActivity{
         startActivity(intent);
     }
 
-    public void requestData() {
+    /*public void requestData() {
         String BASE_URL = "http://ptb-api.husnilkamil.my.id/";
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -159,5 +159,5 @@ public class a2_homescreen extends AppCompatActivity{
 
             }
         });
-    }
+    }*/
 }
