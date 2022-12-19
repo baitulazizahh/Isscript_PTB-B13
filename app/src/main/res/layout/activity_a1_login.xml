@@ -35,7 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/textEditUsername"
+        android:id="@+id/idusername"
         android:layout_width="352dp"
         android:layout_height="70dp"
         android:layout_marginTop="48dp"
@@ -56,7 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/selamatdtg" />
 
     <EditText
-        android:id="@+id/textEditPassword"
+        android:id="@+id/idpassword"
         android:layout_width="352dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -75,16 +75,15 @@
         android:textColorHint="@color/abutua"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEditUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/idusername" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/idbuttonlogin"
         android:layout_width="352dp"
         android:layout_height="66dp"
         android:layout_marginBottom="23dp"
         android:background="@drawable/button_hijau"
         android:text="Masuk"
-        android:onClick="a1masuk"
         android:textColor="@color/putih"
         android:textSize="16sp"
         android:fontFamily="@font/poppinssemibold"

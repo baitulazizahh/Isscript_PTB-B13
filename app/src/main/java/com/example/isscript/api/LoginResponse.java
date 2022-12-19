@@ -4,24 +4,26 @@ import com.google.gson.annotations.SerializedName;
 
 public class LoginResponse{
 
-	@SerializedName("authorisation")
-	private Authorisation authorisation;
+	private String username;
+	private String password;
 
-	@SerializedName("user")
-	private User user;
-
-	@SerializedName("status")
-	private String status;
-
-	public Authorisation getAuthorisation(){
-		return authorisation;
+	public String getUsername() {
+		return username;
 	}
 
-	public User getUser(){
-		return user;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public String getStatus(){
-		return status;
+	public String getPassword() {
+		return password;
 	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+
+
 }
