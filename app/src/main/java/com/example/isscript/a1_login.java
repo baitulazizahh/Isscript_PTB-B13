@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.isscript.datamodels.LoginResponse;
+import com.example.isscript.datamodels.User;
 import com.example.isscript.retrofit.StoryClient;
 
 import java.util.Objects;
@@ -88,6 +89,7 @@ public class a1_login extends AppCompatActivity {
                                 SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
                                 SharedPreferences.Editor editor= sharedPref.edit();
                                 editor.putString("TOKEN", token);
+
                                 editor.apply();
 
 

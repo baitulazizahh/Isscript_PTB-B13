@@ -6,6 +6,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.example.isscript.datamodels.User;
 
 public class b6_profil extends AppCompatActivity {
 
@@ -15,8 +20,6 @@ public class b6_profil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b6_profil);
 
-        SharedPreferences sharedPref = getSharedPreferences("pref", MODE_PRIVATE);
-        String token = sharedPref.getString("TOKEN", "");
     }
 
     public void logout(View view) {
@@ -28,6 +31,33 @@ public class b6_profil extends AppCompatActivity {
         intent5.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent5);
     }
+
+/*    public void tampilUser(User user) {
+        SharedPreferences sharedPref = getSharedPreferences("pref", MODE_PRIVATE);
+        SharedPreferences.Editor editor= sharedPref.edit();
+        editor.putInt("id", user.getId());
+        editor.putString("nama", user.getName());
+        editor.putString("nim", user.getUsername());
+
+        editor.apply();
+
+    }*/
+
+/*    public boolean isLoggedIn(){
+        SharedPreferences sharedPref = getSharedPreferences("pref", MODE_PRIVATE);
+        return sharedPref.getInt("id",-1)!= -1;
+    }
+
+    public User getUser(){
+        SharedPreferences sharedPref = getSharedPreferences("pref", MODE_PRIVATE);
+
+        return new User(
+                sharedPref.getInt("id", -1),
+                sharedPref.getString("nama", null),
+                sharedPref.getString("nim", null)
+        );
+
+    }*/
 
     public void b6kegantifoto(View view) {
         Intent intent = new Intent(b6_profil.this, b7_ganti_foto.class);

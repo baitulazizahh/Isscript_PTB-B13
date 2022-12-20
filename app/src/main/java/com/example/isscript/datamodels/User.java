@@ -92,7 +92,7 @@ public class User{
 		return twoFactorRecoveryCodes;
 	}
 
-	public String getName(){
+	public  String getName(){
 		return name;
 	}
 
@@ -112,7 +112,7 @@ public class User{
 		return email;
 	}
 
-	public String getUsername(){
+	public  String getUsername(){
 		return username;
 	}
 }

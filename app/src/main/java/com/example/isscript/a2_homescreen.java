@@ -20,8 +20,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class a2_homescreen extends AppCompatActivity{
 
-    /*private Boolean isLoggedIn = false;
-    String token;*/
+    private Boolean isLoggedIn = false;
+    String token;
 
     private RecyclerView rvJadwal;
 
@@ -32,21 +32,16 @@ public class a2_homescreen extends AppCompatActivity{
         SharedPreferences sharedPref = getSharedPreferences("pref", MODE_PRIVATE);
         String token = sharedPref.getString("TOKEN", "");
 
-        /*Intent mainIntent = getIntent();
+        Intent mainIntent = getIntent();
         String username = mainIntent.getStringExtra("USERX");
         isLoggedIn = mainIntent.getBooleanExtra("LOGX", false);
-
-        SharedPreferences sharedPref = getSharedPreferences(
-                "com.example.isscript",
-                MODE_PRIVATE);
-        String token = sharedPref.getString("token", "");
 
         if (token.equals("")) {
             //Panggil activity Login
             Intent loginIntent = new Intent(this,a1_login.class);
             startActivity(loginIntent);
             finish();
-        }*/
+        }
         setContentView(R.layout.activity_a2_homescreen);
 
 

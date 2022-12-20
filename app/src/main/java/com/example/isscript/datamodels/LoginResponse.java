@@ -17,9 +17,7 @@ public class LoginResponse{
         return authorisation;
     }
 
-    public User getUser(){
-        return user;
-    }
+
 
     public String getStatus(){
         return status;
