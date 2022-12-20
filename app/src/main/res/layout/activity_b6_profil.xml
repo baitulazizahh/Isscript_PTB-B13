@@ -115,6 +115,7 @@
         android:background="@drawable/tombol_keluar"
         android:fontFamily="@font/poppinssemibold"
         android:text="Keluar akun"
+        android:onClick="logout"
         android:textColor="@color/oren"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"

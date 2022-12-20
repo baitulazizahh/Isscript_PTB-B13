@@ -1,4 +1,4 @@
-package com.example.isscript.api;
+package com.example.isscript.datamodels;
 
 import com.google.gson.annotations.SerializedName;
 

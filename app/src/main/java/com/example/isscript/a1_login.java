@@ -5,99 +5,108 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
-import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.isscript.api.ApiClient;
-import com.example.isscript.api.Authorisation;
-import com.example.isscript.api.LoginRequest;
-import com.example.isscript.api.LoginResponse;
-import com.google.android.material.textfield.TextInputEditText;
+import com.example.isscript.datamodels.LoginResponse;
+import com.example.isscript.retrofit.StoryClient;
 
-import java.io.Serializable;
+import java.util.Objects;
 
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class a1_login extends AppCompatActivity {
 
-    EditText username, password;
-    Button buttonlogin;
-
+    EditText edittextusername, editpassword;
+    Button login_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a1_login);
 
-        username = findViewById(R.id.idusername);
-        password = findViewById(R.id.idpassword);
-        buttonlogin = findViewById(R.id.idbuttonlogin);
 
-        buttonlogin.setOnClickListener(new View.OnClickListener() {
+        login_btn = findViewById(R.id.login_btn);
+
+        login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (TextUtils.isEmpty(username.getText().toString())||TextUtils.isEmpty(password.getText().toString())){
-                    Toast.makeText(a1_login.this, "Username / Password Required", Toast.LENGTH_LONG).show();
-                } else{
-                    login();
-
-                }
-
+                cekLogin();
             }
         });
+
+
     }
 
-    public void login(){
+    public void login(View view) {
+        Intent intent = new Intent(a1_login.this, a2_homescreen.class);
+        startActivity(intent);
+    }
 
-        LoginRequest loginRequest = new LoginRequest();
-        loginRequest.setUsername(username.getText().toString());
-        loginRequest.setPassword(password.getText().toString());
+    public void cekLogin() {
+        edittextusername = findViewById(R.id.idusername);
+        editpassword = findViewById(R.id.idpassword);
+        login_btn = findViewById(R.id.login_btn);
 
-        Call<LoginResponse> loginResponseCall = ApiClient.getUserService().userlogin(loginRequest);
-        loginResponseCall.enqueue(new Callback<LoginResponse>() {
+        String username = edittextusername.getText().toString();
+        String password = editpassword.getText().toString();
+
+        login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                if (response.isSuccessful()){
-                    Toast.makeText(a1_login.this, "Berhasil login", Toast.LENGTH_LONG).show();
-                    LoginResponse loginResponse = response.body();
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                           /* startActivity(new Intent(a1_login.this, a2_homescreen.class).putExtra("data", loginResponse.getUsername()));*/
-                            Response response1 = Response.get();
-                            String token = response1.getToken();
+            public void onClick(View view) {
+                String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
 
-                            SharedPreferences sharedPref = getSharedPreferences(
-                                    "com.example.isscript",
-                                    MODE_PRIVATE);
+                Retrofit retrofit = new Retrofit.Builder()
+                        .baseUrl(API_BASE_URL)
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .client(new OkHttpClient.Builder().build())
+                        .build();
 
-                            SharedPreferences.Editor editor = sharedPref.edit();
-                            editor.putString("TOKEN", token);
-                            editor.apply();
+                StoryClient client = retrofit.create(StoryClient.class);
 
-                            Toast.makeText(a1_login.this, "Berhasil login", Toast.LENGTH_SHORT).show();
-                            Intent mainIntent = new Intent(a1_login.this, a2_homescreen.class);
-                            mainIntent.putExtra("USERX", (Serializable) username);
-                            mainIntent.putExtra("LOGX", true);
-                            startActivity(mainIntent);
+                Call<LoginResponse> call = client.login(username, password);
+
+                call.enqueue(new Callback<LoginResponse>() {
+                    @Override
+                    public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+
+                        if (response.isSuccessful()) {
+                            LoginResponse loginResponse = response.body();
+                            if (loginResponse != null && Objects.equals(loginResponse.getStatus(), "success")) {
+                                Toast.makeText(a1_login.this, "Berhasil Login", Toast.LENGTH_SHORT).show();
+
+                                String token = loginResponse.getAuthorisation().getToken();
+
+                                SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
+                                SharedPreferences.Editor editor= sharedPref.edit();
+                                editor.putString("TOKEN", token);
+                                editor.apply();
+
+
+                                Intent Intent = new Intent(a1_login.this, a2_homescreen.class);
+                                startActivity(Intent);
+                            }
+                        } else {
+                            Log.e("LoginActivity", response.message());
+                            Toast.makeText(a1_login.this, "Username/password anda salah", Toast.LENGTH_SHORT).show();
                         }
-                    },700);
-                }else {
-                    Toast.makeText(a1_login.this, "Gagal Login", Toast.LENGTH_LONG).show();
-                }
-            }
 
-            @Override
-            public void onFailure(Call<LoginResponse> call, Throwable t) {
-                Toast.makeText(a1_login.this, "Throwable "+ t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onFailure(Call<LoginResponse> call, Throwable t) {
+                        Toast.makeText(a1_login.this, "Gagal login", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
     }
-
 }
