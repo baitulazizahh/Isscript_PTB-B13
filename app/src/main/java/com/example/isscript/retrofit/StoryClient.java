@@ -1,5 +1,6 @@
 package com.example.isscript.retrofit;
 
+import com.example.isscript.datamodels.GantipwResponse;
 import com.example.isscript.datamodels.LoginResponse;
 import com.example.isscript.datamodels.ProfilResponse;
 
@@ -18,5 +19,9 @@ public interface StoryClient {
 
     @GET("api/me")
     Call<ProfilResponse> profill(@Header("Authorization")String token);
+
+    /*@FormUrlEncoded
+    @POST("/api/password")
+    Call<GantipwResponse> gantii(@Field("username") String username, @Field("password") String password);*/
 
 }
