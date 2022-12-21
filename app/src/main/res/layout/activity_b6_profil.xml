@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintTop_toBottomOf="@+id/idtextView20" />
 
     <Button
         android:id="@+id/button2"
@@ -87,7 +87,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Baitul Azizah"
         android:textColor="@color/hitam"
         android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,12 +94,11 @@
         app:layout_constraintTop_toBottomOf="@+id/imageIconTanggal" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/idtextView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:fontFamily="@font/poppinsmedium"
-        android:text="2011521002"
         android:textColor="@color/abutua"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,7 +113,6 @@
         android:background="@drawable/tombol_keluar"
         android:fontFamily="@font/poppinssemibold"
         android:text="Keluar akun"
-        android:onClick="logout"
         android:textColor="@color/oren"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -187,7 +184,6 @@
             android:fontFamily="@font/poppinsregular"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
-            android:onClick="profil"
             android:text="PROFIL"
             android:textColor="@color/oren"
             android:textSize="11sp" />

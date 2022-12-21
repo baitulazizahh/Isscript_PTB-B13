@@ -8,13 +8,21 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.isscript.adapters.JadwalAdapter;
+import com.example.isscript.datamodels.ProfilResponse;
 import com.example.isscript.models.Jadwal;
+import com.example.isscript.retrofit.StoryClient;
 
 import java.util.ArrayList;
 
 import okhttp3.OkHttpClient;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -22,6 +30,7 @@ public class a2_homescreen extends AppCompatActivity{
 
     private Boolean isLoggedIn = false;
     String token;
+    TextView tvnama;
 
     private RecyclerView rvJadwal;
 
@@ -44,12 +53,48 @@ public class a2_homescreen extends AppCompatActivity{
         }
         setContentView(R.layout.activity_a2_homescreen);
 
-
         rvJadwal = findViewById(R.id.rv_jadwal);
         JadwalAdapter adapter = new JadwalAdapter(getJadwal());
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         rvJadwal.setLayoutManager(layoutManager);
         rvJadwal.setAdapter(adapter);
+
+        tampilNama();
+    }
+
+    public void tampilNama(){
+        tvnama = findViewById(R.id.username);
+
+        SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
+        String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(API_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(new OkHttpClient.Builder().build())
+                .build();
+        StoryClient client = retrofit.create(StoryClient.class);
+
+        Call<ProfilResponse> call = client.profill("Bearer "+token);
+        call.enqueue(new Callback<ProfilResponse>() {
+            @Override
+            public void onResponse(Call<ProfilResponse> call, Response<ProfilResponse> response) {
+                if (response.isSuccessful()){
+                    if (!response.isSuccessful()) {
+                        tvnama.setText("Nama mahasiswa");
+                        return;
+                    }else {
+                        ProfilResponse profilResponse =response.body();
+
+                        String name = profilResponse.getName();
+                        tvnama.setText(name);
+                    }
+                }
+            }
+            @Override
+            public void onFailure(Call<ProfilResponse> call, Throwable t) {
+                Toast.makeText(a2_homescreen.this, "Terjadi error", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     public ArrayList<Jadwal> getJadwal() {
@@ -126,20 +171,9 @@ public class a2_homescreen extends AppCompatActivity{
         Intent intent = new Intent(a2_homescreen.this, b3_sidang.class);
         startActivity(intent);
     }
+
     public void profil(View view) {
         Intent intent = new Intent(a2_homescreen.this, b6_profil.class);
         startActivity(intent);
     }
-/*
-    public void requestData() {
-        String BASE_URL = "http://ptb-api.husnilkamil.my.id/";
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .client(new OkHttpClient.Builder().build())
-                .build();
-
-        StoryEndpoint client = retrofit.create(StoryEndpoint.class);
-    }*/
-
 }

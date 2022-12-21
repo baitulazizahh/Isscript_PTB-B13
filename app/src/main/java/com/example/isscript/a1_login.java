@@ -34,7 +34,6 @@ public class a1_login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a1_login);
 
-
         login_btn = findViewById(R.id.login_btn);
 
         login_btn.setOnClickListener(new View.OnClickListener() {
@@ -43,14 +42,7 @@ public class a1_login extends AppCompatActivity {
                 cekLogin();
             }
         });
-
-
     }
-
-/*    public void login(View view) {
-        Intent intent = new Intent(a1_login.this, a2_homescreen.class);
-        startActivity(intent);
-    }*/
 
     public void cekLogin() {
         edittextusername = findViewById(R.id.idusername);

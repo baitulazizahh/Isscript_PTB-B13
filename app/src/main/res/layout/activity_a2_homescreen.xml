@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinssemibold"
-        android:text="BAITUL AZIZAH"
+
         android:textColor="@color/putih"
         android:textSize="21sp"
         app:layout_constraintStart_toStartOf="@+id/perjalanansaya"
