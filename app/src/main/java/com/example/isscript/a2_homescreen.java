@@ -29,8 +29,8 @@ public class a2_homescreen extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SharedPreferences sharedPref = getSharedPreferences("pref", MODE_PRIVATE);
-        String token = sharedPref.getString("TOKEN", "");
+        SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
+        token = sharedPref.getString("TOKEN", "");
 
         Intent mainIntent = getIntent();
         String username = mainIntent.getStringExtra("USERX");

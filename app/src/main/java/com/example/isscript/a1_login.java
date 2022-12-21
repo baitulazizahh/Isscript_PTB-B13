@@ -47,10 +47,10 @@ public class a1_login extends AppCompatActivity {
 
     }
 
-    public void login(View view) {
+/*    public void login(View view) {
         Intent intent = new Intent(a1_login.this, a2_homescreen.class);
         startActivity(intent);
-    }
+    }*/
 
     public void cekLogin() {
         edittextusername = findViewById(R.id.idusername);
