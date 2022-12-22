@@ -37,7 +37,7 @@
         android:layout_marginTop="48dp"
         android:background="@drawable/tombol_oren"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Ubah profil"
+        android:text="Profil Saya"
         android:paddingEnd="30dp"
         android:paddingStart="40dp"
         android:textColor="@color/hitam"

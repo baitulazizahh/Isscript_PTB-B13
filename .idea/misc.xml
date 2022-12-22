@@ -51,9 +51,12 @@
         <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/layout/activity_ubah_profil.xml" value="0.10175288584865327" />
         <entry key="..\:/Kuliah/Semester 5/1. Pemograman Teknologi Bergerak/PPTB B13/app/src/main/res/layout/jadwal_semhas_sidang.xml" value="0.1" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/beranda_selector.xml" value="0.1535" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/bulatoren.xml" value="0.1975" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/button_hijau.xml" value="0.164" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/button_input.xml" value="0.2115" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/header_homescreen.xml" value="0.1975" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/ic_dalamproses.xml" value="0.164" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/ic_edit.xml" value="0.1975" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/ic_fotodummy.xml" value="0.164" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/ic_home_hitam.xml" value="0.164" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/ic_home_warna.xml" value="0.164" />
@@ -64,6 +67,7 @@
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/panahkiri.xml" value="0.137" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/petak_emas.xml" value="0.121" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/petak_latar.xml" value="0.164" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/petak_silver.xml" value="0.1975" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/selector_profil.xml" value="0.1535" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/selector_sidang.xml" value="0.1535" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/drawable/selector_stock_bottom_nav_view.xml" value="0.1535" />
@@ -80,7 +84,7 @@
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_a4_pilih_pembimbing.xml" value="0.15604959384352288" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_a5_list_logbook.xml" value="0.1675929884566054" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_a6_detail_logbook.xml" value="0.1675929884566054" />
-        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_a7_tambah_edit_logbook.xml" value="0.1675929884566054" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_a7_tambah_edit_logbook.xml" value="0.2" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_a8_tambah_judul.xml" value="0.1675929884566054" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_a9_semhas.xml" value="0.25" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_activityhomescreenonprogress2.xml" value="0.1675929884566054" />
@@ -95,6 +99,7 @@
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_b6_profil.xml" value="0.33" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_b7_ganti_foto.xml" value="0.1675929884566054" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_b8_ganti_password.xml" value="0.15604959384352288" />
+        <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_b9_lihat_profil.xml" value="0.33" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_daftar_peserta.xml" value="0.33" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_detail_logbook.xml" value="0.2" />
         <entry key="..\:/PTB/Isscript_PTB-B13/app/src/main/res/layout/activity_detail_logbook_setelah_acc.xml" value="0.1675929884566054" />
