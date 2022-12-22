@@ -15,13 +15,22 @@ public interface StoryClient {
 
     @FormUrlEncoded
     @POST("/api/login")
-    Call<LoginResponse> login(@Field("username") String username, @Field("password") String password);
+    Call<LoginResponse> login(
+            @Field("username") String username,
+            @Field("password") String password
+    );
 
-    @GET("api/me")
-    Call<ProfilResponse> profill(@Header("Authorization")String token);
+    @GET("/api/me")
+    Call<ProfilResponse> profill(
+            @Header("Authorization")String token
+    );
 
-    /*@FormUrlEncoded
+    @FormUrlEncoded
     @POST("/api/password")
-    Call<GantipwResponse> gantii(@Field("username") String username, @Field("password") String password);*/
+    Call<GantipwResponse> gantii(
+            @Field("old_password") String old_password,
+            @Field("new_password") String new_password,
+            @Field("confirm_password") String confirm_password
+    );
 
 }

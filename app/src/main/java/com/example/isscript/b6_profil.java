@@ -108,8 +108,8 @@ public class b6_profil extends AppCompatActivity {
         });
     }
 
-    public void b6kegantifoto(View view) {
-        Intent intent = new Intent(b6_profil.this, b7_ganti_foto.class);
+    public void b6kelihatprofil(View view) {
+        Intent intent = new Intent(b6_profil.this, b9_lihat_profil.class);
         startActivity(intent);
     }
     public void b6kegantipassword(View view) {

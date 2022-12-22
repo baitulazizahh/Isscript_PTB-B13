@@ -35,11 +35,9 @@ public class b9_lihat_profil extends AppCompatActivity {
         tampilProfil2();
     }
     public void tampilProfil2(){
-        tvnama = findViewById(R.id.textView);
+        tvnama = findViewById(R.id.textView111);
         tvnim = findViewById(R.id.username1);
-        tvnim = findViewById(R.id.email1);
-/*        String name = tvnama.getText().toString();
-        String username = tvnim.getText().toString();*/
+        tvemail = findViewById(R.id.email1);
 
         SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
 
@@ -85,6 +83,11 @@ public class b9_lihat_profil extends AppCompatActivity {
 
     public void keprofillagi(View view) {
         Intent intent = new Intent(b9_lihat_profil.this, b6_profil.class);
+        startActivity(intent);
+    }
+
+    public void gantiprofill(View view) {
+        Intent intent = new Intent(b9_lihat_profil.this, b7_ganti_foto.class);
         startActivity(intent);
     }
 }

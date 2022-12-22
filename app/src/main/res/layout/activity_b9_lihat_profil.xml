@@ -64,12 +64,11 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView111"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="nama"
         android:textColor="@color/hitam"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/textstatus"
@@ -85,7 +84,7 @@
         android:textColor="@color/oren"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textstatus"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView111" />
 
     <TextView
         android:id="@+id/username1"
@@ -93,7 +92,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="nama"
         android:textColor="@color/hitam"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/username"
@@ -117,7 +115,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="nama"
         android:textColor="@color/hitam"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/email"
@@ -130,6 +127,7 @@
         android:layout_marginBottom="23dp"
         android:background="@drawable/tombol_hijau"
         android:text="Edit Profil"
+        android:onClick="gantiprofill"
         android:textColor="@color/putih"
         android:textSize="16sp"
         android:fontFamily="@font/poppinssemibold"

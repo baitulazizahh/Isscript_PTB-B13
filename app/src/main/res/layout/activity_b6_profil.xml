@@ -43,7 +43,7 @@
         android:textColor="@color/hitam"
         android:drawableEnd="@drawable/ic_panahkanan"
         android:textSize="16sp"
-        android:onClick="b6kegantifoto"
+        android:onClick="b6kelihatprofil"
         android:textAlignment="viewStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
