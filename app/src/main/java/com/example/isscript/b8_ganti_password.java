@@ -43,6 +43,10 @@ public class b8_ganti_password extends AppCompatActivity {
             }
         });
     }
+    public void b8kehomescreen(View view) {
+        Intent intent = new Intent(b8_ganti_password.this, b6_profil.class);
+        startActivity(intent);
+    }
 
     private void gantiPW(){
         tiet1 = findViewById(R.id.textInputEditText1);
@@ -54,6 +58,18 @@ public class b8_ganti_password extends AppCompatActivity {
         String new_password = tiet2.getText().toString();
         String confirm_password = tiet3.getText().toString();
 
+        if (old_password.isEmpty()) {
+            tiet1.setError("Masukkan password lama");
+            tiet1.requestFocus();
+        }
+        if (new_password.isEmpty()) {
+            tiet2.setError("Masukkan password baru");
+            tiet2.requestFocus();
+        }
+        if (confirm_password.isEmpty()) {
+            tiet3.setError("Masukkan konfirmasi password baru");
+            tiet3.requestFocus();
+        }
         btn_gantiPW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,41 +91,34 @@ public class b8_ganti_password extends AppCompatActivity {
 
                         if (response.isSuccessful()) {
                             GantipwResponse gantipwResponse = response.body();
-                            if (gantipwResponse != null) {
-                                Toast.makeText(b8_ganti_password.this, "Berhasil memperbaharui password", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(b8_ganti_password.this, "Berhasil memperbaharui password", Toast.LENGTH_SHORT).show();
 
-                                SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
-                                SharedPreferences.Editor editor= sharedPref.edit();
-
-                                editor.apply();
+                            SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.apply();
 
 
-                                Intent Intent = new Intent(b8_ganti_password.this, b6_profil.class);
-                                startActivity(Intent);
-                            }
-                        } else {
-                            Log.e("LoginActivity", response.message());
-                            Toast.makeText(b8_ganti_password.this, "Password tidak sama", Toast.LENGTH_SHORT).show();
+                            Intent Intent = new Intent(b8_ganti_password.this, b6_profil.class);
+                            startActivity(Intent);
                         }
-
                     }
-
                     @Override
                     public void onFailure(Call<GantipwResponse> call, Throwable t) {
-                        Toast.makeText(b8_ganti_password.this, "Gagal memperbahrui password", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(b8_ganti_password.this, "Gagal memperbaharui password", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
         });
+/*        else if (new_password!=confirm_password){
+            tiet3.setError("Password baru dan konfirmasi password tidak cocok");
+            tiet3.requestFocus();
+        }*/
+/*        else{
 
-    }
 
-    public void b8keprofil(View view) {
-        Intent intent = new Intent(b8_ganti_password.this, b6_profil.class);
-        startActivity(intent);
-    }
-    public void b8gantipassword(View view) {
-        Intent intent = new Intent(b8_ganti_password.this, b6_profil.class);
-        startActivity(intent);
+        }*/
+
+
+
     }
 }
