@@ -58,7 +58,7 @@ public class a5_list_logbook extends AppCompatActivity implements listlogbook_ad
         startActivity(intent);
     }
     public void a5tambahlogbook(View view) {
-        Intent intent = new Intent(a5_list_logbook.this, a7_tambah_edit_logbook.class);
+        Intent intent = new Intent(a5_list_logbook.this, a7_edit_logbook.class);
         startActivity(intent);
     }
 

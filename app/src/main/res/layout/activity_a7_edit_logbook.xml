@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih"
-    tools:context=".a7_tambah_edit_logbook">
+    tools:context=".a7_edit_logbook">
 
     <ImageView
         android:id="@+id/imageView"

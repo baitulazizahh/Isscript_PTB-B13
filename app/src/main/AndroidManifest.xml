@@ -18,6 +18,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".c1_tambah_logbook"
+            android:exported="false" />
+        <activity
             android:name=".b9_lihat_profil"
             android:exported="false" />
         <activity
@@ -70,7 +73,7 @@
             android:name=".a8_tambah_judul"
             android:exported="false" />
         <activity
-            android:name=".a7_tambah_edit_logbook"
+            android:name=".a7_edit_logbook"
             android:exported="false" />
         <activity
             android:name=".a6_detail_logbook"

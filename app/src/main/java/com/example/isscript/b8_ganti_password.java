@@ -58,7 +58,7 @@ public class b8_ganti_password extends AppCompatActivity {
         String new_password = tiet2.getText().toString();
         String confirm_password = tiet3.getText().toString();
 
-        if (old_password.isEmpty()) {
+/*        if (old_password.isEmpty()) {
             tiet1.setError("Masukkan password lama");
             tiet1.requestFocus();
         }
@@ -69,7 +69,7 @@ public class b8_ganti_password extends AppCompatActivity {
         if (confirm_password.isEmpty()) {
             tiet3.setError("Masukkan konfirmasi password baru");
             tiet3.requestFocus();
-        }
+        }*/
         btn_gantiPW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,18 +88,21 @@ public class b8_ganti_password extends AppCompatActivity {
                 call.enqueue(new Callback<GantipwResponse>() {
                     @Override
                     public void onResponse(Call<GantipwResponse> call, Response<GantipwResponse> response) {
-
                         if (response.isSuccessful()) {
                             GantipwResponse gantipwResponse = response.body();
-                            Toast.makeText(b8_ganti_password.this, "Berhasil memperbaharui password", Toast.LENGTH_SHORT).show();
+                            if (gantipwResponse != null && Objects.equals(gantipwResponse.getStatus(), "success")) {
+                                Toast.makeText(b8_ganti_password.this, "Berhasil ganti password", Toast.LENGTH_SHORT).show();
 
-                            SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
-                            SharedPreferences.Editor editor = sharedPref.edit();
-                            editor.apply();
+                                SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
+                                SharedPreferences.Editor editor= sharedPref.edit();
+                                editor.apply();
 
-
-                            Intent Intent = new Intent(b8_ganti_password.this, b6_profil.class);
-                            startActivity(Intent);
+                                Intent Intent = new Intent(b8_ganti_password.this, b6_profil.class);
+                                startActivity(Intent);
+                            }
+                        } else {
+                            Log.e("gantipw", response.message());
+                            Toast.makeText(b8_ganti_password.this, "Gagal memperbaharui password", Toast.LENGTH_SHORT).show();
                         }
                     }
                     @Override
