@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.isscript.datamodels.GantipwResponse;
@@ -28,12 +29,16 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class b8_ganti_password extends AppCompatActivity {
 
     Button btn_gantiPW;
-    TextInputEditText tiet1, tiet2, tiet3;
+    TextView tiet1, tiet2, tiet3;
+    String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b8_ganti_password);
+
+        SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
+        token = sharedPref.getString("TOKEN", "");
 
         btn_gantiPW = findViewById(R.id.button);
         btn_gantiPW.setOnClickListener(new View.OnClickListener() {
@@ -43,54 +48,39 @@ public class b8_ganti_password extends AppCompatActivity {
             }
         });
     }
-    public void b8kehomescreen(View view) {
+    public void b8keprofil(View view) {
         Intent intent = new Intent(b8_ganti_password.this, b6_profil.class);
         startActivity(intent);
     }
 
     private void gantiPW(){
         tiet1 = findViewById(R.id.textInputEditText1);
-        tiet2 = findViewById(R.id.textInputEditText1);
+        tiet2 = findViewById(R.id.textInputEditText2);
         tiet3 = findViewById(R.id.textInputEditText3);
-        btn_gantiPW = findViewById(R.id.login_btn);
+        btn_gantiPW = findViewById(R.id.button);
 
         String old_password = tiet1.getText().toString();
         String new_password = tiet2.getText().toString();
         String confirm_password = tiet3.getText().toString();
 
-/*        if (old_password.isEmpty()) {
-            tiet1.setError("Masukkan password lama");
-            tiet1.requestFocus();
-        }
-        if (new_password.isEmpty()) {
-            tiet2.setError("Masukkan password baru");
-            tiet2.requestFocus();
-        }
-        if (confirm_password.isEmpty()) {
-            tiet3.setError("Masukkan konfirmasi password baru");
-            tiet3.requestFocus();
-        }*/
         btn_gantiPW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
-
                 Retrofit retrofit = new Retrofit.Builder()
                         .baseUrl(API_BASE_URL)
                         .addConverterFactory(GsonConverterFactory.create())
                         .client(new OkHttpClient.Builder().build())
                         .build();
-
                 StoryClient client = retrofit.create(StoryClient.class);
 
-                Call<GantipwResponse> call = client.gantii(old_password,new_password,confirm_password);
-
+                Call<GantipwResponse> call = client.gantii(old_password,new_password,confirm_password,"Bearer "+token);
                 call.enqueue(new Callback<GantipwResponse>() {
                     @Override
                     public void onResponse(Call<GantipwResponse> call, Response<GantipwResponse> response) {
                         if (response.isSuccessful()) {
                             GantipwResponse gantipwResponse = response.body();
-                            if (gantipwResponse != null && Objects.equals(gantipwResponse.getStatus(), "success")) {
+                            if (gantipwResponse != null) {
                                 Toast.makeText(b8_ganti_password.this, "Berhasil ganti password", Toast.LENGTH_SHORT).show();
 
                                 SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
@@ -101,27 +91,15 @@ public class b8_ganti_password extends AppCompatActivity {
                                 startActivity(Intent);
                             }
                         } else {
-                            Log.e("gantipw", response.message());
                             Toast.makeText(b8_ganti_password.this, "Gagal memperbaharui password", Toast.LENGTH_SHORT).show();
                         }
                     }
                     @Override
                     public void onFailure(Call<GantipwResponse> call, Throwable t) {
-                        Toast.makeText(b8_ganti_password.this, "Gagal memperbaharui password", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(b8_ganti_password.this, "Gagal koneksi ke server", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
         });
-/*        else if (new_password!=confirm_password){
-            tiet3.setError("Password baru dan konfirmasi password tidak cocok");
-            tiet3.requestFocus();
-        }*/
-/*        else{
-
-
-        }*/
-
-
-
     }
 }

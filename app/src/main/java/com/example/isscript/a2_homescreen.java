@@ -1,12 +1,21 @@
 package com.example.isscript;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,6 +25,10 @@ import com.example.isscript.adapters.JadwalAdapter;
 import com.example.isscript.datamodels.ProfilResponse;
 import com.example.isscript.models.Jadwal;
 import com.example.isscript.retrofit.StoryClient;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.messaging.RemoteMessage;
 
 import java.util.ArrayList;
 
@@ -33,6 +46,7 @@ public class a2_homescreen extends AppCompatActivity{
     TextView tvnama;
 
     private RecyclerView rvJadwal;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +74,8 @@ public class a2_homescreen extends AppCompatActivity{
         rvJadwal.setAdapter(adapter);
 
         tampilNama();
+
+
     }
 
     public void tampilNama(){
@@ -176,4 +192,5 @@ public class a2_homescreen extends AppCompatActivity{
         Intent intent = new Intent(a2_homescreen.this, b6_profil.class);
         startActivity(intent);
     }
+
 }

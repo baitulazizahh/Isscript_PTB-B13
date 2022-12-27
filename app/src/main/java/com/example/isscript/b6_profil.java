@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.isscript.datamodels.LoginResponse;
+import com.example.isscript.datamodels.LogoutResponse;
 import com.example.isscript.datamodels.ProfilResponse;
 import com.example.isscript.datamodels.User;
 import com.example.isscript.retrofit.StoryClient;
@@ -56,18 +58,52 @@ public class b6_profil extends AppCompatActivity {
         btnlogout = findViewById(R.id.button1);
 
         SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
-        SharedPreferences.Editor editor= sharedPref.edit();
-        editor.clear();
-        editor.apply();
-        Intent intent5 = new Intent(this, a1_login.class);
-        intent5.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(intent5);
+        String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(API_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(new OkHttpClient.Builder().build())
+                .build();
+        StoryClient client = retrofit.create(StoryClient.class);
+
+        Call<LogoutResponse> call = client.logout("Bearer "+token);
+        call.enqueue(new Callback<LogoutResponse>() {
+            @Override
+            public void onResponse(Call<LogoutResponse> call, Response<LogoutResponse> response) {
+/*                SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
+                SharedPreferences.Editor editor= sharedPref.edit();
+                editor.clear();
+                editor.apply();
+                Intent intent5 = new Intent(b6_profil.this, a1_login.class);
+                intent5.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent5);*/
+                if (response.isSuccessful()) {
+                    LogoutResponse logoutResponse = response.body();
+                    if (logoutResponse != null) {
+                        Toast.makeText(b6_profil.this, "Berhasil Logout", Toast.LENGTH_SHORT).show();
+                        SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
+                        SharedPreferences.Editor editor= sharedPref.edit();
+                        editor.clear();
+                        editor.apply();
+                        finish();
+                        Intent intent5 = new Intent(b6_profil.this, a1_login.class);
+                        intent5.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent5);
+                    }
+                } else {
+                    Toast.makeText(b6_profil.this, "Gagal logout", Toast.LENGTH_SHORT).show();
+                }
+            }
+            @Override
+            public void onFailure(Call<LogoutResponse> call, Throwable t) {
+                Toast.makeText(b6_profil.this, "Terjadi error", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     public void tampilProfil(){
         tvnama = findViewById(R.id.idtextView19);
         tvnim = findViewById(R.id.idtextView20);
-/*        String name = tvnama.getText().toString();
-        String username = tvnim.getText().toString();*/
 
         SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
 
@@ -78,7 +114,6 @@ public class b6_profil extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(new OkHttpClient.Builder().build())
                 .build();
-
         StoryClient client = retrofit.create(StoryClient.class);
 
         Call<ProfilResponse> call = client.profill("Bearer "+token);

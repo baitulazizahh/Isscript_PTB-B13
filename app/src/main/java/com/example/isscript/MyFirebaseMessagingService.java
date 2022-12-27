@@ -15,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -22,6 +24,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private static final String CHANNEL_ID = "Test_kanal";
     private static final String TAG = "Service-Debug";
     private NotificationManagerCompat notificationManager;
+
+
 
     @Override
     public void onNewToken(@NonNull String token) {
@@ -52,7 +56,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         NotificationCompat.Builder builder = null;
 
         //Tipe notif 1
-        Intent resultIntent = new Intent(this, b7_ganti_foto.class);
+        Intent resultIntent = new Intent(this, b9_lihat_profil.class);
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
         stackBuilder.addNextIntentWithParentStack(resultIntent);
         PendingIntent resultPendingIntent =
