@@ -4,7 +4,6 @@ public class Peserta {
     String nama;
     String nim;
 
-
     public Peserta(){}
 
     public Peserta(String nama, String nim) {

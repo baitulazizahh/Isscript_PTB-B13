@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 public class start extends AppCompatActivity {
-    private int waktu_loading=4000;
+    private int waktu_loading=3000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,7 +15,7 @@ public class start extends AppCompatActivity {
         new Handler(). postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent home = new Intent(start.this,activity_login.class);
+                Intent home = new Intent(start.this,a2_homescreen.class);
                 startActivity(home);
                 finish();
             }

@@ -3,138 +3,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.isscript">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="ISSCRIPT"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Isscript"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".listlogbook2"
+            android:name=".c1_tambah_logbook"
             android:exported="false" />
         <activity
-            android:name=".sidang_acc"
+            android:name=".b9_lihat_profil"
             android:exported="false" />
         <activity
-            android:name=".semhas2"
+            android:name=".NotifAzizah"
             android:exported="false" />
         <activity
-            android:name=".selesai_edit"
+            android:name=".notif2_gita"
+            android:exported="false" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".notif_salma"
             android:exported="false" />
         <activity
-            android:name=".hs_ajukan_judul2"
+            android:name=".b8_ganti_password"
             android:exported="false" />
         <activity
-            android:name=".tambahlogbook2"
+            android:name=".b7_ganti_foto"
             android:exported="false" />
         <activity
-            android:name=".hs_selesai_logbook"
+            android:name=".b6_profil"
             android:exported="false" />
         <activity
-            android:name=".tambahlogbook1"
+            android:name=".b5_detail_sidang"
             android:exported="false" />
         <activity
-            android:name=".sidang2"
+            android:name=".b4_daftar_sidang"
             android:exported="false" />
         <activity
-            android:name=".sidang_menunggu_acc"
+            android:name=".b3_sidang"
             android:exported="false" />
         <activity
-            android:name=".hs_logbook_proses3"
+            android:name=".b2_detail_semhas"
             android:exported="false" />
         <activity
-            android:name=".hs_logbook_proses2"
+            android:name=".b1_daftar_semhas"
             android:exported="false" />
         <activity
-            android:name=".hs_logbook_proses"
+            android:name=".a9_semhas"
             android:exported="false" />
         <activity
-            android:name=".hs_ajukan_judul"
+            android:name=".a8_tambah_judul"
             android:exported="false" />
         <activity
-            android:name=".hs_pilih_pembimbing"
+            android:name=".a7_edit_logbook"
             android:exported="false" />
         <activity
-            android:name=".hs_berhasil_daftar_ta"
+            android:name=".a6_detail_logbook"
             android:exported="false" />
         <activity
-            android:name=".detail_pengajuan_sidang"
+            android:name=".a5_list_logbook"
             android:exported="false" />
         <activity
-            android:name=".detail_pengajuan_semhas"
+            android:name=".a4_pilih_pembimbing"
             android:exported="false" />
         <activity
-            android:name=".detail_pendaftaran_ta"
+            android:name=".a3_daftar_ta"
             android:exported="false" />
         <activity
-            android:name=".activity_login"
+            android:name=".a2_homescreen"
             android:exported="false" />
         <activity
-            android:name=".ajukan_judul"
-            android:exported="false" />
-        <activity
-            android:name=".daftar_peserta"
+            android:name=".a1_login"
             android:exported="false" />
         <activity
             android:name=".detail_logbook"
-            android:exported="false" />
-        <activity
-            android:name=".detail_logbook_setelah_acc"
-            android:exported="false" />
-        <activity
-            android:name=".detail_semhas"
-            android:exported="false" />
-        <activity
-            android:name=".detail_sidang"
-            android:exported="false" />
-        <activity
-            android:name=".edit_logbook"
-            android:exported="false" />
-        <activity
-            android:name=".ganti_password"
-            android:exported="false" />
-        <activity
-            android:name=".hs"
-            android:exported="false" />
-        <activity
-            android:name=".pendaftaran_ta"
-            android:exported="false" />
-        <activity
-            android:name=".pengajuan_semhas"
-            android:exported="false" />
-        <activity
-            android:name=".pengajuan_sidang"
-            android:exported="false" />
-        <activity
-            android:name=".pilih_pembimbing"
-            android:exported="false" />
-        <activity
-            android:name=".profil"
-            android:exported="false" />
-        <activity
-            android:name=".semhas1"
-            android:exported="false" />
-        <activity
-            android:name=".semhas_menunggu_acc"
-            android:exported="false" />
-        <activity
-            android:name=".sidang1"
-            android:exported="false" />
-        <activity
-            android:name=".tambah_logbook"
-            android:exported="false" />
-        <activity
-            android:name=".tambah_peserta"
-            android:exported="false" />
-        <activity
-            android:name=".tambah_peserta1"
-            android:exported="false" />
-        <activity
-            android:name=".ubah_profil"
             android:exported="false" />
         <activity
             android:name=".start"

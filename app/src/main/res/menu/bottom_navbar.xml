@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/selector_beranda"
+        android:title="Beranda"/>
+
+    <item
+        android:id="@+id/nav_semhas"
+        android:icon="@drawable/selector_semhas"
+        android:title="Semhas"/>
+
+    <item
+        android:id="@+id/nav_sidang"
+        android:icon="@drawable/selector_sidang"
+        android:title="Sidang"/>
+
+    <item
+        android:id="@+id/nav_profil"
+        android:icon="@drawable/selector_profil"
+        android:title="Profil"/>
+</menu>
