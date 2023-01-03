@@ -2,6 +2,7 @@ package com.example.isscript.retrofit;
 
 import androidx.annotation.Nullable;
 
+import com.example.isscript.datamodels.DetailLogbookResponse;
 import com.example.isscript.datamodels.GantipwResponse;
 import com.example.isscript.datamodels.LoginResponse;
 import com.example.isscript.datamodels.LogoutResponse;
@@ -41,5 +42,11 @@ public interface StoryClient {
             @Field("confirm_password") String confirm_password,
             @Header("Authorization") String token
     );
+
+    @GET("/api/theses/200/logbooks/399")
+    Call<DetailLogbookResponse> detaillb(
+            @Header("Authorization")String token
+    );
+
 
 }

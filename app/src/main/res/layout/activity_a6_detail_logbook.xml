@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
         android:layout_marginTop="21dp"
-        android:text="tanggallogbook"
+        android:text=""
         android:textColor="@color/hitam"
         android:textSize="14sp"
         android:fontFamily="@font/poppinsmedium"
@@ -75,7 +75,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Nama"
+        android:text="Progress"
         android:textColor="@color/hitam"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/textstatus"
@@ -88,7 +88,7 @@
         android:layout_marginStart="145dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinsmedium"
-        android:text="namasaya"
+        android:text=""
         android:textColor="@color/hitam"
 
         android:textSize="14sp"
@@ -103,7 +103,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinssemibold"
 
-        android:text="NIM"
+        android:text="Problem"
         android:textColor="@color/hitam"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/textstatus"
@@ -116,65 +116,12 @@
         android:layout_marginStart="145dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinsmedium"
-        android:text="nimsaya"
+        android:text=""
         android:textColor="@color/hitam"
 
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinssemibold"
-
-        android:text="Pembimbing"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textstatus"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <TextView
-        android:id="@+id/texttanggal"
-        android:layout_width="235dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:text="pembimbingsaya"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinssemibold"
-
-        android:text="Catatan"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textstatus"
-        app:layout_constraintTop_toBottomOf="@+id/texttanggal" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="235dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:text="Catatanlogbookdisini"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texttanggal" />
 
     <Button
         android:id="@+id/button"

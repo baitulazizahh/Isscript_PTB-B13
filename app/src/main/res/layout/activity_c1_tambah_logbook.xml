@@ -34,116 +34,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
         android:layout_marginTop="41dp"
+        android:onClick="c1kehomescreen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_panahkiri" />
+        app:srcCompat="@drawable/ic_panahkiri"
+        tools:ignore="OnClick" />
 
-    <TextView
-        android:id="@+id/textstatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Tanggal"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-
-        app:layout_constraintStart_toStartOf="@+id/textTanggal"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/textNim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="21dp"
-        android:text="tanggallogbook"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppinsmedium"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/textTanggal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinssemibold"
-
-        android:text="Nama"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textLokasi"
-        app:layout_constraintTop_toBottomOf="@+id/textNim" />
-
-    <TextView
-        android:id="@+id/textJam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:text="namasaya"
-        android:textColor="@color/hitam"
-
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNim" />
-
-    <TextView
-        android:id="@+id/textLokasi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinssemibold"
-
-        android:text="NIM"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textJam" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:text="nimsaya"
-        android:textColor="@color/hitam"
-
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textJam" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinssemibold"
-
-        android:text="Pembimbing"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <TextView
-        android:id="@+id/texttanggal"
-        android:layout_width="235dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:text="pembimbingsaya"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView1"
@@ -151,17 +47,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Catatan"
+        android:text="Tanggal"
         android:textColor="@color/oren"
-        android:textSize="16sp"
 
-        app:layout_constraintStart_toStartOf="@+id/textInputEditText4"
-        app:layout_constraintTop_toBottomOf="@+id/texttanggal" />
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="32dp" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText4"
-        android:layout_width="352dp"
-        android:layout_height="52dp"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/input_tombol"
         android:fontFamily="@font/poppinsmedium"
@@ -169,8 +65,64 @@
         android:textColor="@color/hitam"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textprogres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/poppinssemibold"
+
+        android:text="Progress"
+        android:textColor="@color/oren"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText4" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText5"
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="156dp"
+        android:background="@drawable/input_tombol"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingStart="20dp"
+        android:textColor="@color/hitam"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputEditText4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText4"
+        app:layout_constraintTop_toBottomOf="@+id/textprogres" />
+
+    <TextView
+        android:id="@+id/texttgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="176dp"
+
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Problem"
+        android:textColor="@color/oren"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textprogres"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText4" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputproblem"
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_tombol"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingStart="20dp"
+        android:textColor="@color/hitam"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputEditText4"
+        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText4"
+        app:layout_constraintTop_toBottomOf="@+id/textprogres" />
 
     <Button
         android:id="@+id/button"
@@ -184,6 +136,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="OnClick" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

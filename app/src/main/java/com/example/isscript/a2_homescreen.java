@@ -175,6 +175,10 @@ public class a2_homescreen extends AppCompatActivity{
         Intent intent = new Intent(a2_homescreen.this, a5_list_logbook.class);
         startActivity(intent);
     }
+    public void ketambahlb(View view) {
+        Intent intent = new Intent(a2_homescreen.this, c1_tambah_logbook.class);
+        startActivity(intent);
+    }
     public void beranda(View view) {
         Intent intent = new Intent(a2_homescreen.this, a2_homescreen.class);
         startActivity(intent);
