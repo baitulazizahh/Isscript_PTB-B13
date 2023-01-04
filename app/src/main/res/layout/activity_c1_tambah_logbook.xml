@@ -42,17 +42,18 @@
 
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="432dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Tanggal"
+        android:text="Supervisor_id"
         android:textColor="@color/oren"
 
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="32dp" />
+        tools:layout_editor_absoluteX="9dp"
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText4"
@@ -65,6 +66,35 @@
         android:textColor="@color/hitam"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Tanggal"
+        android:textColor="@color/oren"
+
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditTextid"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="430dp"
+        android:background="@drawable/input_tombol"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingStart="20dp"
+        android:textColor="@color/hitam"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
@@ -134,6 +164,7 @@
         android:textColor="@color/putih"
         android:fontFamily="@font/poppinssemibold"
         android:textSize="16sp"
+        android:onClick="simpan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

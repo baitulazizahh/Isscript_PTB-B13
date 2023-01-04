@@ -1,12 +1,14 @@
 package com.example.isscript.retrofit;
 
-import androidx.annotation.Nullable;
+import android.widget.EditText;
 
 import com.example.isscript.datamodels.DetailLogbookResponse;
 import com.example.isscript.datamodels.GantipwResponse;
 import com.example.isscript.datamodels.LoginResponse;
 import com.example.isscript.datamodels.LogoutResponse;
 import com.example.isscript.datamodels.ProfilResponse;
+import com.example.isscript.datamodels.RvhsResponse;
+import com.example.isscript.datamodels.TambahLogbookResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -29,6 +31,16 @@ public interface StoryClient {
             @Header("Authorization") String token
     );
 
+    @FormUrlEncoded
+    @POST("/api/theses/301/logbooks")
+    Call<TambahLogbookResponse> tmbhlogbook(
+            @Header("Authorization") String token,
+            @Field("supervisor_id") String supervisor_id,
+            @Field("date") String date,
+            @Field("progress") String progress,
+            @Field("problem") String problem
+    );
+
     @GET("/api/me")
     Call<ProfilResponse> profill(
             @Header("Authorization")String token
@@ -48,5 +60,10 @@ public interface StoryClient {
             @Header("Authorization")String token
     );
 
+
+    @GET("/api/thesis/seminars/322/audiences")
+    Call<RvhsResponse> rvhs(
+            @Header("Authorization")String token
+    );
 
 }

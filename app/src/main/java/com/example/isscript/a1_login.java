@@ -44,12 +44,12 @@ public class a1_login extends AppCompatActivity {
     EditText edittextusername, editpassword;
     Button login_btn;
 
-/*    @Override
+   //@Override
     public void onNewToken(@NonNull String token) {
         Log.d(TAG, "Refreshed token: " + token);
 
     }
-    @Override
+    //@Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         String tipe = remoteMessage.getData().get("tipe");
         if (tipe.equals("1"))
@@ -58,7 +58,7 @@ public class a1_login extends AppCompatActivity {
             displayNotification2(remoteMessage.getNotification());
 
 
-    }*/
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

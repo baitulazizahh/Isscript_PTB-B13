@@ -1,5 +1,7 @@
 package com.example.isscript.adapters;
 
+import com.example.isscript.datamodels.AudiencesItem;
+import com.example.isscript.datamodels.Logbook;
 import com.example.isscript.models.Jadwal;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,13 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.isscript.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class JadwalAdapter extends RecyclerView.Adapter<JadwalAdapter.JadwalViewHolder>{
+    private List<AudiencesItem> ListJadwal = new ArrayList<>();
 
-    ArrayList<Jadwal> ListJadwal = new ArrayList<>();
-
-    public JadwalAdapter(ArrayList<Jadwal> listJadwal) {
-        this.ListJadwal = listJadwal;
+    public void setListJadwal(List<AudiencesItem> ListJadwal) {
+        this.ListJadwal = ListJadwal;
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -30,15 +33,16 @@ public class JadwalAdapter extends RecyclerView.Adapter<JadwalAdapter.JadwalView
         return new JadwalViewHolder(view);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull JadwalViewHolder holder, int position) {
-        Jadwal jadwal = ListJadwal.get(position);
-        holder.textNama.setText(jadwal.getNama());
+        AudiencesItem jadwal = ListJadwal.get(position);
+        holder.textNama.setText(jadwal.getName());
         holder.textNim.setText(jadwal.getNim());
         holder.imageLencana.setImageResource(R.drawable.lencana_semhas);
-        holder.textTanggal.setText(jadwal.getTanggal());
-        holder.textJam.setText(jadwal.getJam());
-        holder.textLokasi.setText(jadwal.getLokasi());
+        //holder.textTanggal.setText(jadwal.getPivot());
+        //holder.textJam.setText(jadwal.getJam());
+       // holder.textLokasi.setText(jadwal.getd());
         holder.imageIconTanggal.setImageResource(R.drawable.ic_kalender);
         holder.imageIconJam.setImageResource(R.drawable.ic_jam);
         holder.imageIconLokasi.setImageResource(R.drawable.ic_pin);
@@ -67,4 +71,21 @@ public class JadwalAdapter extends RecyclerView.Adapter<JadwalAdapter.JadwalView
             textLokasi = itemView.findViewById(R.id.textLokasi);
         }
     }
+
+
+
+//    ArrayList<Jadwal> ListJadwal = new ArrayList<>();
+//
+//
+//    public JadwalAdapter(ArrayList<Jadwal> listJadwal) {
+//        this.ListJadwal = listJadwal;
+//    }
+
+
+
+
+
+
+
+
 }

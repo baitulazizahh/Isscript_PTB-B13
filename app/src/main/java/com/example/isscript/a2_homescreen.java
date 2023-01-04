@@ -22,7 +22,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.isscript.adapters.JadwalAdapter;
+//import com.example.isscript.datamodels.HomescreenResponse;
+import com.example.isscript.datamodels.AudiencesItem;
+import com.example.isscript.datamodels.Logbook;
 import com.example.isscript.datamodels.ProfilResponse;
+import com.example.isscript.datamodels.RvhsResponse;
+import com.example.isscript.datamodels.TambahLogbookResponse;
 import com.example.isscript.models.Jadwal;
 import com.example.isscript.retrofit.StoryClient;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,6 +36,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.RemoteMessage;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
@@ -46,6 +52,7 @@ public class a2_homescreen extends AppCompatActivity{
     TextView tvnama;
 
     private RecyclerView rvJadwal;
+    private JadwalAdapter adapter;
 
 
     @Override
@@ -66,16 +73,67 @@ public class a2_homescreen extends AppCompatActivity{
             finish();
         }
         setContentView(R.layout.activity_a2_homescreen);
-
-        rvJadwal = findViewById(R.id.rv_jadwal);
-        JadwalAdapter adapter = new JadwalAdapter(getJadwal());
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        rvJadwal.setLayoutManager(layoutManager);
-        rvJadwal.setAdapter(adapter);
-
         tampilNama();
 
 
+
+
+
+        //minta data ke server
+
+ String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(API_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(new OkHttpClient.Builder().build())
+                .build();
+        StoryClient client = retrofit.create(StoryClient.class);
+
+        Call<RvhsResponse> call = client.rvhs("Bearer"+ token);
+        call.enqueue(new Callback<RvhsResponse>() {
+            @Override
+            public void onResponse(Call<RvhsResponse> call, Response<RvhsResponse> response) {
+                Log.d("HS-debug", response.toString());
+                RvhsResponse rvhsResponse = response.body();
+                if (rvhsResponse != null) {
+                    List<AudiencesItem> audiences = rvhsResponse.getAudiences();
+                    Log.d("HS-debug", String.valueOf(audiences.size()));
+                    adapter.setListJadwal(audiences);
+                   // Toast.makeText(a2_homescreen.this, nRvhsResponse.getMessage(), Toast.LENGTH_SHORT).show();
+
+                   // SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
+                  //  SharedPreferences.Editor editor= sharedPref.edit();
+                  //  editor.apply();
+
+                   // Intent Intent = new Intent(c1_tambah_logbook.this,a2_homescreen.class);
+                    //tartActivity(Intent);
+                }
+            }
+
+//            @Override
+//            public void onFailure(Call<RvhsResponse> call, Throwable t) {
+//
+//            } else {
+//                Toast.makeText(c1_tambah_logbook.this, "Gagal menambah logbook", Toast.LENGTH_SHORT).show();
+//            }
+
+            //}
+
+            @Override
+            public void onFailure(Call<RvhsResponse> call, Throwable t) {
+
+            }
+        });
+
+
+        rvJadwal = findViewById(R.id.rv_jadwal);
+        //JadwalAdapter adapter = new JadwalAdapter(getJadwal());
+        // LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        rvJadwal.setLayoutManager(new LinearLayoutManager(this));
+        rvJadwal.setAdapter(adapter);
+
+        adapter = new JadwalAdapter();
+        rvJadwal.setAdapter(adapter);
     }
 
     public void tampilNama(){
@@ -94,6 +152,7 @@ public class a2_homescreen extends AppCompatActivity{
         call.enqueue(new Callback<ProfilResponse>() {
             @Override
             public void onResponse(Call<ProfilResponse> call, Response<ProfilResponse> response) {
+
                 if (response.isSuccessful()){
                     if (!response.isSuccessful()) {
                         tvnama.setText("Nama mahasiswa");
