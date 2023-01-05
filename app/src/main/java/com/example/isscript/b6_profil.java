@@ -71,16 +71,16 @@ public class b6_profil extends AppCompatActivity {
         call.enqueue(new Callback<LogoutResponse>() {
             @Override
             public void onResponse(Call<LogoutResponse> call, Response<LogoutResponse> response) {
-/*                SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
+                SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
                 SharedPreferences.Editor editor= sharedPref.edit();
                 editor.clear();
                 editor.apply();
                 Intent intent5 = new Intent(b6_profil.this, a1_login.class);
                 intent5.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent5);*/
-                if (response.isSuccessful()) {
+                startActivity(intent5);
+                /*if (response.isSuccessful()) {
                     LogoutResponse logoutResponse = response.body();
-                    if (logoutResponse != null) {
+                    if (logoutResponse != null && Objects.equals(logoutResponse.getMessage(), "success")) {
                         Toast.makeText(b6_profil.this, "Berhasil Logout", Toast.LENGTH_SHORT).show();
                         SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
                         SharedPreferences.Editor editor= sharedPref.edit();
@@ -93,7 +93,7 @@ public class b6_profil extends AppCompatActivity {
                     }
                 } else {
                     Toast.makeText(b6_profil.this, "Gagal logout", Toast.LENGTH_SHORT).show();
-                }
+                }*/
             }
             @Override
             public void onFailure(Call<LogoutResponse> call, Throwable t) {

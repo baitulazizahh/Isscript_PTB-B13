@@ -3,15 +3,19 @@ package com.example.isscript;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
 public class b3_sidang extends AppCompatActivity {
-
+    String token;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b3_sidang);
+
+        SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
+        token = sharedPref.getString("TOKEN", "");
     }
     public void b3kedetailsidang(View view) {
         Intent intent = new Intent(b3_sidang.this, b5_detail_sidang.class);

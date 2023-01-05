@@ -98,14 +98,14 @@
         app:layout_constraintStart_toStartOf="@+id/textInputEditText"
         app:layout_constraintTop_toBottomOf="@+id/card_view1" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
         android:id="@+id/textInputEditText"
         android:layout_width="352dp"
         android:layout_height="52dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/input_tombol"
         android:fontFamily="@font/poppinsmedium"
-        android:hint="NIM"
+        android:hint="Student id"
         android:inputType="number"
         android:paddingStart="20dp"
         android:textColor="@color/hitam"
@@ -114,21 +114,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textstatus" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText1"
-        android:layout_width="352dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/input_tombol"
-        android:fontFamily="@font/poppinsmedium"
-        android:hint="Nama"
-        android:paddingStart="20dp"
-        android:textColor="@color/hitam"
-        android:textColorHint="@color/abutua"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textInputEditText"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
 
 
     <Button
@@ -195,7 +180,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText1" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView2"
