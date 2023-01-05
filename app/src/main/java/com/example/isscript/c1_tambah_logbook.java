@@ -25,7 +25,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class c1_tambah_logbook extends AppCompatActivity {
-    EditText tiettgl, tiet4, tiet5,tietid;
+    EditText tiettgl, tieprog, tieprob ,tietid;
     Button simpan;
     String token;
 
@@ -33,14 +33,15 @@ public class c1_tambah_logbook extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_c1_tambah_logbook);
+
         SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
         token = sharedPref.getString("TOKEN", "");
 //        SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
 //        token = sharedPref.getString("TOKEN", "");
         tietid = findViewById(R.id.textInputEditText4);
-        tiettgl = findViewById(R.id.textInputEditTextid);
-        tiet4 = findViewById(R.id.textInputproblem);
-        tiet5 = findViewById(R.id.textInputEditText5);
+        tiettgl = findViewById(R.id.date);
+        tieprog = findViewById(R.id.progres);
+        tieprob = findViewById(R.id.problem);
 
         simpan= findViewById(R.id.button);
         simpan.setOnClickListener(new View.OnClickListener() {
@@ -52,21 +53,22 @@ public class c1_tambah_logbook extends AppCompatActivity {
     }
 
     private void tmbhLogbook() {
+
 //        tiettgl = findViewById(R.id.textInputEditText4);
 //        tiet4 = findViewById(R.id.textInputproblem);
 //        tiet5 = findViewById(R.id.textInputEditText5);
 //        tietid = findViewById(R.id.textInputEditTextid);
 //        btn_tmbhlogbook = findViewById(R.id.button);
 
-        String supervisor_id =  tietid.getText().toString();
+        Integer supervisor_id =  Integer.valueOf(tietid.getText().toString());
         String date = tiettgl.getText().toString();
-        String progress = tiet4.getText().toString();
-        String problem = tiet5.getText().toString();
+        String progress = tieprog.getText().toString();
+        String problem = tieprob.getText().toString();
 
-        simpan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
+        //simpan.setOnClickListener(new View.OnClickListener() {
+           // @Override
+          //  public void onClick(View view) {
+        String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(API_BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -74,25 +76,24 @@ public class c1_tambah_logbook extends AppCompatActivity {
                 .build();
         StoryClient client = retrofit.create(StoryClient.class);
 
-        Call<TambahLogbookResponse> call = client.tmbhlogbook("Bearer "+token,supervisor_id,date,progress,problem);
+        Call<TambahLogbookResponse> call = client.tmbhLogbook("Bearer "+token,supervisor_id,date,progress,problem);
         call.enqueue(new Callback<TambahLogbookResponse>() {
             @Override
             public void onResponse(Call<TambahLogbookResponse> call, Response<TambahLogbookResponse> response) {
                 Log.d("debug-act", response.toString());
                 if (response.isSuccessful()) {
                     TambahLogbookResponse tambahLogbookResponse = response.body();
-                    if (tambahLogbookResponse != null && tambahLogbookResponse.getMessage()== "success") {
-                            Toast.makeText(c1_tambah_logbook.this, tambahLogbookResponse.getMessage(), Toast.LENGTH_SHORT).show();
-
-                                SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
-                                SharedPreferences.Editor editor= sharedPref.edit();
-                                editor.apply();
-
+                    if (tambahLogbookResponse != null) {
+                        Toast.makeText(c1_tambah_logbook.this, tambahLogbookResponse.getMessage(), Toast.LENGTH_SHORT).show();
                         Intent Intent = new Intent(c1_tambah_logbook.this,a2_homescreen.class);
                         startActivity(Intent);
-                       }
+                    }
+
+//                                SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
+//                                SharedPreferences.Editor editor= sharedPref.edit();
+//                                editor.apply();
                     } else {
-                            Toast.makeText(c1_tambah_logbook.this, "Gagal menambah logbook", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(c1_tambah_logbook.this, "Gagal menambah logbook", Toast.LENGTH_SHORT).show();
                         }
             }
             @Override
@@ -101,8 +102,8 @@ public class c1_tambah_logbook extends AppCompatActivity {
             }
         });
             }
-        });
-    }
+
+
     public void simpan (View view) {
         Intent intent = new Intent(c1_tambah_logbook.this, a2_homescreen.class);
         startActivity(intent);

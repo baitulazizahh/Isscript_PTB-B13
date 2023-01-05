@@ -33,9 +33,9 @@ public interface StoryClient {
 
     @FormUrlEncoded
     @POST("/api/theses/301/logbooks")
-    Call<TambahLogbookResponse> tmbhlogbook(
+    Call<TambahLogbookResponse> tmbhLogbook(
             @Header("Authorization") String token,
-            @Field("supervisor_id") String supervisor_id,
+            @Field("supervisor_id")  Integer supervisor_id,
             @Field("date") String date,
             @Field("progress") String progress,
             @Field("problem") String problem

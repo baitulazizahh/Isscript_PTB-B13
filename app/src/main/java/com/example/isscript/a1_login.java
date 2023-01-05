@@ -44,7 +44,7 @@ public class a1_login extends AppCompatActivity {
     EditText edittextusername, editpassword;
     Button login_btn;
 
-   //@Override
+    //@Override
     public void onNewToken(@NonNull String token) {
         Log.d(TAG, "Refreshed token: " + token);
 

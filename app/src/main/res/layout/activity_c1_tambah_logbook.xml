@@ -9,7 +9,7 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="97dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -45,21 +45,22 @@
         android:id="@+id/textViewid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="432dp"
+        android:layout_marginTop="400dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Supervisor_id"
+        android:text="Problem"
         android:textColor="@color/oren"
 
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="9dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="14dp" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText4"
         android:layout_width="320dp"
-        android:layout_height="50dp"
+        android:layout_height="52dp"
         android:layout_marginTop="8dp"
+        android:inputType="numberDecimal"
         android:background="@drawable/input_tombol"
         android:fontFamily="@font/poppinsmedium"
         android:paddingStart="20dp"
@@ -75,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Tanggal"
+        android:text="Supervisor id"
         android:textColor="@color/oren"
 
         android:textSize="16sp"
@@ -84,17 +85,18 @@
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditTextid"
+        android:id="@+id/problem"
         android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="430dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="404dp"
+        android:inputType="text"
         android:background="@drawable/input_tombol"
         android:fontFamily="@font/poppinsmedium"
         android:paddingStart="20dp"
         android:textColor="@color/hitam"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
@@ -105,17 +107,18 @@
         android:layout_marginTop="28dp"
         android:fontFamily="@font/poppinssemibold"
 
-        android:text="Progress"
+        android:text="Tanggal"
         android:textColor="@color/oren"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText4" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText5"
+        android:id="@+id/progres"
         android:layout_width="320dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="156dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
         android:background="@drawable/input_tombol"
         android:fontFamily="@font/poppinsmedium"
         android:paddingStart="20dp"
@@ -124,26 +127,27 @@
         app:layout_constraintEnd_toEndOf="@+id/textInputEditText4"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textInputEditText4"
-        app:layout_constraintTop_toBottomOf="@+id/textprogres" />
+        app:layout_constraintTop_toBottomOf="@+id/texttgl" />
 
     <TextView
         android:id="@+id/texttgl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="146dp"
 
         android:fontFamily="@font/poppinssemibold"
-        android:text="Problem"
+        android:text="Progres"
         android:textColor="@color/oren"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textprogres"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText4" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputproblem"
+        android:id="@+id/date"
         android:layout_width="320dp"
-        android:layout_height="100dp"
+        android:layout_height="52dp"
         android:layout_marginTop="8dp"
+        android:inputType="text"
         android:background="@drawable/input_tombol"
         android:fontFamily="@font/poppinsmedium"
         android:paddingStart="20dp"
@@ -167,7 +171,6 @@
         android:onClick="simpan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="OnClick" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
