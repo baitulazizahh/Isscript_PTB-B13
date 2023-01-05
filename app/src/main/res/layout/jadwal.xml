@@ -70,7 +70,7 @@
             android:layout_marginStart="12dp"
             android:layout_toEndOf="@+id/imageIconTanggal"
             android:fontFamily="@font/poppinsmedium"
-            android:text=""
+            android:text="12-01-2023"
             android:textColor="@color/hijau"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/imageIconTanggal"

@@ -47,12 +47,12 @@ public class c1_tambah_logbook extends AppCompatActivity {
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tmbhLogbook();
+                tambahLogbook();
             }
         });
     }
 
-    private void tmbhLogbook() {
+    private void tambahLogbook() {
 
 //        tiettgl = findViewById(R.id.textInputEditText4);
 //        tiet4 = findViewById(R.id.textInputproblem);
@@ -66,8 +66,8 @@ public class c1_tambah_logbook extends AppCompatActivity {
         String problem = tieprob.getText().toString();
 
         //simpan.setOnClickListener(new View.OnClickListener() {
-           // @Override
-          //  public void onClick(View view) {
+        // @Override
+        //  public void onClick(View view) {
         String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(API_BASE_URL)
@@ -84,24 +84,26 @@ public class c1_tambah_logbook extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     TambahLogbookResponse tambahLogbookResponse = response.body();
                     if (tambahLogbookResponse != null) {
+                        SharedPreferences sharedPref = getSharedPreferences("prefs", MODE_PRIVATE);
+                        SharedPreferences.Editor editor= sharedPref.edit();
+                        editor.putString("TOKEN", token);
+                        editor.apply();
                         Toast.makeText(c1_tambah_logbook.this, tambahLogbookResponse.getMessage(), Toast.LENGTH_SHORT).show();
                         Intent Intent = new Intent(c1_tambah_logbook.this,a2_homescreen.class);
                         startActivity(Intent);
                     }
 
-//                                SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
-//                                SharedPreferences.Editor editor= sharedPref.edit();
-//                                editor.apply();
-                    } else {
-                        Toast.makeText(c1_tambah_logbook.this, "Gagal menambah logbook", Toast.LENGTH_SHORT).show();
-                        }
+
+                } else {
+                    Toast.makeText(c1_tambah_logbook.this, "Gagal menambah logbook", Toast.LENGTH_SHORT).show();
+                }
             }
             @Override
             public void onFailure(Call<TambahLogbookResponse> call, Throwable t) {
                 Toast.makeText(c1_tambah_logbook.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-            }
+    }
 
 
     public void simpan (View view) {

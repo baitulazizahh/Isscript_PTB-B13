@@ -40,9 +40,9 @@ public class JadwalAdapter extends RecyclerView.Adapter<JadwalAdapter.JadwalView
         holder.textNama.setText(jadwal.getName());
         holder.textNim.setText(jadwal.getNim());
         holder.imageLencana.setImageResource(R.drawable.lencana_semhas);
-        //holder.textTanggal.setText(jadwal.getPivot());
+        //holder.textTanggal.setText(jadwal.());
         //holder.textJam.setText(jadwal.getJam());
-       // holder.textLokasi.setText(jadwal.getd());
+        holder.textLokasi.setText(jadwal.getBirthplace());
         holder.imageIconTanggal.setImageResource(R.drawable.ic_kalender);
         holder.imageIconJam.setImageResource(R.drawable.ic_jam);
         holder.imageIconLokasi.setImageResource(R.drawable.ic_pin);
