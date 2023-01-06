@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -33,7 +34,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class a5_list_logbook extends AppCompatActivity implements listlogbook_adapter.logbookClickListener{
     private RecyclerView rvLogbook;
-    private  listlogbook_adapter adapter;
+    private listlogbook_adapter adapter;
     String token;
 
     @Override
@@ -41,16 +42,24 @@ public class a5_list_logbook extends AppCompatActivity implements listlogbook_ad
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a5_list_logbook);
 
-        SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
-        token = sharedPref.getString("TOKEN", "");
+        SharedPreferences sharedPref = getSharedPreferences("Pref", Context.MODE_PRIVATE);
+        token = sharedPref.getString("TOKEN","");
+
+
+        /*        LinearLayoutManager layoutManager = new LinearLayoutManager(this);*/
+
+/*        rvLogbook.setLayoutManager(layoutManager);
+        rvLogbook.setAdapter(adapter);*/
+
+
 
         RecyclerView rvLogbook = findViewById(R.id.rv_logbook);
 
         rvLogbook.setLayoutManager(new LinearLayoutManager(this));
         adapter = new listlogbook_adapter();
+        adapter.setListenerlb(this);
         rvLogbook.setAdapter(adapter);
 
-        //Minta Data ke sserver
         String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -58,24 +67,32 @@ public class a5_list_logbook extends AppCompatActivity implements listlogbook_ad
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(new OkHttpClient.Builder().build())
                 .build();
-
         StoryClient client = retrofit.create(StoryClient.class);
 
         Call<ListLogbookResponse> call = client.getlistLB("Bearer "+token);
         call.enqueue(new Callback<ListLogbookResponse>() {
             @Override
             public void onResponse(Call<ListLogbookResponse> call, Response<ListLogbookResponse> response) {
-                ListLogbookResponse listLogbookResponse = response.body();
-                if (listLogbookResponse != null) {
-                    List<LogbooksItem> logbooks = listLogbookResponse.getLogbooks();
-                    adapter.setItemLogbooks(logbooks);
+                ListLogbookResponse listLogbookkResponse = response.body();
+                if (listLogbookkResponse != null){
+                    List<LogbooksItem> logbooks = listLogbookkResponse.getLogbooks();
+                    adapter.setItemList(logbooks);
                 }
             }
 
             @Override
-            public void onFailure(Call<ListLogbookResponse> call, Throwable t){
-        }
-    });}
+            public void onFailure(Call<ListLogbookResponse> call, Throwable t) {
+
+            }
+        });
+
+        /*list_logbook_adapter adapter = new list_logbook_adapter(getlogbook());
+        adapter.setListenerlb(this);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        rvLogbook.setLayoutManager(layoutManager);
+        rvLogbook.setAdapter(adapter);*/
+
+    }
 
     public void a5kehomescreen(View view) {
         Intent intent = new Intent(a5_list_logbook.this, a2_homescreen.class);
@@ -87,9 +104,9 @@ public class a5_list_logbook extends AppCompatActivity implements listlogbook_ad
     }
 
     @Override
-    public void onlogbookClick(logbook logbook) {
+    public void onlogbookClick(LogbooksItem logbook) {
         Intent detaillogbook = new Intent(this, a6_detail_logbook.class);
-        detaillogbook.putExtra("panah",logbook.getPanah());
+        detaillogbook.putExtra("panah",logbook.getDate());
         startActivity(detaillogbook);
     }
 }

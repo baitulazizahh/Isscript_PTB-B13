@@ -18,17 +18,27 @@ import java.util.List;
 
 public class listlogbook_adapter extends RecyclerView.Adapter<listlogbook_adapter.listlogbookVH>{
 
-    private List<LogbooksItem> itemLogbooks = new ArrayList<>();
+    private List<LogbooksItem> itemList= new ArrayList<>();
+    public void setItemList(List<LogbooksItem> itemList) {
 
-    public void setItemLogbooks(List<LogbooksItem> itemLogbooks) {
-        this.itemLogbooks = itemLogbooks;
+        this.itemList = itemList;
         notifyDataSetChanged();
     }
 
-    ArrayList<logbook> listLoogbook = new ArrayList<>();
+    /*    ArrayList<logbook> listLoogbook = new ArrayList<>();*/
+    logbookClickListener listenerlb;
 
-    public listlogbook_adapter() {
+
+/*    public list_logbook_adapter() {
         this.listLoogbook = listLoogbook;
+    }
+    public void setListLoogbook(ArrayList<logbook> listLoogbook) {
+        this.listLoogbook = listLoogbook;
+    }*/
+
+    public void setListenerlb(logbookClickListener listenerlb) {
+
+        this.listenerlb = listenerlb;
     }
 
 
@@ -36,39 +46,46 @@ public class listlogbook_adapter extends RecyclerView.Adapter<listlogbook_adapte
     @Override
     public listlogbookVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.activity_listlogbook2, parent, false);
+                .inflate(R.layout.activity_listlogbook2,parent,false);
         return new listlogbookVH(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull listlogbookVH holder, int position) {
-        logbook logbook = listLoogbook.get(position);
-        LogbooksItem list = itemLogbooks.get(position);
-        holder.imageView4.setImageResource(R.drawable.ic_dalamproses);
-        holder.texttanggal.setText(logbook.getTanggal());
-        holder.imageView8.setImageResource(R.drawable.ic_panahkanan);
+        LogbooksItem list = itemList.get(position);
+
+        /*holder.imageView4.setImageResource(R.drawable.ic_dalamproses);*/
+        holder.texttanggal.setText(list.getDate());
+        /*        holder.imageView8.setImageResource(R.drawable.ic_panahkanan);*/
     }
 
     @Override
     public int getItemCount() {
-        return itemLogbooks.size();
-        //return itemLogbooks.size();
+
+        return itemList.size();
     }
 
     public interface logbookClickListener{
-        void onlogbookClick(logbook logbook);
+        void onlogbookClick(LogbooksItem logbook);
     }
 
-    public class listlogbookVH extends RecyclerView.ViewHolder{
+    public class listlogbookVH extends RecyclerView.ViewHolder implements View.OnClickListener{
         public TextView texttanggal;
         public ImageView imageView8, imageView4;
 
         public listlogbookVH(@NonNull View itemView) {
             super(itemView);
-            imageView4 = itemView.findViewById(R.id.imageView4);
+            /*            imageView4 = itemView.findViewById(R.id.imageView4);*/
             texttanggal = itemView.findViewById(R.id.texttanggal) ;
-            imageView8 = itemView.findViewById(R.id.imageView8);
+            /*            imageView8 = itemView.findViewById(R.id.imageView8);*/
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            LogbooksItem logbook = itemList.get(getAdapterPosition());
+            listenerlb.onlogbookClick(logbook);
         }
     }
-    }
-
+}

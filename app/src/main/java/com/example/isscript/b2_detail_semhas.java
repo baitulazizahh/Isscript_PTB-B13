@@ -72,16 +72,17 @@ public class b2_detail_semhas extends AppCompatActivity {
 
                     String seminarAt = detailSemhas2Response.getSeminarAt();
                     int roomId = detailSemhas2Response.getRoomId();
-                    int Id = detailSemhas2Response.getId();
+ /*                   int Id = detailSemhas2Response.getId();*/
 
 
                     dstgl.setText(seminarAt);
                     dslok.setText(roomId);
-
                 }
             }
 
             @Override
+
+
             public void onFailure(Call<DetailSemhas2Response> call, Throwable t) {
                 Toast.makeText(b2_detail_semhas.this, "Terjadi error", Toast.LENGTH_SHORT).show();
             }
@@ -97,10 +98,10 @@ public class b2_detail_semhas extends AppCompatActivity {
                     DetailTAResponse detailTAResponse = response.body();
 
                     String title = detailTAResponse.getTitle();
-                    String name =  detailTAResponse.getStudent().getName();
+                    //String name =  detailTAResponse.getStudent().getName();
                     String nim =   detailTAResponse.getStudent().getNim();
                     //String name2 = detailTAResponse.getSupervisors().getName();
-                    dsnama.setText(name);
+                    //dsnama.setText(name);
                     dsnim.setText(nim);
                     dsjdl.setText(title);
                     //dspem.setText(name2);

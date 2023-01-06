@@ -8,6 +8,7 @@ import com.example.isscript.datamodels.GantipwResponse;
 import com.example.isscript.datamodels.ListLogbookResponse;
 import com.example.isscript.datamodels.LoginResponse;
 import com.example.isscript.datamodels.LogoutResponse;
+import com.example.isscript.datamodels.PembimbingResponse;
 import com.example.isscript.datamodels.PilihPembimbingResponse;
 import com.example.isscript.datamodels.ProfilResponse;
 import com.example.isscript.datamodels.ReviewersItem;
@@ -66,11 +67,21 @@ public interface StoryClient {
     Call<DetailTAResponse> detailta(
             @Header("Authorization")String token
     );
-
+/*
     @FormUrlEncoded
     @POST("/api/thesis/seminars/322/audiences")
     Call<PilihPembimbingResponse> PilihPbb(
             @Field("lecturer_id") String lecturer_id,
+            @Header("Authorization") String token
+    );*/
+
+    @FormUrlEncoded
+    @POST("/api/theses")
+    Call<PembimbingResponse> pilihpembimbing(
+            @Field("title") String title,
+            @Field("abstract") String abstracts,
+            @Field("lecturer_id") String lecturer_id,
+            @Field("position") String position,
             @Header("Authorization") String token
     );
 }

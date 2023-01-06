@@ -168,7 +168,7 @@ public class a2_homescreen extends AppCompatActivity{
         return listJadwal;
     }
     public void a2tambahjudul(View view) {
-        Intent intent = new Intent(a2_homescreen.this, a8_tambah_judul.class);
+        Intent intent = new Intent(a2_homescreen.this, a4_pilih_pembimbing.class);
         startActivity(intent);
     }
     public void kelistlb(View view) {

@@ -147,7 +147,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/button_hijau"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Ajukan judul TA"
+        android:text="Pilih pembimbing"
         android:onClick="a2tambahjudul"
         android:textColor="@color/putih"
         android:textSize="16sp"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih"
-    tools:context=".a4_pilih_pembimbing">
+    tools:context=".a8_tambah_judul">
 
     <ImageView
         android:id="@+id/imageView"
@@ -35,12 +35,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
-        android:onClick="a4kehomescreen"
         android:layout_marginTop="41dp"
+        android:onClick="a8kehomescreen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_panahkiri" />
-
 
     <TextView
         android:id="@+id/textstatus"
@@ -48,12 +47,104 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Nama Pembimbing"
+        android:text="Judul"
         android:textColor="@color/oren"
         android:textSize="16sp"
 
         app:layout_constraintStart_toStartOf="@+id/textInputEditText3"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/textInputEditText3"
+        android:layout_width="352dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_tombol"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingStart="20dp"
+        android:textColor="@color/hitam"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textstatus" />
+    <TextView
+        android:id="@+id/textstatus1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Abstrak"
+        android:textColor="@color/oren"
+        android:textSize="16sp"
+
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText3"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText3" />
+
+    <EditText
+        android:id="@+id/textInputEditText31"
+        android:layout_width="352dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_tombol"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingStart="20dp"
+        android:textColor="@color/hitam"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textstatus1" />
+    <TextView
+        android:id="@+id/textstatus2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Id pembimbing"
+        android:textColor="@color/oren"
+        android:textSize="16sp"
+
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText3"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText31" />
+
+    <EditText
+        android:id="@+id/textInputEditText32"
+        android:layout_width="352dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_tombol"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingStart="20dp"
+        android:textColor="@color/hitam"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textstatus2" />
+    <TextView
+        android:id="@+id/textstatus3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Position"
+        android:textColor="@color/oren"
+        android:textSize="16sp"
+
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText3"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText32" />
+
+    <EditText
+        android:id="@+id/textInputEditText33"
+        android:layout_width="352dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_tombol"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingStart="20dp"
+        android:textColor="@color/hitam"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textstatus3" />
 
     <Button
         android:id="@+id/button"
@@ -62,7 +153,6 @@
         android:layout_marginBottom="23dp"
         android:background="@drawable/tombol_hijau"
         android:text="Simpan"
-        android:onClick="a41kehomescreen"
         android:textColor="@color/putih"
         android:textSize="16sp"
         android:fontFamily="@font/poppinssemibold"
@@ -70,18 +160,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText3"
-        android:layout_width="352dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/input_tombol"
-        android:fontFamily="@font/poppinsmedium"
-        android:hint=""
-        android:paddingStart="20dp"
-        android:textColor="@color/hitam"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textstatus" />
 </androidx.constraintlayout.widget.ConstraintLayout>

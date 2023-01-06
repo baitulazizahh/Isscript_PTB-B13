@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.isscript.datamodels.GantipwResponse;
-import com.example.isscript.datamodels.PilihPembimbingResponse;
+import com.example.isscript.datamodels.PembimbingResponse;
 import com.example.isscript.retrofit.StoryClient;
 
 import java.util.Objects;
@@ -27,20 +27,20 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class a4_pilih_pembimbing extends AppCompatActivity {
 
-    TextView pilihPbb;
-    Button simpan_btn;
+    TextView judul, abstrak, pembimbing, posisi;
+    Button tambah_btn;
     String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a4_pilih_pembimbing);
-        simpan_btn = findViewById(R.id.button);
+        tambah_btn = findViewById(R.id.button);
 
         SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
         token = sharedPref.getString("TOKEN", "");
 
-        simpan_btn.setOnClickListener(new View.OnClickListener() {
+        tambah_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -49,15 +49,19 @@ public class a4_pilih_pembimbing extends AppCompatActivity {
         });
     }
     public void tambahjudul() {
-        pilihPbb = findViewById(R.id.textInputEditText3);
+        judul = findViewById(R.id.textInputEditText3);
+        abstrak = findViewById(R.id.textInputEditText31);
+        pembimbing = findViewById(R.id.textInputEditText32);
+        posisi = findViewById(R.id.textInputEditText33);
 
-        simpan_btn = findViewById(R.id.button);
+        tambah_btn = findViewById(R.id.button);
 
+        String title = judul.getText().toString();
+        String abstracts = abstrak.getText().toString();
+        String lecturer_id = pembimbing.getText().toString();
+        String position = posisi.getText().toString();
 
-        String lecturer_id = pilihPbb.getText().toString();
-
-
-        simpan_btn.setOnClickListener(new View.OnClickListener() {
+        tambah_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
@@ -70,16 +74,16 @@ public class a4_pilih_pembimbing extends AppCompatActivity {
 
                 StoryClient client = retrofit.create(StoryClient.class);
 
-                Call<PilihPembimbingResponse> call = client.PilihPbb(lecturer_id,"Bearer "+token);
+                Call<PembimbingResponse> call = client.pilihpembimbing(title,abstracts, lecturer_id, position,"Bearer "+token);
 
-                call.enqueue(new Callback<PilihPembimbingResponse>() {
+                call.enqueue(new Callback<PembimbingResponse>() {
                     @Override
-                    public void onResponse(Call<PilihPembimbingResponse> call, Response<PilihPembimbingResponse> response) {
+                    public void onResponse(Call<PembimbingResponse> call, Response<PembimbingResponse> response) {
 
                         if (response.isSuccessful()) {
-                            PilihPembimbingResponse tambahJudulResponse = response.body();
+                            PembimbingResponse tambahJudulResponse = response.body();
                             if (tambahJudulResponse != null) {
-                                Toast.makeText(a4_pilih_pembimbing.this, "Berhasil tambah judul", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(a4_pilih_pembimbing.this, "Berhasil pilih pembimbing", Toast.LENGTH_SHORT).show();
 
                                 SharedPreferences sharedPref = getSharedPreferences("Pref", MODE_PRIVATE);
                                 SharedPreferences.Editor editor= sharedPref.edit();
@@ -89,24 +93,20 @@ public class a4_pilih_pembimbing extends AppCompatActivity {
                                 startActivity(Intent);
                             }
                         } else {
-                            Toast.makeText(a4_pilih_pembimbing.this, "Gagal tambah judul ya", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(a4_pilih_pembimbing.this, "Gagal pilih pembimbing", Toast.LENGTH_SHORT).show();
                         }
                     }
 
                     @Override
-                    public void onFailure(Call<PilihPembimbingResponse> call, Throwable t) {
-                        Toast.makeText(a4_pilih_pembimbing.this, "Gagal tambah judul", Toast.LENGTH_SHORT).show();
+                    public void onFailure(Call<PembimbingResponse> call, Throwable t) {
+                        Toast.makeText(a4_pilih_pembimbing.this, "Gagal pilih pembimbing", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
         });
     }
 
-    public void a4kehomescreen(View view) {
-        Intent intent = new Intent(a4_pilih_pembimbing.this, a2_homescreen.class);
-        startActivity(intent);
-    }
-    public void a41kehomescreen(View view) {
+    public void a8kehomescreen(View view) {
         Intent intent = new Intent(a4_pilih_pembimbing.this, a2_homescreen.class);
         startActivity(intent);
     }
