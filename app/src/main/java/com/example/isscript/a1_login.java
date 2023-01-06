@@ -143,7 +143,7 @@ public class a1_login extends AppCompatActivity {
                                 startActivity(Intent);
                             }
                         } else {
-                            Log.e("LoginActivity", response.message());
+                            /*Log.e("LoginActivity", response.message());*/
                             Toast.makeText(a1_login.this, "Username/password anda salah", Toast.LENGTH_SHORT).show();
                         }
 

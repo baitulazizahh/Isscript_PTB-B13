@@ -41,20 +41,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_panahkiri" />
 
+
     <TextView
         android:id="@+id/textstatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Nama pembimbing"
+        android:text="Nama Pembimbing"
         android:textColor="@color/oren"
         android:textSize="16sp"
 
-        app:layout_constraintStart_toStartOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText3"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-
 
     <Button
         android:id="@+id/button"
@@ -71,26 +70,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText3"
         android:layout_width="352dp"
         android:layout_height="52dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/input_tombol"
+        android:fontFamily="@font/poppinsmedium"
+        android:hint=""
+        android:paddingStart="20dp"
+        android:textColor="@color/hitam"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textstatus" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="14dp"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
-        app:layout_constraintTop_toTopOf="@+id/spinner"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_panahbawah" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

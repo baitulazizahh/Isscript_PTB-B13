@@ -2,10 +2,15 @@ package com.example.isscript.retrofit;
 
 import androidx.annotation.Nullable;
 
+import com.example.isscript.datamodels.DetailSemhas2Response;
+import com.example.isscript.datamodels.DetailTAResponse;
 import com.example.isscript.datamodels.GantipwResponse;
+import com.example.isscript.datamodels.ListLogbookResponse;
 import com.example.isscript.datamodels.LoginResponse;
 import com.example.isscript.datamodels.LogoutResponse;
+import com.example.isscript.datamodels.PilihPembimbingResponse;
 import com.example.isscript.datamodels.ProfilResponse;
+import com.example.isscript.datamodels.ReviewersItem;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -42,4 +47,30 @@ public interface StoryClient {
             @Header("Authorization") String token
     );
 
+
+    @GET("/api/theses/309/seminars")
+    Call<DetailSemhas2Response> detailSemhas(
+            @Header("Authorization")String token
+    );
+
+    @GET("/api/theses/309/seminars")
+    Call<ReviewersItem> reviewers (
+            @Header("Authorization")String token
+    );
+
+    @GET("api/theses/309/logbooks")
+    Call<ListLogbookResponse> getlistLB(
+            @Header("Authorization")String token);
+
+    @GET("/api/theses/277/trials")
+    Call<DetailTAResponse> detailta(
+            @Header("Authorization")String token
+    );
+
+    @FormUrlEncoded
+    @POST("/api/thesis/seminars/322/audiences")
+    Call<PilihPembimbingResponse> PilihPbb(
+            @Field("lecturer_id") String lecturer_id,
+            @Header("Authorization") String token
+    );
 }

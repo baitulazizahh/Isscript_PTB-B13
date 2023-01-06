@@ -10,26 +10,25 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.isscript.R;
+import com.example.isscript.datamodels.LogbooksItem;
 import com.example.isscript.models.logbook;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class listlogbook_adapter extends RecyclerView.Adapter<listlogbook_adapter.listlogbookVH>{
 
+    private List<LogbooksItem> itemLogbooks = new ArrayList<>();
+
+    public void setItemLogbooks(List<LogbooksItem> itemLogbooks) {
+        this.itemLogbooks = itemLogbooks;
+        notifyDataSetChanged();
+    }
+
     ArrayList<logbook> listLoogbook = new ArrayList<>();
-    logbookClickListener listenerlb;
 
-
-    public listlogbook_adapter(ArrayList<logbook> listLoogbook) {
+    public listlogbook_adapter() {
         this.listLoogbook = listLoogbook;
-    }
-
-    public void setListLoogbook(ArrayList<logbook> listLoogbook) {
-        this.listLoogbook = listLoogbook;
-    }
-
-    public void setListenerlb(logbookClickListener listenerlb) {
-        this.listenerlb = listenerlb;
     }
 
 
@@ -44,6 +43,7 @@ public class listlogbook_adapter extends RecyclerView.Adapter<listlogbook_adapte
     @Override
     public void onBindViewHolder(@NonNull listlogbookVH holder, int position) {
         logbook logbook = listLoogbook.get(position);
+        LogbooksItem list = itemLogbooks.get(position);
         holder.imageView4.setImageResource(R.drawable.ic_dalamproses);
         holder.texttanggal.setText(logbook.getTanggal());
         holder.imageView8.setImageResource(R.drawable.ic_panahkanan);
@@ -51,14 +51,15 @@ public class listlogbook_adapter extends RecyclerView.Adapter<listlogbook_adapte
 
     @Override
     public int getItemCount() {
-        return listLoogbook.size();
+        return itemLogbooks.size();
+        //return itemLogbooks.size();
     }
 
     public interface logbookClickListener{
         void onlogbookClick(logbook logbook);
     }
 
-    public class listlogbookVH extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class listlogbookVH extends RecyclerView.ViewHolder{
         public TextView texttanggal;
         public ImageView imageView8, imageView4;
 
@@ -67,14 +68,7 @@ public class listlogbook_adapter extends RecyclerView.Adapter<listlogbook_adapte
             imageView4 = itemView.findViewById(R.id.imageView4);
             texttanggal = itemView.findViewById(R.id.texttanggal) ;
             imageView8 = itemView.findViewById(R.id.imageView8);
-
-            itemView.setOnClickListener(this);
-        }
-
-        @Override
-        public void onClick(View view) {
-            logbook logbook = listLoogbook.get(getAdapterPosition());
-            listenerlb.onlogbookClick(logbook);
         }
     }
-}
+    }
+
